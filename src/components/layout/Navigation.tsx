@@ -1,14 +1,19 @@
 'use client';
 
-import React, { useEffect, useRef, useState } from 'react';
-import { Menu, X, Sun, Moon, ChevronDown } from 'lucide-react';
+import React, { useState } from 'react';
+import { Menu, X, Sun, Moon } from 'lucide-react';
 import { useTheme } from 'next-themes';
+import globalLocations from '../../../data/globalLocations.json';
+import NavDropdown from './NavDropdown';
+import MobileNavDropdown from './MobileNavDropdown';
+
 
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [productsMenuOpen, setProductsMenuOpen] = useState(false);
+  const [countriesMenuOpen, setCountriesMenuOpen] = useState(false);
   const [mobileProductsOpen, setMobileProductsOpen] = useState(false);
-  const productsMenuRef = useRef<HTMLDivElement | null>(null);
+  const [mobileCountriesOpen, setMobileCountriesOpen] = useState(false);
   const { theme, setTheme } = useTheme();
 
   const isDark = theme === 'dark';
@@ -22,24 +27,18 @@ export default function Navigation() {
     ? 'text-gray-300 hover:text-white'
     : 'text-gray-700 hover:text-gray-900';
 
-  useEffect(() => {
-    function handleOutsideClick(event: MouseEvent) {
-      if (
-        productsMenuRef.current &&
-        !productsMenuRef.current.contains(event.target as Node)
-      ) {
-        setProductsMenuOpen(false);
-      }
-    }
+  // Dropdown menu items
+  const productsItems = [
+    { label: 'Instruments', href: '#' },
+    { label: 'Accessories', href: '#' },
+    { label: 'Softwares', href: '#' },
+  ];
 
-    if (productsMenuOpen) {
-      document.addEventListener('mousedown', handleOutsideClick);
-    }
-
-    return () => {
-      document.removeEventListener('mousedown', handleOutsideClick);
-    };
-  }, [productsMenuOpen]);
+  type GlobalLocation = { name: string; left: string; top: string };
+  const countriesItems = (globalLocations as GlobalLocation[]).map((location) => ({
+    label: location.name,
+    href: '#',
+  }));
 
   return (
     <>
@@ -79,60 +78,33 @@ export default function Navigation() {
                 >
                   About
                 </a>
-                <div
-                  className="relative"
-                  ref={productsMenuRef}
-                  onMouseEnter={() => setProductsMenuOpen(true)}
-                  onMouseLeave={() => setProductsMenuOpen(false)}
-                >
-                  <button
-                    className={`flex items-center gap-2 text-sm font-medium ${navItemStyles}`}
-                    style={{ transition: 'color 5ms ease-in-out' }}
-                    aria-haspopup="true"
-                    aria-expanded={productsMenuOpen}
-                  >
-                    Products
-                    <ChevronDown
-                      size={16}
-                      className={`transition-transform duration-200 ${productsMenuOpen ? 'rotate-180' : ''}`}
-                    />
-                  </button>
 
-                  {/* Invisible bridge to keep menu open */}
-                  <div className="absolute left-0 right-0 h-8 top-full" />
+                {/* Products Dropdown */}
+                <NavDropdown
+                  label="Products"
+                  items={productsItems}
+                  isOpen={productsMenuOpen}
+                  onToggle={setProductsMenuOpen}
+                  navItemStyles={navItemStyles}
+                  navSurfaceStyles={navSurfaceStyles}
+                />
 
-                  <div
-                    className={`absolute left-0 top-full z-50 mt-8 w-56 rounded-2xl border p-3 shadow-2xl transition-opacity transition-transform duration-200 ease-in-out ${navSurfaceStyles} ${
-                      productsMenuOpen ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 -translate-y-2 pointer-events-none'
-                    }`}
-                  >
-                    {[
-                      { label: 'Instruments', href: '#' },
-                      { label: 'Accessories', href: '#' },
-                      { label: 'Softwares', href: '#' },
-                    ].map((item) => (
-                      <a
-                        key={item.label}
-                        href={item.href}
-                        className={`block rounded-xl px-4 py-2 text-sm font-medium transition-colors ${navItemStyles}`}
-                      >
-                        {item.label}
-                      </a>
-                    ))}
-                  </div>
-                </div>
                 <a
                   href="#"
                   className={`transition-colors text-sm font-medium ${navItemStyles}`}
                 >
                   Support
                 </a>
-                <a
-                  href="#"
-                  className={`transition-colors text-sm font-medium ${navItemStyles}`}
-                >
-                  Countries
-                </a>
+
+                {/* Countries Dropdown */}
+                <NavDropdown
+                  label="Countries"
+                  items={countriesItems}
+                  isOpen={countriesMenuOpen}
+                  onToggle={setCountriesMenuOpen}
+                  navItemStyles={navItemStyles}
+                  navSurfaceStyles={navSurfaceStyles}
+                />
               </div>
 
               {/* Right Side - Dark Mode Toggle + Get Quote Button */}
@@ -190,36 +162,13 @@ export default function Navigation() {
               </a>
 
               {/* Mobile Products Dropdown */}
-              <div>
-                <button
-                  onClick={() => setMobileProductsOpen(!mobileProductsOpen)}
-                  className={`flex items-center justify-between w-full py-2 ${textColor} hover:text-blue-600 font-medium`}
-                >
-                  Products
-                  <ChevronDown
-                    size={20}
-                    className={`transition-transform duration-200 ${mobileProductsOpen ? 'rotate-180' : ''}`}
-                  />
-                </button>
-
-                {mobileProductsOpen && (
-                  <div className="pl-4 pt-2 space-y-2">
-                    {[
-                      { label: 'Instruments', href: '#' },
-                      { label: 'Accessories', href: '#' },
-                      { label: 'Softwares', href: '#' },
-                    ].map((item) => (
-                      <a
-                        key={item.label}
-                        href={item.href}
-                        className={`block py-2 text-sm ${textColor} hover:text-blue-600`}
-                      >
-                        {item.label}
-                      </a>
-                    ))}
-                  </div>
-                )}
-              </div>
+              <MobileNavDropdown
+                label="Products"
+                items={productsItems}
+                isOpen={mobileProductsOpen}
+                onToggle={() => setMobileProductsOpen(!mobileProductsOpen)}
+                textColor={textColor}
+              />
 
               <a
                 href="#"
@@ -227,12 +176,15 @@ export default function Navigation() {
               >
                 Support
               </a>
-              <a
-                href="#"
-                className={`block py-2 ${textColor} hover:text-blue-600 font-medium`}
-              >
-                Countries
-              </a>
+
+              {/* Mobile Countries Dropdown */}
+              <MobileNavDropdown
+                label="Countries"
+                items={countriesItems}
+                isOpen={mobileCountriesOpen}
+                onToggle={() => setMobileCountriesOpen(!mobileCountriesOpen)}
+                textColor={textColor}
+              />
 
               <div className="flex items-center gap-3 pt-2">
                 <button
