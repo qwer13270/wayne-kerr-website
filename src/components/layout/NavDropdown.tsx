@@ -1,11 +1,11 @@
 'use client';
 
 import React, { useRef, useEffect } from 'react';
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown, LucideIcon } from 'lucide-react';
 
 interface NavDropdownProps {
   label: string;
-  items: Array<{ label: string; href: string }>;
+  items: Array<{ label: string; href: string; icon?: LucideIcon }>;
   isOpen: boolean;
   onToggle: (open: boolean) => void;
   navItemStyles: string;
@@ -66,15 +66,19 @@ export default function NavDropdown({
           isOpen ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 -translate-y-2 pointer-events-none'
         }`}
       >
-        {items.map((item) => (
-          <a
-            key={item.label}
-            href={item.href}
-            className={`block rounded-xl px-4 py-2 text-sm font-medium transition-colors ${navItemStyles}`}
-          >
-            {item.label}
-          </a>
-        ))}
+        {items.map((item) => {
+          const Icon = item.icon;
+          return (
+            <a
+              key={item.label}
+              href={item.href}
+              className={`flex items-center gap-3 rounded-xl px-4 py-2 text-sm font-medium transition-colors ${navItemStyles}`}
+            >
+              {Icon && <Icon size={18} />}
+              {item.label}
+            </a>
+          );
+        })}
       </div>
     </div>
   );

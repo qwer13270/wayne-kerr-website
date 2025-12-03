@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Menu, X, Sun, Moon } from 'lucide-react';
+import { Menu, X, Sun, Moon, Gauge, Wrench, Code2, Globe, MapPin, Flag } from 'lucide-react';
 import { useTheme } from 'next-themes';
 import globalLocations from '../../../data/globalLocations.json';
 import NavDropdown from './NavDropdown';
@@ -23,22 +23,29 @@ export default function Navigation() {
   const navSurfaceStyles = isDark
     ? 'bg-white/5 border-white/20'
     : 'bg-white/55 border-white/60';
+  const dropdownSurfaceStyles = isDark
+    ? 'bg-black/80 border-black/80'
+    : 'bg-white/80 border-white/80';
   const navItemStyles = isDark
     ? 'text-gray-300 hover:text-white'
     : 'text-gray-700 hover:text-gray-900';
 
   // Dropdown menu items
   const productsItems = [
-    { label: 'Instruments', href: '#' },
-    { label: 'Accessories', href: '#' },
-    { label: 'Softwares', href: '#' },
+    { label: 'Instruments', href: '#', icon: Gauge },
+    { label: 'Accessories', href: '#', icon: Wrench },
+    { label: 'Softwares', href: '#', icon: Code2 },
   ];
 
   type GlobalLocation = { name: string; left: string; top: string };
-  const countriesItems = (globalLocations as GlobalLocation[]).map((location) => ({
-    label: location.name,
-    href: '#',
-  }));
+  const countriesItems = Array.from(
+    new Map(
+      (globalLocations as GlobalLocation[]).map((location) => [
+        location.name.trim(),
+        { label: location.name.trim(), href: '#' },
+      ])
+    ).values()
+  );
 
   return (
     <>
@@ -86,7 +93,7 @@ export default function Navigation() {
                   isOpen={productsMenuOpen}
                   onToggle={setProductsMenuOpen}
                   navItemStyles={navItemStyles}
-                  navSurfaceStyles={navSurfaceStyles}
+                  navSurfaceStyles={dropdownSurfaceStyles}
                 />
 
                 <a
@@ -103,7 +110,7 @@ export default function Navigation() {
                   isOpen={countriesMenuOpen}
                   onToggle={setCountriesMenuOpen}
                   navItemStyles={navItemStyles}
-                  navSurfaceStyles={navSurfaceStyles}
+                  navSurfaceStyles={dropdownSurfaceStyles}
                 />
               </div>
 
