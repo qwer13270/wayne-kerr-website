@@ -2,26 +2,24 @@
 
 import React, { useState } from 'react';
 import { Menu, X, Sun, Moon } from 'lucide-react';
+import { useTheme } from 'next-themes';
 
-interface NavigationProps {
-  darkMode: boolean;
-  setDarkMode: (value: boolean) => void;
-}
-
-export default function Navigation({ darkMode, setDarkMode }: NavigationProps) {
+export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { theme, setTheme } = useTheme();
+  
+  const isDark = theme === 'dark';
 
   // Dynamic color variables
-  const textColor = darkMode ? 'text-white' : 'text-gray-900';
-  const textSecondary = darkMode ? 'text-gray-400' : 'text-gray-600';
+  const textColor = isDark ? 'text-white' : 'text-gray-900';
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 py-6 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         <div className={`backdrop-blur-xl border rounded-full py-3 px-6 shadow-2xl transition-colors duration-300 ${
-          darkMode 
+          isDark 
             ? 'bg-white/5 border-white/20' 
-            : 'bg-white/55 border-white/60'
+            : 'bg-white border-white/60'
         }`}>
           <div className="flex justify-between items-center">
             {/* Logo */}
@@ -30,7 +28,7 @@ export default function Navigation({ darkMode, setDarkMode }: NavigationProps) {
                 <img
                   src="/images/logo/logo.webp"
                   alt="Wayne Kerr Logo"
-                  className={`h-5 w-auto transition-all duration-300 ${darkMode ? 'brightness-0 invert' : ''}`}
+                  className={`h-6 w-auto transition-all duration-300 ${isDark ? 'brightness-0 invert' : ''}`}
                 />
               </a>
             </div>
@@ -40,7 +38,7 @@ export default function Navigation({ darkMode, setDarkMode }: NavigationProps) {
               <a 
                 href="/" 
                 className={`transition-colors text-sm font-medium ${
-                  darkMode ? 'text-gray-300 hover:text-white' : 'text-gray-700 hover:text-gray-900'
+                  isDark ? 'text-gray-300 hover:text-white' : 'text-gray-700 hover:text-gray-900'
                 }`}
               >
                 Home
@@ -48,7 +46,7 @@ export default function Navigation({ darkMode, setDarkMode }: NavigationProps) {
               <a 
                 href="/about" 
                 className={`transition-colors text-sm font-medium ${
-                  darkMode ? 'text-gray-300 hover:text-white' : 'text-gray-700 hover:text-gray-900'
+                  isDark ? 'text-gray-300 hover:text-white' : 'text-gray-700 hover:text-gray-900'
                 }`}
               >
                 About
@@ -56,7 +54,7 @@ export default function Navigation({ darkMode, setDarkMode }: NavigationProps) {
               <a 
                 href="#" 
                 className={`transition-colors text-sm font-medium ${
-                  darkMode ? 'text-gray-300 hover:text-white' : 'text-gray-700 hover:text-gray-900'
+                  isDark ? 'text-gray-300 hover:text-white' : 'text-gray-700 hover:text-gray-900'
                 }`}
               >
                 Products
@@ -64,7 +62,7 @@ export default function Navigation({ darkMode, setDarkMode }: NavigationProps) {
               <a 
                 href="#" 
                 className={`transition-colors text-sm font-medium ${
-                  darkMode ? 'text-gray-300 hover:text-white' : 'text-gray-700 hover:text-gray-900'
+                  isDark ? 'text-gray-300 hover:text-white' : 'text-gray-700 hover:text-gray-900'
                 }`}
               >
                 Support
@@ -72,7 +70,7 @@ export default function Navigation({ darkMode, setDarkMode }: NavigationProps) {
               <a 
                 href="#" 
                 className={`transition-colors text-sm font-medium ${
-                  darkMode ? 'text-gray-300 hover:text-white' : 'text-gray-700 hover:text-gray-900'
+                  isDark ? 'text-gray-300 hover:text-white' : 'text-gray-700 hover:text-gray-900'
                 }`}
               >
                 Countries
@@ -83,13 +81,13 @@ export default function Navigation({ darkMode, setDarkMode }: NavigationProps) {
             <div className="hidden lg:flex items-center space-x-3">
               {/* Dark Mode Toggle */}
               <button
-                onClick={() => setDarkMode(!darkMode)}
+                onClick={() => setTheme(isDark ? 'light' : 'dark')}
                 className={`p-2 rounded-full transition-colors ${
-                  darkMode ? 'hover:bg-white/10' : 'hover:bg-gray-900/10'
+                  isDark ? 'hover:bg-white/10' : 'hover:bg-gray-900/10'
                 }`}
                 aria-label="Toggle dark mode"
               >
-                {darkMode ? (
+                {isDark ? (
                   <Sun className="text-yellow-400" size={20} />
                 ) : (
                   <Moon className="text-gray-600" size={20} />
@@ -119,7 +117,7 @@ export default function Navigation({ darkMode, setDarkMode }: NavigationProps) {
           {/* Mobile Menu */}
           {mobileMenuOpen && (
             <div className={`lg:hidden pt-4 mt-4 border-t space-y-3 ${
-              darkMode ? 'border-white/10' : 'border-gray-900/10'
+              isDark ? 'border-white/10' : 'border-gray-900/10'
             }`}>
               <a 
                 href="/" 
@@ -154,11 +152,11 @@ export default function Navigation({ darkMode, setDarkMode }: NavigationProps) {
               
               <div className="flex items-center gap-3 pt-2">
                 <button
-                  onClick={() => setDarkMode(!darkMode)}
+                  onClick={() => setTheme(isDark ? 'light' : 'dark')}
                   className="flex items-center gap-2 py-2 font-medium"
                 >
-                  {darkMode ? <Sun size={20} /> : <Moon size={20} />}
-                  <span className="text-sm">{darkMode ? 'Light Mode' : 'Dark Mode'}</span>
+                  {isDark ? <Sun size={20} /> : <Moon size={20} />}
+                  <span className="text-sm">{isDark ? 'Light Mode' : 'Dark Mode'}</span>
                 </button>
               </div>
               
