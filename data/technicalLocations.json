@@ -1,0 +1,53 @@
+[
+  {
+    "id": 100,
+    "name": "Germany",
+    "city": "Munich",
+    "lat": 48.1351,
+    "lon": 11.582,
+    "description": "Engineering Center",
+    "offices": 1,
+    "employees": 45
+  },
+  {
+    "id": 101,
+    "name": "Japan",
+    "city": "Tokyo",
+    "lat": 35.6762,
+    "lon": 139.6503,
+    "description": "Innovation Lab",
+    "offices": 2,
+    "employees": 95
+  },
+  {
+    "id": 102,
+    "name": "India",
+    "city": "Bangalore",
+    "lat": 12.9716,
+    "lon": 77.5946,
+    "description": "R&D Center",
+    "offices": 2,
+    "employees": 120
+  },
+  {
+    "id": 103,
+    "name": "Taiwan",
+    "city": "Taipei",
+    "lat": 25.033,
+    "lon": 121.5654,
+    "description": "Manufacturing Hub",
+    "offices": 2,
+    "employees": 110
+  },
+  {
+    "id": 104,
+    "name": "Indonesia",
+    "city": "Jakarta",
+    "lat": -6.2088,
+    "lon": 106.8456,
+    "description": "Technical Support Center",
+    "offices": 1,
+    "employees": 35
+  }
+]
+
