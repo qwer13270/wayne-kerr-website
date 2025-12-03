@@ -6,23 +6,20 @@ import Typewriter from 'typewriter-effect';
 import Globe3D from '@/src/components/home/Globe3D';
 import clients from '@/data/clients.json';
 import Navigation from '@/src/components/layout/Navigation';
-import { useDarkMode } from '@/src/contexts/DarkModeContext';
+import { useTheme } from 'next-themes';
 
 import globalLocations from '@/data/globalLocations.json';
 
 
 export default function WayneKerrHomepage() {
+  const [mounted, setMounted] = useState(false);
+  const { theme } = useTheme();
+  const darkMode = theme === 'dark';
+
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
-  const { darkMode, setDarkMode } = useDarkMode();
 
-
-  useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 50);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -30,8 +27,12 @@ export default function WayneKerrHomepage() {
     }, 5000);
     return () => clearInterval(timer);
   }, []);
+  // Wait for theme to be ready
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
-  // Typewriter states
+    // Typewriter states
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [displayedText, setDisplayedText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
@@ -144,9 +145,14 @@ export default function WayneKerrHomepage() {
   const navBg = darkMode ? 'bg-black/80' : 'bg-white/95';
   const heroBg = darkMode ? 'from-blue-950 via-blue-900 to-indigo-950' : 'from-blue-600 via-blue-700 to-indigo-700';
 
+  // Don't render until mounted (prevents hydration mismatch)
+  if (!mounted) {
+    return null;
+  }
+
   return (
     <div className={`min-h-screen ${bgColor} ${textColor} overflow-x-hidden transition-colors duration-300`}>
-      <Navigation darkMode={darkMode} setDarkMode={setDarkMode} />
+      <Navigation/>
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">

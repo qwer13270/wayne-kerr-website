@@ -2,25 +2,35 @@
 
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Phone, Mail, MapPin, Award, Target, Lightbulb, Heart, Shield, TrendingUp, Users, Globe as GlobeIcon, ArrowRight, CheckCircle, Sun, Moon } from 'lucide-react';
-import { useDarkMode } from '@/src/contexts/DarkModeContext';
+import { useTheme } from 'next-themes';
 import Navigation from '@/src/components/layout/Navigation';
 
 export default function AboutPage() {
+
+  const { theme } = useTheme();
+  const darkMode = theme === 'dark';
+  const [mounted, setMounted] = useState(false);
+
+  // Wait for theme to be ready
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const { darkMode, setDarkMode } = useDarkMode();
 
-  useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 50);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+
 
   const bgColor = darkMode ? 'bg-black' : 'bg-white';
   const textColor = darkMode ? 'text-white' : 'text-gray-900';
   const textSecondary = darkMode ? 'text-gray-400' : 'text-gray-600';
   const cardBg = darkMode ? 'bg-white/5 border-white/10' : 'bg-white border-gray-200';
   const navBg = darkMode ? 'bg-black/80' : 'bg-white/95';
+
+  // Don't render until mounted (prevents hydration mismatch)
+  if (!mounted) {
+    return null;
+  }
 
   const milestones = [
     {
@@ -102,7 +112,7 @@ export default function AboutPage() {
   return (
     <div className={`min-h-screen ${bgColor} ${textColor} overflow-x-hidden transition-colors duration-300`}>
       {/* Navigation*/}
-      <Navigation darkMode={darkMode} setDarkMode={setDarkMode} />
+      <Navigation/>
 
       {/* Hero Section*/}
       <section className="relative min-h-[90vh] flex items-center overflow-hidden pt-20">
