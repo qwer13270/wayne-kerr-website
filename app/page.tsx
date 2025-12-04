@@ -181,7 +181,7 @@ export default function WayneKerrHomepage() {
           {/* Rest of hero content stays the same */}
           <div className="space-y-8">
 
-            <div className="inline-block">
+            <div className="hidden sm:inline-block">
               <div className="px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-sm text-white mb-6">
                 🏆 Trusted by industry leaders for 78+ years
               </div>
