@@ -5,9 +5,7 @@ import { Menu, X, ChevronDown, Phone, Mail, MapPin, ArrowRight, Award, TrendingU
 import Typewriter from 'typewriter-effect';
 import Globe3D from '@/src/components/home/Globe3D';
 import clients from '@/data/clients.json';
-import Navigation from '@/src/components/layout/Navigation';
 import { useTheme } from 'next-themes';
-
 import globalLocations from '@/data/globalLocations.json';
 
 
@@ -152,8 +150,6 @@ export default function WayneKerrHomepage() {
 
   return (
     <div className={`min-h-screen ${bgColor} ${textColor} overflow-x-hidden transition-colors duration-300`}>
-      <Navigation/>
-
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
@@ -420,62 +416,6 @@ export default function WayneKerrHomepage() {
 
         </div>
       </section>
-
-
-      {/* Footer */}
-      <footer className={`${darkMode ? 'bg-black text-white' : 'bg-white text-gray-900'} py-12 sm:py-16`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-            <div>
-              <img
-                src="/images/logo/logo.webp"
-                alt="Wayne Kerr Logo"
-                className={`h-5 w-auto mb-4 ${darkMode ? 'brightness-0 invert' : ''}`}
-              />
-              <p className={`${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>Leaders in precision component measurement since 1946</p>
-            </div>
-
-            <div>
-              <h4 className="font-semibold mb-4">Products</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className={`transition-colors ${darkMode ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-gray-900'
-                  }`}>LCR Meters</a></li>
-                <li><a href="#" className={`transition-colors ${darkMode ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-gray-900'
-                  }`}>Accessories</a></li>
-                <li><a href="#" className={`transition-colors ${darkMode ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-gray-900'
-                  }`}>Software</a></li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-semibold mb-4">Company</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className={`transition-colors ${darkMode ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-gray-900'
-                  }`}>About Us</a></li>
-                <li><a href="#" className={`transition-colors ${darkMode ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-gray-900'
-                  }`}>News</a></li>
-                <li><a href="#" className={`transition-colors ${darkMode ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-gray-900'
-                  }`}>Careers</a></li>
-                <li><a href="#" className={`transition-colors ${darkMode ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-gray-900'
-                  }`}>Contact</a></li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-semibold mb-4">Contact</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li className={`flex items-center gap-2 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}><Phone size={16} /> +1 234 567 8900</li>
-                <li className={`flex items-center gap-2 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}><Mail size={16} /> info@waynekerr.com</li>
-                <li className={`flex items-center gap-2 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}><MapPin size={16} /> Global Locations</li>
-              </ul>
-            </div>
-          </div>
-
-          <div className={`border-t ${darkMode ? 'border-gray-800' : 'border-gray-200'} pt-8 text-center ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-            <p>&copy; 2024 Wayne Kerr Electronics. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }
