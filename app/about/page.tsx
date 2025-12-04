@@ -128,15 +128,6 @@ export default function AboutPage() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
           {/* Centered Content */}
           <div className="text-center max-w-4xl mx-auto mb-16">
-            <div className="inline-block mb-6">
-              <div className={`px-6 py-3 backdrop-blur-sm border rounded-full text-sm font-medium ${darkMode 
-                ? 'bg-white/10 border-white/20 text-white' 
-                : 'bg-blue-600/10 border-blue-600/20 text-blue-600'
-              }`}>
-                🏆 Established 1946 • 78+ Years of Innovation
-              </div>
-            </div>
-
             <h1 className={`text-5xl sm:text-6xl lg:text-8xl font-bold mb-6 leading-tight ${textColor}`}>
               About Us
             </h1>
@@ -282,7 +273,7 @@ export default function AboutPage() {
 
           <div className="relative">
             {/* Timeline line */}
-            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-600 via-purple-600 to-indigo-600 hidden lg:block"></div>
+            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-600 via-blue-700 to-blue-800 hidden lg:block"></div>
 
             <div className="space-y-12">
               {milestones.map((milestone, index) => (
