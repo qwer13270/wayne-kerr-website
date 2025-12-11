@@ -128,15 +128,6 @@ export default function AboutPage() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
           {/* Centered Content */}
           <div className="text-center max-w-4xl mx-auto mb-16">
-            <div className="inline-block mb-6">
-              <div className={`px-6 py-3 backdrop-blur-sm border rounded-full text-sm font-medium ${darkMode 
-                ? 'bg-white/10 border-white/20 text-white' 
-                : 'bg-blue-600/10 border-blue-600/20 text-blue-600'
-              }`}>
-                🏆 Established 1946 • 78+ Years of Innovation
-              </div>
-            </div>
-
             <h1 className={`text-5xl sm:text-6xl lg:text-8xl font-bold mb-6 leading-tight ${textColor}`}>
               About Us
             </h1>
@@ -282,7 +273,7 @@ export default function AboutPage() {
 
           <div className="relative">
             {/* Timeline line */}
-            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-600 via-purple-600 to-indigo-600 hidden lg:block"></div>
+            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-600 via-blue-700 to-blue-800 hidden lg:block"></div>
 
             <div className="space-y-12">
               {milestones.map((milestone, index) => (
@@ -348,55 +339,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
-
-      {/* Footer */}
-      <footer className={`${darkMode ? 'bg-black text-white' : 'bg-white text-gray-900'} py-12 sm:py-16 border-t ${darkMode ? 'border-gray-800' : 'border-gray-200'}`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-            <div>
-              <img
-                src="/images/logo/logo.webp"
-                alt="Wayne Kerr Logo"
-                className={`h-5 w-auto mb-4 ${darkMode ? 'brightness-0 invert' : ''}`}
-              />
-              <p className={`${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>Leaders in precision component measurement since 1946</p>
-            </div>
-
-            <div>
-              <h4 className="font-semibold mb-4">Products</h4>
-              <ul className="space-y-2">
-                <li><a href="#" className={`transition-colors ${darkMode ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-gray-900'}`}>LCR Meters</a></li>
-                <li><a href="#" className={`transition-colors ${darkMode ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-gray-900'}`}>Accessories</a></li>
-                <li><a href="#" className={`transition-colors ${darkMode ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-gray-900'}`}>Software</a></li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-semibold mb-4">Company</h4>
-              <ul className="space-y-2">
-                <li><a href="/about" className={`transition-colors ${darkMode ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-gray-900'}`}>About Us</a></li>
-                <li><a href="#" className={`transition-colors ${darkMode ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-gray-900'}`}>News</a></li>
-                <li><a href="#" className={`transition-colors ${darkMode ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-gray-900'}`}>Careers</a></li>
-                <li><a href="#" className={`transition-colors ${darkMode ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-gray-900'}`}>Contact</a></li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-semibold mb-4">Contact</h4>
-              <ul className="space-y-2">
-                <li className={`flex items-center gap-2 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}><Phone size={16} /> +1 234 567 8900</li>
-                <li className={`flex items-center gap-2 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}><Mail size={16} /> info@waynekerr.com</li>
-                <li className={`flex items-center gap-2 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}><MapPin size={16} /> Global Locations</li>
-              </ul>
-            </div>
-          </div>
-
-          <div className={`border-t ${darkMode ? 'border-gray-800' : 'border-gray-200'} pt-8 text-center ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-            <p>&copy; 2024 Wayne Kerr Electronics. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }
