@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "series": "1EVA40100 Series",
+    "title": "Kelvin Clips (fine jaw)",
+    "description": "The 40100 has fine-pointed jaws for tight spaces or fine wires. The 40150 is a cost-effective alternative for 4300 series LCR Meters, and the 40180 is a larger-jawed variant of the 40100.",
+    "image": "/images/accessories/kelvin-clips.jpg"
+  },
+  {
+    "id": 2,
+    "series": "1EVA40125",
+    "title": "SMD Tweezers",
+    "description": "40125 HF SMD Tweezers are used to connect a Wayne Kerr 6500 analyzer to surface mount devices which have end cap terminations.",
+    "image": "/images/accessories/smd-tweezers-40125.jpg"
+  },
+  {
+    "id": 3,
+    "series": "1EVA40120",
+    "title": "SMD Tweezers",
+    "description": "The 40120 is a pair of chip component tweezers designed for contacting leadless devices, with the cable terminated by BNC connectors.",
+    "image": "/images/accessories/smd-tweezers-40120.jpg"
+  },
+  {
+    "id": 4,
+    "series": "1EV1905X",
+    "title": "SMD probe leads with 1023",
+    "description": "The 1905X is a 4-2 BNC converter plus lead with two sprung needle probes to access surface mounted devices on circuit boards and for interfacing to hybrid components and chip components on tape.",
+    "image": "/images/accessories/smd-probe-1905x.jpg"
+  },
+  {
+    "id": 5,
+    "series": "1EV1905A",
+    "title": "SMD probe leads",
+    "description": "The 1905A lead with two sprung needle probes is used to access surface mounted devices on circuit boards and for interfacing to hybrid components and chip components on tape.",
+    "image": "/images/accessories/smd-probe-1905a.jpg"
+  },
+  {
+    "id": 6,
+    "series": "1EV1505",
+    "title": "4 Terminal Lead",
+    "description": "The 1EV1505 is a 600 mm extension cable terminated with four BNC connectors at the instrument end and four individual crocodile clips at the component end.",
+    "image": "/images/accessories/4-terminal-lead.jpg"
+  },
+  {
+    "id": 7,
+    "series": "1J1100",
+    "title": "Protection Unit",
+    "description": "The 1100 Protection Unit, designed for the 6430B or 6440B Component Analyzers, prevents damage to the test equipment by absorbing up to 25 Joules of energy and blowing a fuse in overload situations.",
+    "image": "/images/accessories/protection-unit.jpg"
+  },
+  {
+    "id": 8,
+    "series": "1J10362",
+    "title": "2 Terminal bottom contact SMD fixture",
+    "description": "The 10362 is a 2-terminal bottom-contact SMD fixture that supports 250 A DC bias when used with the 3260 + 3265 system.",
+    "image": "/images/accessories/smd-fixture-10362.jpg"
+  },
+  {
+    "id": 9,
+    "series": "1J1036",
+    "title": "2 Terminal conventional fixture",
+    "description": "The 1036 is a 2-terminal conventional fixture that can handle a 250A bias current. It can only be used with the 3260+3265 system.",
+    "image": "/images/accessories/conventional-fixture.jpg"
+  },
+  {
+    "id": 10,
+    "series": "1J1025",
+    "title": "Grounded Component Probe",
+    "description": "The 1025 probe allows a 6500 to make ground referenced impedance measurements. In normal use the 6500 is unable to measure components which have one terminal directly referenced to ground, but the 1025 Probe is the solution to this restriction.",
+    "image": "/images/accessories/grounded-probe.jpg"
+  },
+  {
+    "id": 11,
+    "series": "1J1023",
+    "title": "BNC 4-2 Adopter",
+    "description": "The 1023 adaptor allows 2-terminal accessories to be used with 4-terminal analyzers, such as the 4300 and 6500, which do not have a 2 Term/ 4 Term switching facility on their front panel.",
+    "image": "/images/accessories/bnc-adapter.jpg"
+  },
+  {
+    "id": 12,
+    "series": "1J1016 Series",
+    "title": "SMD 2/4-Terminal 125A Fixture",
+    "description": "The 1016 SMD 2-Terminal and 10164 SMD 4-Terminal High Current Fixtures connect Wayne Kerr Analyzer (3255B/3260B) and DC Bias Unit (3265B) to a surface mount Device Under Test, supporting up to 125 A DC bias current.",
+    "image": "/images/accessories/smd-fixture-1016.jpg"
+  }
+]

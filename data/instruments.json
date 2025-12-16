@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "series": "7820 Series",
+    "title": "Impulse Tester",
+    "description": "Specializes in testing inter-layer short circuits in motors, transformers, and inductors, and supports various test modes including area ratio, area difference, corona number, and corona amount.",
+    "image": "/images/products/instruments/7820.png"
+  },
+  {
+    "id": 2,
+    "series": "6500B Series",
+    "title": "Impedance Analyzer",
+    "description": "High-precision analyzers featuring a user-friendly graphical interface, high-resolution color display, 0.05% basic accuracy, a minimum frequency of 20Hz, and a maximum frequency of up to 120MHz.",
+    "image": "/images/products/instruments/6500B.png"
+  },
+  {
+    "id": 3,
+    "series": "6500P Series",
+    "title": "High Frequency LCR Meter",
+    "description": "The 6500P series LCR meters feature extended test frequencies, high accuracy, and a large, high-resolution color display.",
+    "image": "/images/products/instruments/6500P.png"
+  },
+  {
+    "id": 4,
+    "series": "6565 Series",
+    "title": "High Frequency DC Bias",
+    "description": "The 6565 DC Bias Units are used to evaluate components at currents up to 80A and are compatible with the Wayne Kerr 6500B and 6500P models of precision analyzers.",
+    "image": "/images/products/instruments/6565.png"
+  },
+  {
+    "id": 5,
+    "series": "6400B Series",
+    "title": "Precision Component Analyzer",
+    "description": "The 6400 Series provides thorough and accurate testing of any passive component with market-leading accuracy.",
+    "image": "/images/products/instruments/6440B.png"
+  },
+  {
+    "id": 6,
+    "series": "5400L Series",
+    "title": "High Current Test System LCR Meter",
+    "description": "High-current inductance testing systems with external DC bias up to 300A, 0.05% basic accuracy, a frequency range of 10Hz to 10MHz, and the capability for simultaneous multi-parameter measurements.",
+    "image": "/images/products/instruments/5400L.png"
+  },
+  {
+    "id": 7,
+    "series": "4300 Series",
+    "title": "LCR Meters",
+    "description": "User-friendly LCR meters with extensive functions for accurate, fast measurements from 20Hz to 1MHz, ideal for various test and production environments.",
+    "image": "/images/products/instruments/4300.png"
+  },
+  {
+    "id": 8,
+    "series": "3265B Series",
+    "title": "DC Bias Current Unit",
+    "description": "Enable high current component evaluation with the Wayne Kerr 3255B Inductance Analyzer or 3260B Precision Magnetics Analyzer, offering bias current settings from 25mA to 25A in 25mA steps.",
+    "image": "/images/products/instruments/3265B.png"
+  },
+  {
+    "id": 9,
+    "series": "3260B Series",
+    "title": "Precision Magnetics Analyzer",
+    "description": "Provides comprehensive magnetic component analysis up to 3MHz, including true 4-terminal primary to secondary parameters, through 8 front panel BNCs.",
+    "image": "/images/products/instruments/3260B.png"
+  },
+  {
+    "id": 10,
+    "series": "3255B Series",
+    "title": "Inductance Analyzer",
+    "description": "Versatile and accurate inductance analyzers designed for straightforward device characterization.",
+    "image": "/images/products/instruments/3255B.png"
+  },
+  {
+    "id": 11,
+    "series": "3210B Series",
+    "title": "Hi-Pot Tester",
+    "description": "3-in-1 tester combines AC/DC/IR withstand voltage tests with AC settings of 0.10 to 5000V and 0.10mA to 15.00mA, DC settings of 0 to 6000V and 0.10mA to 7.50mA.",
+    "image": "/images/products/instruments/3210.png"
+  },
+  {
+    "id": 12,
+    "series": "3100 Series",
+    "title": "Micro-Ohm Meter",
+    "description": "Measures resistance from 0.001 mΩ to 1.999 MΩ with ±0.1% accuracy and features a four-wire test system with RS232/HANDLER interface.",
+    "image": "/images/products/instruments/3100.png"
+  }
+]
