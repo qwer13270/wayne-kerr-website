@@ -1,12 +1,22 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
-import { Menu, X, Sun, Moon, Gauge, Wrench, Code2, Globe, MapPin, Flag } from 'lucide-react';
-import { useTheme } from 'next-themes';
-import globalLocations from '../../../data/globalLocations.json';
-import NavDropdown from './NavDropdown';
-import MobileNavDropdown from './MobileNavDropdown';
-
+import React, { useState } from "react";
+import {
+  Menu,
+  X,
+  Sun,
+  Moon,
+  Gauge,
+  Wrench,
+  Code2,
+  Globe,
+  MapPin,
+  Flag,
+} from "lucide-react";
+import { useTheme } from "next-themes";
+import globalLocations from "../../../data/globalLocations.json";
+import NavDropdown from "./NavDropdown";
+import MobileNavDropdown from "./MobileNavDropdown";
 
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -16,25 +26,25 @@ export default function Navigation() {
   const [mobileCountriesOpen, setMobileCountriesOpen] = useState(false);
   const { theme, setTheme } = useTheme();
 
-  const isDark = theme === 'dark';
+  const isDark = theme === "dark";
 
   // Dynamic color variables
-  const textColor = isDark ? 'text-white' : 'text-gray-900';
+  const textColor = isDark ? "text-white" : "text-gray-900";
   const navSurfaceStyles = isDark
-    ? 'bg-white/5 border-white/20'
-    : 'bg-white/55 border-white/60';
+    ? "bg-white/5 border-white/20"
+    : "bg-white/55 border-white/60";
   const dropdownSurfaceStyles = isDark
-    ? 'bg-black/80 border-black/80'
-    : 'bg-white/80 border-white/80';
+    ? "bg-black/80 border-black/80"
+    : "bg-white/80 border-white/80";
   const navItemStyles = isDark
-    ? 'text-gray-300 hover:text-white'
-    : 'text-gray-700 hover:text-gray-900';
+    ? "text-gray-300 hover:text-white"
+    : "text-gray-700 hover:text-gray-900";
 
   // Dropdown menu items
   const productsItems = [
-    { label: 'Instruments', href: '#', icon: Gauge },
-    { label: 'Accessories', href: '#', icon: Wrench },
-    { label: 'Softwares', href: '#', icon: Code2 },
+    { label: "Instruments", href: "/products/instruments", icon: Gauge },
+    { label: "Accessories", href: "/products/accessories", icon: Wrench },
+    { label: "Softwares", href: "/products/softwares", icon: Code2 },
   ];
 
   type GlobalLocation = { name: string; left: string; top: string };
@@ -42,7 +52,7 @@ export default function Navigation() {
     new Map(
       (globalLocations as GlobalLocation[]).map((location) => [
         location.name.trim(),
-        { label: location.name.trim(), href: '#' },
+        { label: location.name.trim(), href: "#" },
       ])
     ).values()
   );
@@ -58,7 +68,9 @@ export default function Navigation() {
       )}
       <nav className="fixed top-0 left-0 right-0 z-50 py-6 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
-          <div className={`backdrop-blur-xl border rounded-full py-3 px-6 shadow-2xl transition-colors duration-300 ${navSurfaceStyles}`}>
+          <div
+            className={`backdrop-blur-xl border rounded-full py-3 px-6 shadow-2xl transition-colors duration-300 ${navSurfaceStyles}`}
+          >
             <div className="flex justify-between items-center">
               {/* Logo */}
               <div className="flex items-center">
@@ -66,7 +78,9 @@ export default function Navigation() {
                   <img
                     src="/images/logo/logo.webp"
                     alt="Wayne Kerr Logo"
-                    className={`h-5 w-auto transition-all duration-300 ${isDark ? 'brightness-0 invert' : ''}`}
+                    className={`h-5 w-auto transition-all duration-300 ${
+                      isDark ? "brightness-0 invert" : ""
+                    }`}
                   />
                 </a>
               </div>
@@ -118,9 +132,9 @@ export default function Navigation() {
               <div className="hidden lg:flex items-center space-x-3">
                 {/* Dark Mode Toggle */}
                 <button
-                  onClick={() => setTheme(isDark ? 'light' : 'dark')}
+                  onClick={() => setTheme(isDark ? "light" : "dark")}
                   className={`p-2 rounded-full transition-colors ${
-                    isDark ? 'hover:bg-white/10' : 'hover:bg-gray-900/10'
+                    isDark ? "hover:bg-white/10" : "hover:bg-gray-900/10"
                   }`}
                   aria-label="Toggle dark mode"
                 >
@@ -154,7 +168,9 @@ export default function Navigation() {
 
           {/* Mobile Menu */}
           {mobileMenuOpen && (
-            <div className={`lg:hidden mt-4 rounded-3xl border p-6 space-y-3 shadow-2xl ${navSurfaceStyles}`}>
+            <div
+              className={`lg:hidden mt-4 rounded-3xl border p-6 space-y-3 shadow-2xl ${navSurfaceStyles}`}
+            >
               <a
                 href="/"
                 className={`block py-2 ${textColor} hover:text-blue-600 font-medium`}
@@ -195,11 +211,13 @@ export default function Navigation() {
 
               <div className="flex items-center gap-3 pt-2">
                 <button
-                  onClick={() => setTheme(isDark ? 'light' : 'dark')}
+                  onClick={() => setTheme(isDark ? "light" : "dark")}
                   className="flex items-center gap-2 py-2 font-medium"
                 >
                   {isDark ? <Sun size={20} /> : <Moon size={20} />}
-                  <span className="text-sm">{isDark ? 'Light Mode' : 'Dark Mode'}</span>
+                  <span className="text-sm">
+                    {isDark ? "Light Mode" : "Dark Mode"}
+                  </span>
                 </button>
               </div>
             </div>

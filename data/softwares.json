@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "series": "WK IQC",
+    "title": "Data Logging",
+    "description": "WK Data Logging system is a common utility for all WK machines to collect measurement data and enhance UI and application of all WK models. Collect measurement data via PC.",
+    "image": "/images/software/data-logging.jpg"
+  },
+  {
+    "id": 2,
+    "series": "WK Factory View",
+    "title": "Factory View 2014 Pro",
+    "description": "FactoryView 2014 Pro is a versatile, user-friendly software for WK Instruments, offering multi-mode testing and data analysis with bilingual support. Visualize and control your machines via PC.",
+    "image": "/images/software/factory-view.jpg"
+  },
+  {
+    "id": 3,
+    "series": "WK Mesco View",
+    "title": "Mesco View for Windows",
+    "description": "MESCOView for Windows enables comprehensive component testing with intuitive UI, supports Wayne Kerr LCR Analyzers, and offers data export to EXCEL. Control your machines via PC.",
+    "image": "/images/software/mesco-view.jpg"
+  }
+]
