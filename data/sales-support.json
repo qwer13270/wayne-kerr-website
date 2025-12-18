@@ -1,0 +1,167 @@
+[
+  {
+    "id": 1,
+    "country": "United Kingdom",
+    "flag": "🇬🇧",
+    "region": "HQ - U.K",
+    "phone": "+44 (0)1243 846555",
+    "fax": "+44 (0)1243 846551",
+    "address": "Unit 1A, Durban Road, Bognor Regis, West Sussex, PO22 9QT, UK",
+    "contactPerson": "Mr. Griffiths",
+    "email": "bill.griffiths@wayne-kerr.co.uk"
+  },
+  {
+    "id": 2,
+    "country": "United States",
+    "flag": "🇺🇸",
+    "region": "U.S.A. - New York",
+    "phone": "+1 800 933 9319",
+    "fax": "+1 781 933 9523",
+    "address": "165L New Boston Street, Woburn, MA 01801-6201, USA",
+    "contactPerson": "Mr. Lin",
+    "email": "wei.lin@waynekerr.com"
+  },
+  {
+    "id": 3,
+    "country": "United States",
+    "flag": "🇺🇸",
+    "region": "U.S.A. - San Diego",
+    "phone": "+1 512 771 2597",
+    "fax": "",
+    "address": "4890 Sunroad Centrum Ln, #477, San Diego, 92123, USA",
+    "contactPerson": "Mr. Chen",
+    "email": "kevchen1129@gmail.com"
+  },
+  {
+    "id": 4,
+    "country": "United States",
+    "flag": "🇺🇸",
+    "region": "U.S.A. - Texas",
+    "phone": "+1 512 771 2597",
+    "fax": "",
+    "address": "11721 Domain Blvd, #3357, Austin TX 78758, USA",
+    "contactPerson": "Mr. Chen",
+    "email": "kevchen1129@gmail.com"
+  },
+  {
+    "id": 5,
+    "country": "Taiwan",
+    "flag": "🇹🇼",
+    "region": "Taiwan",
+    "phone": "+886-2-2915-8990",
+    "fax": "+886-2-2915-5775",
+    "address": "No.21, Ln. 228, Sec. 2, Beixin Rd., Xindian Dist., New Taipei City 231, Taiwan (R.O.C.)",
+    "contactPerson": "Mr. Kevin Lin",
+    "email": "kevin.lin_waynekerr@yahoo.com"
+  },
+  {
+    "id": 6,
+    "country": "China",
+    "flag": "🇨🇳",
+    "region": "China - Beijing",
+    "phone": "+86 010-61705792",
+    "fax": "+86 010-61705792",
+    "address": "B-1118, Youth Entrepreneurship Building, Changping District, Beijing City",
+    "contactPerson": "Mr. Liao",
+    "email": "601073924@qq.com"
+  },
+  {
+    "id": 7,
+    "country": "China",
+    "flag": "🇨🇳",
+    "region": "China - Suzhou",
+    "phone": "+86 186-10594398",
+    "fax": "",
+    "address": "Room 908, Building 3, Caizhi Business Plaza, Changqiao Subdistrict, Wuzhong District, Suzhou City, Jiangsu Province",
+    "contactPerson": "Mr. Sun",
+    "email": "sunqi_waynekerr@163.com"
+  },
+  {
+    "id": 8,
+    "country": "China",
+    "flag": "🇨🇳",
+    "region": "China - Xi'an",
+    "phone": "+86 181-92732231",
+    "fax": "",
+    "address": "Room 2825, 28th Floor, Block B, Yanxiang City Plaza, 56 Jinye First Road, High-tech Zone, Xi'an City, Shaanxi Province",
+    "contactPerson": "Mr. Yang",
+    "email": "jimmy.yang@waynekerr.net"
+  },
+  {
+    "id": 9,
+    "country": "China",
+    "flag": "🇨🇳",
+    "region": "China - Shenzhen",
+    "phone": "+86 (755) 2652-3879",
+    "fax": "+86 (755) 2652-3875",
+    "address": "Room 1209, 12th Floor, Rongqun Building, Longguan East Road, Yucui Community, Longhua Street, Longhua District, Shenzhen City, Guangdong Province",
+    "contactPerson": "Mr. Yin",
+    "email": "13825235232@163.com"
+  },
+  {
+    "id": 10,
+    "country": "China",
+    "flag": "🇨🇳",
+    "region": "China - Zhengzhou",
+    "phone": "+86 186-10594398",
+    "fax": "",
+    "address": "Unit 1, Room 502, Building 15, No. 12 Courtyard, Taihong Jianye International City, Erqi District, Zhengzhou City",
+    "contactPerson": "Mr. Zhang",
+    "email": "andy.zhang@waynekerr.net"
+  },
+  {
+    "id": 11,
+    "country": "Germany",
+    "flag": "🇩🇪",
+    "region": "Europe - Germany",
+    "phone": "+49 (0) 2371 / 7799280",
+    "fax": "+49 (0) 2371 / 7799282",
+    "address": "Im Kurzen Busch 19, 58640 Iserlohn",
+    "contactPerson": "Mrs Mulle",
+    "email": "bmueller@waynekerr.de"
+  },
+  {
+    "id": 12,
+    "country": "Korea",
+    "flag": "🇰🇷",
+    "region": "Korea",
+    "phone": "+82-2-543-7773",
+    "fax": "+82-2-543-7040",
+    "address": "#506, Sharmant S B/D, 15-4, Jamwon-dong, Seocho-gu, Seoul, 137-902, Korea",
+    "contactPerson": "Mr. John In",
+    "email": "john_in@waynekerr.co.kr"
+  },
+  {
+    "id": 13,
+    "country": "Singapore",
+    "flag": "🇸🇬",
+    "region": "Singapore",
+    "phone": "+65 97801181",
+    "fax": "+65 65848115",
+    "address": "1 Bukit Batok Crescent #03-62, WCEGA Plaza, Singapore 658064",
+    "contactPerson": "Mr. Goh",
+    "email": "desmond@glhitech.com.sg"
+  },
+  {
+    "id": 14,
+    "country": "Japan",
+    "flag": "🇯🇵",
+    "region": "Japan - Tokyo",
+    "phone": "080-7825-5216",
+    "fax": "",
+    "address": "Premist Shimura Sanchome, Room 326, 1-23 Sakashita 2-chome, Itabashi Ward, Tokyo, 326",
+    "contactPerson": "Novianti Yuliarmas",
+    "email": "novi@wkjapan.co.jp"
+  },
+  {
+    "id": 15,
+    "country": "Denmark",
+    "flag": "🇩🇰",
+    "region": "Denmark - Danbridge",
+    "phone": "+45 44 95 55 22",
+    "fax": "",
+    "address": "Herlev Hovedgade 195C, st.tv., DK-2730 Herlev Denmark",
+    "contactPerson": "Lars",
+    "email": "lj.christensen@danbridge.com"
+  }
+]

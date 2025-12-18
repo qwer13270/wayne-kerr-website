@@ -111,7 +111,7 @@ export default function Navigation() {
                 />
 
                 <a
-                  href="#"
+                  href="/support"
                   className={`transition-colors text-sm font-medium ${navItemStyles}`}
                 >
                   Support
@@ -194,7 +194,7 @@ export default function Navigation() {
               />
 
               <a
-                href="#"
+                href="/support"
                 className={`block py-2 ${textColor} hover:text-blue-600 font-medium`}
               >
                 Support
