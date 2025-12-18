@@ -1,0 +1,79 @@
+[
+  {
+    "id": 1,
+    "country": "United Kingdom",
+    "flag": "🇬🇧",
+    "region": "HQ - U.K",
+    "phone": "+44 (0)1243 846555",
+    "fax": "+44 (0)1243 846551",
+    "address": "Unit 1A, Durban Road, Bognor Regis, West Sussex, PO22 9QT, UK",
+    "contactPerson": "Mr. Chen",
+    "email": "cary.chen@wayne-kerr.co.uk"
+  },
+  {
+    "id": 2,
+    "country": "Taiwan",
+    "flag": "🇹🇼",
+    "region": "Taiwan",
+    "phone": "+886-2-2915-8990",
+    "fax": "+886-2-2915-5775",
+    "address": "No.21, Ln. 228, Sec. 2, Beixin Rd., Xindian Dist., New Taipei City 231, Taiwan (R.O.C.)",
+    "contactPerson": "林先生",
+    "email": "kevin.lin_waynekerr@yahoo.com"
+  },
+  {
+    "id": 3,
+    "country": "India",
+    "flag": "🇮🇳",
+    "region": "GL Hitech India",
+    "phone": "+91 78750 88122",
+    "fax": "",
+    "address": "F15, First Floor, New Ashoka Vihar, XLO corner, MIDC Ambad, Nashik 422010",
+    "contactPerson": "GL HITECH INSTRUMENTS PVT LTD",
+    "email": "glhitech.india@gmail.com"
+  },
+  {
+    "id": 4,
+    "country": "United States",
+    "flag": "🇺🇸",
+    "region": "U.S.A.",
+    "phone": "+1 800 933 9319",
+    "fax": "+1 781 933 9523",
+    "address": "165L New Boston Street, Woburn, MA 01801-6201, USA",
+    "contactPerson": "Mr. Lin",
+    "email": "wei.lin@waynekerr.com"
+  },
+  {
+    "id": 5,
+    "country": "China",
+    "flag": "🇨🇳",
+    "region": "China",
+    "phone": "0752-5588258",
+    "fax": "",
+    "address": "Room 1209, 12th Floor, Rongqun Building, Longguan East Road, Yucui Community, Longhua Street, Longhua District, Shenzhen City, Guangdong Province",
+    "contactPerson": "Mr. Chen",
+    "email": "mitchell.chen@waynekerr.net"
+  },
+  {
+    "id": 6,
+    "country": "Germany",
+    "flag": "🇩🇪",
+    "region": "Europe - Germany",
+    "phone": "+49 (0) 2371 / 7799280",
+    "fax": "+49 (0) 2371 / 7799282",
+    "address": "Im Kurzen Busch 19, 58640 Iserlohn",
+    "contactPerson": "Mrs Mulle",
+    "email": "bmueller@waynekerr.de"
+  },
+  {
+    "id": 7,
+    "country": "Denmark",
+    "flag": "🇩🇰",
+    "region": "Denmark - Danbridge",
+    "phone": "+45 44 95 55 22",
+    "fax": "",
+    "address": "Herlev Hovedgade 195C, st.tv., DK-2730 Herlev Denmark",
+    "contactPerson": "Lars",
+    "email": "lj.christensen@danbridge.com"
+  }
+]

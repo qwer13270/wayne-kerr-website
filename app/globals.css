@@ -4,11 +4,13 @@
   :root {
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
+    --bg-secondary: 229 14% 90%;
   }
 
   .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
+    --bg-secondary: 217 33% 17%;
   }
 }
 
@@ -52,8 +54,12 @@
 
 @layer utilities {
   @keyframes client-marquee {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
   }
 
   .animate-client-marquee {
