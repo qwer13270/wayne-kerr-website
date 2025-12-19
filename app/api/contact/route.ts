@@ -9,7 +9,7 @@ export async function POST(request: Request) {
 
     const { data, error } = await resend.emails.send({
       from: "Quote Request <onboarding@resend.dev>", // Use your verified domain
-      to: ["kcbs96199@gmail.com", "kevchen1129@gmail.com"],
+      to: ["kcbs96199@gmail.com"],
       subject: `New Contact from ${body.name}`,
       html: `
         <h2>New Contact</h2>
