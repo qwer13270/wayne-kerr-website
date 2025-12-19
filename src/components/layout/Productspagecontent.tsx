@@ -10,6 +10,7 @@ interface ProductItem {
   title: string;
   description: string;
   image: string;
+  datasheet: string | null;
 }
 
 interface ProductsPageContentProps {
@@ -136,18 +137,23 @@ export default function ProductsPageContent({
                   <h3 className="text-xl font-bold text-primary mb-3 leading-tight">
                     {product.title}
                   </h3>
-                  <p className="text-secondary text-sm leading-relaxed mb-5 line-clamp-3">
+                  <p className="text-secondary text-sm leading-relaxed mb-5">
                     {product.description}
                   </p>
                   <div className="flex gap-3">
                     {/* Datasheet button - show for all categories */}
 
-                    <a
-                      href="#"
-                      className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-blue-600 text-white text-sm font-semibold rounded-lg hover:bg-blue-700 transition-all"
-                    >
-                      Datasheet
-                    </a>
+                    {/* Datasheet button - show only if datasheet exists */}
+                    {product.datasheet && (
+                      <a
+                        href={product.datasheet}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-blue-600 text-white text-sm font-semibold rounded-lg hover:bg-blue-700 transition-all"
+                      >
+                        Datasheet
+                      </a>
+                    )}
 
                     {/* Learn More button - only show for instruments */}
                     {category === "instruments" && (
