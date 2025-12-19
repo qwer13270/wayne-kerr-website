@@ -14,6 +14,7 @@ import {
   Flag,
 } from "lucide-react";
 import { useTheme } from "next-themes";
+import { useRouter } from "next/navigation";
 import globalLocations from "../../../data/globalLocations.json";
 import NavDropdown from "./NavDropdown";
 import MobileNavDropdown from "./MobileNavDropdown";
@@ -25,6 +26,7 @@ export default function Navigation() {
   const [mobileProductsOpen, setMobileProductsOpen] = useState(false);
   const [mobileCountriesOpen, setMobileCountriesOpen] = useState(false);
   const { theme, setTheme } = useTheme();
+  const router = useRouter();
 
   const isDark = theme === "dark";
 
@@ -47,12 +49,15 @@ export default function Navigation() {
     { label: "Softwares", href: "/products/softwares", icon: Code2 },
   ];
 
-  type GlobalLocation = { name: string; left: string; top: string };
+  type GlobalLocation = {
+    name: string;
+    link: string;
+  };
   const countriesItems = Array.from(
     new Map(
       (globalLocations as GlobalLocation[]).map((location) => [
         location.name.trim(),
-        { label: location.name.trim(), href: "#" },
+        { label: location.name.trim(), href: location.link },
       ])
     ).values()
   );
@@ -145,9 +150,12 @@ export default function Navigation() {
                   )}
                 </button>
 
-                {/* Get Quote Button */}
-                <button className="btn-gradient hover:bg-gray-100 text-white px-6 py-2 rounded-full text-sm font-medium transition-colors shadow-lg">
-                  Get Quote
+                {/* Contact Us Button */}
+                <button
+                  onClick={() => router.push("/contact")}
+                  className="bg-blue-600 text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-blue-700 transition-all duration-200 shadow-lg"
+                >
+                  Contact Us
                 </button>
               </div>
 

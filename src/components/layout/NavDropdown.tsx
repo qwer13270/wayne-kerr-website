@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import React, { useRef, useEffect } from 'react';
-import { ChevronDown, LucideIcon } from 'lucide-react';
+import React, { useRef, useEffect } from "react";
+import { ChevronDown, LucideIcon } from "lucide-react";
 
 interface NavDropdownProps {
   label: string;
@@ -24,17 +24,20 @@ export default function NavDropdown({
 
   useEffect(() => {
     function handleOutsideClick(event: MouseEvent) {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
         onToggle(false);
       }
     }
 
     if (isOpen) {
-      document.addEventListener('mousedown', handleOutsideClick);
+      document.addEventListener("mousedown", handleOutsideClick);
     }
 
     return () => {
-      document.removeEventListener('mousedown', handleOutsideClick);
+      document.removeEventListener("mousedown", handleOutsideClick);
     };
   }, [isOpen, onToggle]);
 
@@ -47,14 +50,16 @@ export default function NavDropdown({
     >
       <button
         className={`flex items-center gap-2 text-sm font-medium ${navItemStyles}`}
-        style={{ transition: 'color 5ms ease-in-out' }}
+        style={{ transition: "color 5ms ease-in-out" }}
         aria-haspopup="true"
         aria-expanded={isOpen}
       >
         {label}
         <ChevronDown
           size={16}
-          className={`transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
+          className={`transition-transform duration-200 ${
+            isOpen ? "rotate-180" : ""
+          }`}
         />
       </button>
 
@@ -63,15 +68,21 @@ export default function NavDropdown({
 
       <div
         className={`absolute left-0 top-full z-50 mt-8 w-56 rounded-2xl border p-3 shadow-2xl transition-opacity transition-transform duration-200 ease-in-out ${navSurfaceStyles} ${
-          isOpen ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 -translate-y-2 pointer-events-none'
+          isOpen
+            ? "opacity-100 translate-y-0 pointer-events-auto"
+            : "opacity-0 -translate-y-2 pointer-events-none"
         }`}
       >
         {items.map((item) => {
           const Icon = item.icon;
+          const isExternal =
+            item.href.startsWith("http://") || item.href.startsWith("https://");
           return (
             <a
               key={item.label}
               href={item.href}
+              target={isExternal ? "_blank" : undefined}
+              rel={isExternal ? "noopener noreferrer" : undefined}
               className={`flex items-center gap-3 rounded-xl px-4 py-2 text-sm font-medium transition-colors ${navItemStyles}`}
             >
               {Icon && <Icon size={18} />}

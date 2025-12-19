@@ -11,14 +11,14 @@
     "series": "6500B Series",
     "title": "Impedance Analyzer",
     "description": "High-precision analyzers featuring a user-friendly graphical interface, high-resolution color display, 0.05% basic accuracy, a minimum frequency of 20Hz, and a maximum frequency of up to 120MHz.",
-    "image": "/images/products/instruments/6500B.png"
+    "image": "/images/products/instruments/6500B.webp"
   },
   {
     "id": 3,
     "series": "6500P Series",
     "title": "High Frequency LCR Meter",
     "description": "The 6500P series LCR meters feature extended test frequencies, high accuracy, and a large, high-resolution color display.",
-    "image": "/images/products/instruments/6500P.png"
+    "image": "/images/products/instruments/6500P.webp"
   },
   {
     "id": 4,

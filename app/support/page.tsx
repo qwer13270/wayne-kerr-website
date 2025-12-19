@@ -42,8 +42,8 @@ export default function SupportPage() {
     <div className="min-h-screen pt-32 pb-16">
       <div className="max-w-[1400px] mx-auto px-10">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold mb-3 tracking-tight">
+        <div className="text-center mb-10">
+          <h1 className="text-5xl font-bold mb-4 text-primary">
             Service, Repair & Sales Contacts
           </h1>
           <p className="text-lg text-secondary leading-relaxed max-w-[900px] mx-auto">
@@ -160,12 +160,9 @@ export default function SupportPage() {
                     {contact.phone && (
                       <a
                         href={`tel:${contact.phone}`}
-                        className="flex items-start gap-3 text-sm text-secondary hover:text-blue-500 transition-colors group/item"
+                        className="flex items-start gap-3 text-sm text-secondary"
                       >
-                        <Phone
-                          size={16}
-                          className="mt-0.5 flex-shrink-0 group-hover/item:text-blue-500"
-                        />
+                        <Phone size={16} className="mt-0.5 flex-shrink-0" />
                         <span>{contact.phone}</span>
                       </a>
                     )}
