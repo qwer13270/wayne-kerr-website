@@ -23,33 +23,18 @@ import {
 import { useTheme } from "next-themes";
 import Navigation from "@/src/components/layout/Navigation";
 import { useRouter } from "next/navigation";
+import globalLocations from "@/data/globalLocations.json";
 
 export default function AboutPage() {
   const { theme } = useTheme();
   const router = useRouter();
   const darkMode = theme === "dark";
-  const [mounted, setMounted] = useState(false);
-
-  // Wait for theme to be ready
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
   const bgColor = darkMode ? "bg-black" : "bg-white";
   const textColor = darkMode ? "text-white" : "text-gray-900";
   const textSecondary = darkMode ? "text-gray-400" : "text-gray-600";
   const cardBg = darkMode
     ? "bg-white/5 border-white/10"
     : "bg-white border-gray-200";
-  const navBg = darkMode ? "bg-black/80" : "bg-white/95";
-
-  // Don't render until mounted (prevents hydration mismatch)
-  if (!mounted) {
-    return null;
-  }
 
   const milestones = [
     {
@@ -129,15 +114,10 @@ export default function AboutPage() {
     },
   ];
 
-  const globalOffices = [
-    { region: "United States", city: "Regional Office" },
-    { region: "Germany", city: "European Hub" },
-    { region: "Singapore", city: "Asia Pacific" },
-    { region: "India", city: "South Asia" },
-    { region: "Japan", city: "East Asia" },
-    { region: "China", city: "Greater China" },
-    { region: "Taiwan", city: "Regional Support" },
-  ];
+  const globalOffices = globalLocations.map((location) => ({
+    region: location.name,
+    city: "Regional Office",
+  }));
 
   return (
     <div
@@ -409,7 +389,7 @@ export default function AboutPage() {
           <div className="text-center mt-12">
             <button
               onClick={() => router.push("/support")}
-              className="btn-gradient px-8 py-4 text-lg inline-flex items-center gap-2"
+              className="bg-blue-600 text-white px-8 py-4 text-lg font-semibold rounded-xl hover:bg-blue-700 transition-all duration-200 inline-flex items-center justify-center gap-2"
             >
               View All Locations
               <ArrowRight size={20} />
