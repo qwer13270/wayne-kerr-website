@@ -80,9 +80,9 @@ export default function ContactFormPage() {
   return (
     <>
       <div className="min-h-screen pt-32 pb-16">
-        <div className="max-w-[900px] mx-auto px-10">
+        <div className="max-w-[900px] mx-auto pt-10 px-10">
           {/* Form Container */}
-          <div className="rounded-2xl p-12">
+          <div>
             {/* Header */}
             <div className="text-center mb-10">
               <h1 className="text-5xl font-bold mb-4 text-primary">

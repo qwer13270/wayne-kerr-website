@@ -2,7 +2,6 @@
 
 import React, { useState, useMemo } from "react";
 import { Search, ChevronLeft, ChevronRight } from "lucide-react";
-import { useTheme } from "next-themes";
 const ITEMS_PER_PAGE = 9;
 interface ProductItem {
   id: number;
@@ -22,11 +21,6 @@ export default function ProductsPageContent({
   data,
   category,
 }: ProductsPageContentProps) {
-  const { theme } = useTheme();
-  const darkMode = theme === "dark";
-  const cardBg = darkMode
-    ? "bg-white/5 border-white/10"
-    : "bg-white border-gray-200";
   const [searchQuery, setSearchQuery] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -67,7 +61,7 @@ export default function ProductsPageContent({
 
   return (
     <div className="min-h-screen pt-32 pb-16">
-      <div className="max-w-[1400px] mx-auto px-10">
+      <div className="max-w-[1400px] mx-auto pt-10 px-10">
         {/* Header */}
         <div className="mb-16 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-3 tracking-tight">
@@ -118,7 +112,7 @@ export default function ProductsPageContent({
             {currentProducts.map((product) => (
               <div
                 key={product.id}
-                className={`relative ${cardBg} border rounded-3xl overflow-hidden transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 h-full flex flex-col`}
+                className={`border border-[hsl(var(--border-ui))] rounded-3xl overflow-hidden transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 h-full flex flex-col`}
               >
                 {/* Product Image */}
                 <div className="aspect-[4/3] bg-secondary overflow-hidden">

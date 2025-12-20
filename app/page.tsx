@@ -1,23 +1,46 @@
-'use client';
+"use client";
 
-import React, { useState, useEffect } from 'react';
-import { Menu, X, ChevronDown, Phone, Mail, MapPin, ArrowRight, Award, TrendingUp, Users, Globe, Shield, Target, Zap, Sun, Moon, Shuffle } from 'lucide-react';
-import Typewriter from 'typewriter-effect';
-import Globe3D from '@/src/components/home/Globe3D';
-import clients from '@/data/clients.json';
-import { useTheme } from 'next-themes';
-import globalLocations from '@/data/globalLocations.json';
-
+import React, { useState, useEffect } from "react";
+import {
+  Menu,
+  X,
+  ChevronDown,
+  Phone,
+  Mail,
+  MapPin,
+  ArrowRight,
+  Award,
+  TrendingUp,
+  Users,
+  Globe,
+  Shield,
+  Target,
+  Zap,
+  Sun,
+  Moon,
+  Shuffle,
+} from "lucide-react";
+import Typewriter from "typewriter-effect";
+import Globe3D from "@/src/components/home/Globe3D";
+import clients from "@/data/clients.json";
+import { useTheme } from "next-themes";
+import globalLocations from "@/data/globalLocations.json";
+import { useRouter } from "next/navigation";
 
 export default function WayneKerrHomepage() {
   const [mounted, setMounted] = useState(false);
   const { theme } = useTheme();
-  const darkMode = theme === 'dark';
+  const darkMode = theme === "dark";
 
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
+  const router = useRouter();
 
+  const globalOffices = globalLocations.map((location) => ({
+    region: location.name,
+    city: "Regional Office",
+  }));
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -25,14 +48,10 @@ export default function WayneKerrHomepage() {
     }, 5000);
     return () => clearInterval(timer);
   }, []);
-  // Wait for theme to be ready
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
-    // Typewriter states
+  // Typewriter states
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
-  const [displayedText, setDisplayedText] = useState('');
+  const [displayedText, setDisplayedText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
   const [isTyping, setIsTyping] = useState(true);
 
@@ -41,7 +60,7 @@ export default function WayneKerrHomepage() {
   const rotatingWords = [
     "Impedance Analyzers",
     "Precision Testing",
-    "Measurement Solutions"
+    "Measurement Solutions",
   ];
   // Typewriter effect with word rotation
   useEffect(() => {
@@ -52,7 +71,7 @@ export default function WayneKerrHomepage() {
     if (!isDeleting && displayedText === currentWord) {
       // Finished typing, wait before deleting
       timeout = setTimeout(() => setIsDeleting(true), 2000);
-    } else if (isDeleting && displayedText === '') {
+    } else if (isDeleting && displayedText === "") {
       // Finished deleting, move to next word
       setIsDeleting(false);
       setCurrentWordIndex((prev) => (prev + 1) % rotatingWords.length);
@@ -73,83 +92,90 @@ export default function WayneKerrHomepage() {
 
   const stats = [
     {
-      value: '78+',
-      label: 'Years of Excellence',
+      value: "78+",
+      label: "Years of Excellence",
       icon: Award,
-      description: 'Industry leadership'
+      description: "Industry leadership",
     },
     {
-      value: '45+',
-      label: 'Machine Options',
+      value: "45+",
+      label: "Machine Options",
       icon: TrendingUp,
-      description: 'Diverse solutions'
+      description: "Diverse solutions",
     },
     {
-      value: '57',
-      label: 'Countries',
+      value: "57",
+      label: "Countries",
       icon: Globe,
-      description: 'Global presence'
+      description: "Global presence",
     },
     {
-      value: '16',
-      label: 'Distributors',
+      value: "16",
+      label: "Distributors",
       icon: Users,
-      description: 'Worldwide support'
-    }
+      description: "Worldwide support",
+    },
   ];
 
   const features = [
     {
-      title: 'Exceptional Quality',
-      description: 'Designed for durability and consistent performance in demanding environments.',
-      icon: Shield
+      title: "Exceptional Quality",
+      description:
+        "Designed for durability and consistent performance in demanding environments.",
+      icon: Shield,
     },
     {
-      title: 'Precision Accuracy',
-      description: 'Guarantee highest level of accuracy, ensuring flawless measurements.',
-      icon: Target
+      title: "Precision Accuracy",
+      description:
+        "Guarantee highest level of accuracy, ensuring flawless measurements.",
+      icon: Target,
     },
     {
-      title: 'Multi-Functional',
-      description: 'Engineered to handle a wide range of measurement tasks across various industries.',
-      icon: Shuffle
-    }
+      title: "Multi-Functional",
+      description:
+        "Engineered to handle a wide range of measurement tasks across various industries.",
+      icon: Shuffle,
+    },
   ];
 
   const productCategories = [
     {
-      name: 'Instruments',
-      count: '19+ Models',
-      description: 'Diverse selection of machines designed to meet different measurement needs.'
+      name: "Instruments",
+      count: "19+ Models",
+      description:
+        "Diverse selection of machines designed to meet different measurement needs.",
     },
     {
-      name: 'Accessories',
-      count: '24+ Items',
-      description: 'Range of accessories, tailored to complement and extend the capabilities of our instruments.'
+      name: "Accessories",
+      count: "24+ Items",
+      description:
+        "Range of accessories, tailored to complement and extend the capabilities of our instruments.",
     },
     {
-      name: 'Softwares',
-      count: '3+ Packages',
-      description: 'Specialized software, enabling machine control and data analysis directly from your computer.'
-    }
+      name: "Softwares",
+      count: "3+ Packages",
+      description:
+        "Specialized software, enabling machine control and data analysis directly from your computer.",
+    },
   ];
 
   const marqueeClients = [...clients, ...clients, ...clients];
 
-  const bgColor = darkMode ? 'bg-black' : 'bg-white';
-  const textColor = darkMode ? 'text-white' : 'text-gray-900';
-  const textSecondary = darkMode ? 'text-gray-400' : 'text-gray-600';
-  const cardBg = darkMode ? 'bg-white/5 border-white/10' : 'bg-white border-gray-200';
-  const navBg = darkMode ? 'bg-black/80' : 'bg-white/95';
-  const heroBg = darkMode ? 'from-blue-950 via-blue-900 to-indigo-950' : 'from-blue-600 via-blue-700 to-indigo-700';
-
-  // Don't render until mounted (prevents hydration mismatch)
-  if (!mounted) {
-    return null;
-  }
+  const bgColor = darkMode ? "bg-black" : "bg-white";
+  const textColor = darkMode ? "text-white" : "text-gray-900";
+  const textSecondary = darkMode ? "text-gray-400" : "text-gray-600";
+  const cardBg = darkMode
+    ? "bg-white/5 border-white/10"
+    : "bg-white border-gray-200";
+  const navBg = darkMode ? "bg-black/80" : "bg-white/95";
+  const heroBg = darkMode
+    ? "from-blue-950 via-blue-900 to-indigo-950"
+    : "from-blue-600 via-blue-700 to-indigo-700";
 
   return (
-    <div className={`min-h-screen ${bgColor} ${textColor} overflow-x-hidden transition-colors duration-300`}>
+    <div
+      className={`min-h-screen ${bgColor} ${textColor} overflow-x-hidden transition-colors duration-300`}
+    >
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
@@ -159,24 +185,29 @@ export default function WayneKerrHomepage() {
             className="w-full h-full object-cover"
           />
           {/* Blur + Overlay */}
-          <div className={`absolute inset-0 backdrop-blur-sm transition-all duration-500 ${darkMode
-            ? 'bg-gradient-to-br from-black/75 via-gray-900/65 to-black/75'
-            : 'bg-gradient-to-br from-blue-900/80 via-black-800/30 to-black-900/80'
-            }`}></div>
+          <div
+            className={`absolute inset-0 backdrop-blur-sm transition-all duration-500 ${
+              darkMode
+                ? "bg-gradient-to-br from-black/75 via-gray-900/65 to-black/75"
+                : "bg-gradient-to-br from-blue-900/80 via-black-800/30 to-black-900/80"
+            }`}
+          ></div>
         </div>
 
         {/* Animated overlay effects */}
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute inset-0 opacity-20">
             <div className="absolute top-20 left-10 w-72 h-72 bg-blue-400 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
-            <div className="absolute bottom-20 right-10 w-72 h-72 bg-indigo-400 rounded-full mix-blend-multiply filter blur-xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+            <div
+              className="absolute bottom-20 right-10 w-72 h-72 bg-indigo-400 rounded-full mix-blend-multiply filter blur-xl animate-pulse"
+              style={{ animationDelay: "1s" }}
+            ></div>
           </div>
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-20">
           {/* Rest of hero content stays the same */}
           <div className="space-y-8">
-
             <div className="hidden sm:inline-block">
               <div className="px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-sm text-white mb-6">
                 🏆 Trusted by industry leaders for 78+ years
@@ -198,31 +229,29 @@ export default function WayneKerrHomepage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
               <button className="group bg-white text-blue-900 px-8 py-4 rounded-full font-semibold text-lg hover:shadow-2xl transition-all flex items-center gap-2 w-full sm:w-auto">
                 Explore Products
-                <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+                <ArrowRight
+                  size={20}
+                  className="group-hover:translate-x-1 transition-transform"
+                />
               </button>
               <button className="btn-outline-light px-8 py-4 text-lg w-full sm:w-auto">
                 Get Quote
               </button>
             </div>
           </div>
-
         </div>
-
-
 
         {/* Half-circle bridge into next section */}
         <div
-          className={`absolute bottom-[-40%] left-1/2 -translate-x-1/2 w-[160%] h-[50%] rounded-[999px] blur-2xl opacity-100 pointer-events-none transition-colors duration-500 ${darkMode ? 'bg-black' : 'bg-white'
-            }`}
+          className={`absolute bottom-[-40%] left-1/2 -translate-x-1/2 w-[160%] h-[50%] rounded-[999px] blur-2xl opacity-100 pointer-events-none transition-colors duration-500 ${
+            darkMode ? "bg-black" : "bg-white"
+          }`}
           style={{
             boxShadow: darkMode
-              ? '0 -60px 140px rgba(0,0,0,0.85)'
-              : '0 -60px 140px rgb(255, 255, 255)'
+              ? "0 -60px 140px rgba(0,0,0,0.85)"
+              : "0 -60px 140px rgb(255, 255, 255)",
           }}
         />
-
-
-
       </section>
 
       {/* Our Clients Section */}
@@ -230,22 +259,39 @@ export default function WayneKerrHomepage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <p className={`text-xl sm:text-2xl mb-12 ${textColor}`}>
-              Trusted by <span className="font-bold tracking-tight">Industry Leaders Worldwide</span>
+              Trusted by{" "}
+              <span className="font-bold tracking-tight">
+                Industry Leaders Worldwide
+              </span>
             </p>
           </div>
 
           <div className="relative overflow-hidden">
-            <div className={`pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r ${darkMode ? 'from-black-900/90' : 'from-white'} to-transparent`} />
-            <div className={`pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l ${darkMode ? 'from-black-900/90' : 'from-white'} to-transparent`} />
+            <div
+              className={`pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r ${
+                darkMode ? "from-black-900/90" : "from-white"
+              } to-transparent`}
+            />
+            <div
+              className={`pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l ${
+                darkMode ? "from-black-900/90" : "from-white"
+              } to-transparent`}
+            />
 
             <div className="flex gap-10 animate-client-marquee py-6">
               {marqueeClients.map((client, index) => (
-                <div key={`${client.name}-${index}`} className="flex-shrink-0 w-32 sm:w-40 flex items-center justify-center">
+                <div
+                  key={`${client.name}-${index}`}
+                  className="flex-shrink-0 w-32 sm:w-40 flex items-center justify-center"
+                >
                   <img
-                    src={`/images/clients/${client.name.toLowerCase().replace(' ', '-')}.png`}
+                    src={`/images/clients/${client.name
+                      .toLowerCase()
+                      .replace(" ", "-")}.png`}
                     alt={client.name}
-                    className={`h-14 sm:h-16 w-auto object-contain transition ${darkMode ? 'opacity-90' : 'brightness-0 contrast-125'
-                      }`}
+                    className={`h-14 sm:h-16 w-auto object-contain transition ${
+                      darkMode ? "opacity-90" : "brightness-0 contrast-125"
+                    }`}
                   />
                 </div>
               ))}
@@ -267,11 +313,10 @@ export default function WayneKerrHomepage() {
             {stats.map((stat, index) => {
               const Icon = stat.icon;
               return (
-                <div
-                  key={index}
-                  className="group relative"
-                >
-                  <div className={`relative ${cardBg} backdrop-blur-sm border rounded-3xl p-6 sm:p-8 hover:shadow-2xl transition-all duration-500 group-hover:-translate-y-2`}>
+                <div key={index} className="group relative">
+                  <div
+                    className={`relative ${cardBg} backdrop-blur-sm border rounded-3xl p-6 sm:p-8 hover:shadow-2xl transition-all duration-500 group-hover:-translate-y-2`}
+                  >
                     <div className="inline-flex p-3 rounded-2xl bg-gradient-to-r from-blue-600 to-blue-700 mb-4">
                       <Icon className="text-white" size={24} />
                     </div>
@@ -280,7 +325,9 @@ export default function WayneKerrHomepage() {
                       {stat.value}
                     </div>
 
-                    <div className={`text-lg sm:text-xl font-semibold ${textColor} mb-1`}>
+                    <div
+                      className={`text-lg sm:text-xl font-semibold ${textColor} mb-1`}
+                    >
                       {stat.label}
                     </div>
 
@@ -299,7 +346,9 @@ export default function WayneKerrHomepage() {
       <section className={`py-20 sm:py-32`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className={`text-4xl sm:text-5xl md:text-6xl font-bold mb-6 ${textColor}`}>
+            <h2
+              className={`text-4xl sm:text-5xl md:text-6xl font-bold mb-6 ${textColor}`}
+            >
               Explore Our Products
             </h2>
             <p className={`text-xl ${textSecondary} max-w-3xl mx-auto`}>
@@ -310,21 +359,21 @@ export default function WayneKerrHomepage() {
           {/* 3 Column Grid - Horizontal on Desktop, Vertical on Mobile */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {productCategories.map((category, index) => (
-              <div
-                key={index}
-                className="group relative"
-              >
-                <div className={`relative ${cardBg} border rounded-3xl overflow-hidden hover:shadow-2xl transition-all duration-500 group-hover:-translate-y-2 h-full flex flex-col`}>
-
+              <div key={index} className="group relative">
+                <div
+                  className={`relative ${cardBg} border rounded-3xl overflow-hidden hover:shadow-2xl transition-all duration-500 group-hover:-translate-y-2 h-full flex flex-col`}
+                >
                   {/* Image Area */}
                   <div className="relative h-64 bg-gradient-to-br from-blue-50 to-purple-50 flex items-center justify-center overflow-hidden">
                     {/* Replace this with your actual image */}
                     <img
-                      src={`/images/products/${category.name.toLowerCase().replace(' ', '-')}.webp`}
+                      src={`/images/products/${category.name
+                        .toLowerCase()
+                        .replace(" ", "-")}.webp`}
                       alt={category.name}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                       onError={(e) => {
-                        (e.target as HTMLElement).style.display = 'none';
+                        (e.target as HTMLElement).style.display = "none";
                         // Fallback to emoji if image doesn't exist yet
                       }}
                     />
@@ -337,7 +386,9 @@ export default function WayneKerrHomepage() {
 
                   {/* Content Area */}
                   <div className="p-8 flex flex-col flex-grow">
-                    <h3 className={`text-2xl sm:text-3xl font-bold ${textColor} mb-3`}>
+                    <h3
+                      className={`text-2xl sm:text-3xl font-bold ${textColor} mb-3`}
+                    >
                       {category.name}
                     </h3>
 
@@ -347,7 +398,10 @@ export default function WayneKerrHomepage() {
 
                     <button className="flex items-center gap-2 text-blue-600 font-semibold group-hover:gap-3 transition-all self-start">
                       Explore Range
-                      <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+                      <ArrowRight
+                        size={20}
+                        className="group-hover:translate-x-1 transition-transform"
+                      />
                     </button>
                   </div>
                 </div>
@@ -361,11 +415,14 @@ export default function WayneKerrHomepage() {
       <section className="py-20 sm:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className={`text-4xl sm:text-5xl md:text-6xl font-bold mb-6 ${textColor}`}>
+            <h2
+              className={`text-4xl sm:text-5xl md:text-6xl font-bold mb-6 ${textColor}`}
+            >
               Why Choose Wayne Kerr?
             </h2>
             <p className={`text-xl ${textSecondary} max-w-3xl mx-auto`}>
-              Seven decades of innovation driving the future of precision measurement
+              Seven decades of innovation driving the future of precision
+              measurement
             </p>
           </div>
 
@@ -373,16 +430,17 @@ export default function WayneKerrHomepage() {
             {features.map((feature, index) => {
               const Icon = feature.icon;
               return (
-                <div
-                  key={index}
-                  className="group relative"
-                >
-                  <div className={`relative ${cardBg} backdrop-blur-sm border rounded-3xl p-8 sm:p-10 hover:shadow-2xl transition-all duration-500 group-hover:-translate-y-2 h-full`}>
+                <div key={index} className="group relative">
+                  <div
+                    className={`relative ${cardBg} backdrop-blur-sm border rounded-3xl p-8 sm:p-10 hover:shadow-2xl transition-all duration-500 group-hover:-translate-y-2 h-full`}
+                  >
                     <div className="inline-flex p-4 rounded-2xl bg-gradient-to-r from-blue-600 to-blue-700 mb-6">
                       <Icon className="text-white" size={32} />
                     </div>
 
-                    <h3 className={`text-2xl sm:text-3xl font-bold ${textColor} mb-4`}>
+                    <h3
+                      className={`text-2xl sm:text-3xl font-bold ${textColor} mb-4`}
+                    >
                       {feature.title}
                     </h3>
 
@@ -396,24 +454,49 @@ export default function WayneKerrHomepage() {
           </div>
         </div>
       </section>
-
-
-      {/* Global Operations & Support - 3D Globe */}
       <section className="py-20 sm:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className={`text-4xl sm:text-5xl font-bold mb-4 ${textColor}`}>
-              Global Operations & Support
+          <div className="text-center mb-16">
+            <h2 className={`text-4xl sm:text-5xl font-bold mb-6 ${textColor}`}>
+              Global Presence
             </h2>
-            <p className={`text-xl ${textSecondary}`}>
-              Serving customers across 57 countries worldwide
+            <p className={`text-xl ${textSecondary} max-w-3xl mx-auto`}>
+              Regional offices providing worldwide technical support and
+              services
             </p>
           </div>
 
-          {/* 3D Globe Component */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {globalOffices.map((office, index) => (
+              <div
+                key={index}
+                className={`${cardBg} border rounded-2xl p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1`}
+              >
+                <div className="flex items-start gap-3">
+                  <MapPin
+                    className="text-blue-600 flex-shrink-0 mt-1"
+                    size={24}
+                  />
+                  <div>
+                    <h3 className={`text-xl font-bold ${textColor} mb-1`}>
+                      {office.region}
+                    </h3>
+                    <p className={`${textSecondary}`}>{office.city}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
 
-          <Globe3D darkMode={darkMode} />
-
+          <div className="text-center mt-12">
+            <button
+              onClick={() => router.push("/support")}
+              className="bg-blue-600 text-white px-8 py-4 text-lg font-semibold rounded-xl hover:bg-blue-700 transition-all duration-200 inline-flex items-center justify-center gap-2"
+            >
+              View All Locations
+              <ArrowRight size={20} />
+            </button>
+          </div>
         </div>
       </section>
     </div>
