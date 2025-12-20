@@ -4,35 +4,40 @@
     "series": "1EVA40100 Series",
     "title": "Kelvin Clips (fine jaw)",
     "description": "The 40100 has fine-pointed jaws for tight spaces or fine wires. The 40150 is a cost-effective alternative for 4300 series LCR Meters, and the 40180 is a larger-jawed variant of the 40100.",
-    "image": "/images/products/accessories/1EVA40100.png"
+    "image": "/images/products/accessories/1EVA40100.png",
+    "datasheet": "/datasheets/accessories/1EVA40100.pdf"
   },
   {
     "id": 2,
     "series": "1EVA40125",
     "title": "SMD Tweezers",
     "description": "40125 HF SMD Tweezers are used to connect a Wayne Kerr 6500 analyzer to surface mount devices which have end cap terminations.",
-    "image": "/images/products/accessories/1EVA40125.png"
+    "image": "/images/products/accessories/1EVA40125.png",
+    "datasheet": "/datasheets/accessories/1EVA40125.pdf"
   },
   {
     "id": 3,
     "series": "1EVA40120",
     "title": "SMD Tweezers",
     "description": "The 40120 is a pair of chip component tweezers designed for contacting leadless devices, with the cable terminated by BNC connectors.",
-    "image": "/images/products/accessories/1EVA40120.png"
+    "image": "/images/products/accessories/1EVA40120.png",
+    "datasheet": "/datasheets/accessories/1EVA40120.pdf"
   },
   {
     "id": 4,
     "series": "1EV1905X",
     "title": "SMD probe leads with 1023",
     "description": "The 1905X is a 4-2 BNC converter plus lead with two sprung needle probes to access surface mounted devices on circuit boards and for interfacing to hybrid components and chip components on tape.",
-    "image": "/images/products/accessories/1EV1905X.png"
+    "image": "/images/products/accessories/1EV1905X.png",
+    "datasheet": "/datasheets/accessories/1EV1905X.pdf"
   },
   {
     "id": 5,
     "series": "1EV1905A",
     "title": "SMD probe leads",
     "description": "The 1905A lead with two sprung needle probes is used to access surface mounted devices on circuit boards and for interfacing to hybrid components and chip components on tape.",
-    "image": "/images/products/accessories/1EV1905A.png"
+    "image": "/images/products/accessories/1EV1905A.png",
+    "datasheet": "/datasheets/accessories/1EV1905X.pdf"
   },
   {
     "id": 6,
@@ -67,7 +72,8 @@
     "series": "1J1025",
     "title": "Grounded Component Probe",
     "description": "The 1025 probe allows a 6500 to make ground referenced impedance measurements. In normal use the 6500 is unable to measure components which have one terminal directly referenced to ground, but the 1025 Probe is the solution to this restriction.",
-    "image": "/images/products/accessories/1J1025.png"
+    "image": "/images/products/accessories/1J1025.png",
+    "datasheet": "/datasheets/accessories/1J1025.pdf"
   },
   {
     "id": 11,
@@ -81,35 +87,40 @@
     "series": "1J1016 (164)",
     "title": "SMD 2/4-Terminal 125A Fixture",
     "description": "The 1016 SMD 2-Terminal and 10164 SMD 4-Terminal High Current Fixtures connect Wayne Kerr Analyzer (3255B/3260B) and DC Bias Unit (3265B) to a surface mount Device Under Test, supporting up to 125 A DC bias current.",
-    "image": "/images/products/accessories/1J1016 (164).png"
+    "image": "/images/products/accessories/1J1016 (164).png",
+    "datasheet": "/datasheets/accessories/1J1016 (164).pdf"
   },
   {
     "id": 13,
     "series": "1J1015/10154",
     "title": "2-Terminal 125A Fixture",
     "description": "The 1015 Conventional Body 2-Terminal High Current Fixture is used to connect a Wayne Kerr Analyzer (3255B or 3260B) and DC Bias Unit (3265B) system to a conventional body Device Under Test and pass up to 125 A DC bias current.",
-    "image": "/images/products/accessories/1J1015.png"
+    "image": "/images/products/accessories/1J1015.png",
+    "datasheet": "/datasheets/accessories/1J1015.pdf"
   },
   {
     "id": 14,
     "series": "1J10264(74, 84)",
     "title": "4 Terminal SMD Fixture",
     "description": "The 10264, 10274, and 10284 fixtures are designed for use with 6565 dc bias units to facilitate 4-terminal connections with bottom contact surface mount devices, allowing for testing capacities of up to 20A, 40A, and 80A, respectively.",
-    "image": "/images/products/accessories/1J10264(74, 84).png"
+    "image": "/images/products/accessories/1J10264(74, 84).png",
+    "datasheet": "/datasheets/accessories/1J1031.pdf"
   },
   {
     "id": 15,
     "series": "1J1020",
     "title": "Dielectric Material Fixture",
     "description": "The 1020 Fixture, compatible with the 6500 series and /K Materials Test firmware, automatically calculates the permittivity of materials. It supports both Contacting and Non-contacting Electrode Methods up to 30 MHz.",
-    "image": "/images/products/accessories/1J1020.png"
+    "image": "/images/products/accessories/1J1020.png",
+    "datasheet": "/datasheets/accessories/1J1020.pdf"
   },
   {
     "id": 16,
     "series": "1J1001(02)",
     "title": "Converter 4 to (1/2) BNC",
     "description": "The 1001 and 1002 BNC Converters enable the WK 6500 analyzer to connect to devices with either a single BNC connector or two BNC connectors.",
-    "image": "/images/products/accessories/1J1001(02).png"
+    "image": "/images/products/accessories/1J1001(02).png",
+    "datasheet": "/datasheets/accessories/1J1001.pdf"
   },
   {
     "id": 17,
@@ -123,21 +134,24 @@
     "series": "1J1031",
     "title": "SMD 2 Terminal Bottom Contact Adaptor",
     "description": "The 1031 adaptor is used with 1026, 1027 or 1028 fixtures to allow 2-terminal connections to bottom contact surface mount devices for testing up to 80A.",
-    "image": "/images/products/accessories/1J1031.png"
+    "image": "/images/products/accessories/1J1031.png",
+    "datasheet": "/datasheets/accessories/1J1031.pdf"
   },
   {
     "id": 19,
     "series": "1J1026(27, 28)",
     "title": "2 Terminal Conventional Fixture",
     "description": "The 1026, 1027, and 1028 fixtures, compatible with 6565 dc bias units, support conventional DIL device testing at up to 20A, 40A, and 80A, respectively. This range provides versatile testing options for electronic component analysis.",
-    "image": "/images/products/accessories/1J1026-28.png"
+    "image": "/images/products/accessories/1J1026-28.png",
+    "datasheet": "/datasheets/accessories/1J1031.pdf"
   },
   {
     "id": 20,
     "series": "1J1022",
     "title": "Liquid Fixture",
     "description": "The 1022 Liquid Fixture measures the dielectric constant and impedance of liquids accurately. It requires a Wayne Kerr 6500 analyzer and a separately available 1J1002 4-2 BNC Converter for operation.",
-    "image": "/images/products/accessories/1J1022.png"
+    "image": "/images/products/accessories/1J1022.png",
+    "datasheet": "/datasheets/accessories/1J1022.pdf"
   },
   {
     "id": 21,
@@ -151,20 +165,23 @@
     "series": "1EV1006",
     "title": "4 Terminal component fixture",
     "description": "Remote test fixture for axial, radial or bandoliered components. Complete with cable terminating in four BNC connectors",
-    "image": "/images/products/accessories/1EV1006.png"
+    "image": "/images/products/accessories/1EV1006.png",
+    "datasheet": "/datasheets/accessories/1EV1006.pdf"
   },
   {
     "id": 23,
     "series": "1J1032 (324)",
     "title": "SMD 2/4 Terminal Bottom Contact Adaptor",
     "description": "The 1032 fixture is designed for 2-terminal measurements suitable for medium and high impedance devices, while the 10324 fixture offers 4-terminal measurements, ideal for low impedance devices.",
-    "image": "/images/products/accessories/1J1032(324).png"
+    "image": "/images/products/accessories/1J1032(324).png",
+    "datasheet": "/datasheets/accessories/1J1032(324).pdf"
   },
   {
     "id": 24,
     "series": "1J1012(14)",
     "title": "SMD (2/4) Terminal Fixture",
     "description": "The 1012 and 1024 SMD Fixtures enable 2-terminal, and the 1014 facilitates 4-terminal measurements for connecting Wayne Kerr analyzers to surface mount devices.",
-    "image": "/images/products/accessories/1J1012(14, 24).png"
+    "image": "/images/products/accessories/1J1012(14, 24).png",
+    "datasheet": "/datasheets/accessories/1J1012(14, 24).pdf"
   }
 ]

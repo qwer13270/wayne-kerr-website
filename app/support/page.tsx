@@ -40,7 +40,7 @@ export default function SupportPage() {
 
   return (
     <div className="min-h-screen pt-32 pb-16">
-      <div className="max-w-[1400px] mx-auto px-10">
+      <div className="max-w-[1400px] mx-auto pt-10 px-10">
         {/* Header */}
         <div className="text-center mb-10">
           <h1 className="text-5xl font-bold mb-4 text-primary">

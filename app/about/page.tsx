@@ -1,41 +1,18 @@
 "use client";
-
-import React, { useState, useEffect } from "react";
 import {
-  Menu,
-  X,
-  Phone,
-  Mail,
   MapPin,
   Award,
   Target,
   Lightbulb,
   Heart,
   Shield,
-  TrendingUp,
-  Users,
   Globe as GlobeIcon,
   ArrowRight,
   CheckCircle,
-  Sun,
-  Moon,
 } from "lucide-react";
-import { useTheme } from "next-themes";
-import Navigation from "@/src/components/layout/Navigation";
-import { useRouter } from "next/navigation";
 import globalLocations from "@/data/globalLocations.json";
 
 export default function AboutPage() {
-  const { theme } = useTheme();
-  const router = useRouter();
-  const darkMode = theme === "dark";
-  const bgColor = darkMode ? "bg-black" : "bg-white";
-  const textColor = darkMode ? "text-white" : "text-gray-900";
-  const textSecondary = darkMode ? "text-gray-400" : "text-gray-600";
-  const cardBg = darkMode
-    ? "bg-white/5 border-white/10"
-    : "bg-white border-gray-200";
-
   const milestones = [
     {
       year: "1946",
@@ -120,40 +97,19 @@ export default function AboutPage() {
   }));
 
   return (
-    <div
-      className={`min-h-screen ${bgColor} ${textColor} overflow-x-hidden transition-colors duration-300`}
-    >
-      {/* Navigation*/}
-      <Navigation />
-
-      {/* Hero Section*/}
-      <section className="relative min-h-[90vh] flex items-center overflow-hidden pt-20">
-        {/* Full Background - Solid color based on dark mode */}
-        <div
-          className={`absolute inset-0 ${darkMode ? "bg-black" : "bg-white"}`}
-        >
-          {/* Optional: Subtle gradient overlay for depth */}
-          <div
-            className={`absolute inset-0 ${
-              darkMode
-                ? "bg-gradient-to-b from-black via-gray-900/50 to-black"
-                : "bg-gradient-to-b from-white via-gray-50/50 to-white"
-            } opacity-50`}
-          ></div>
-        </div>
-
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
+    <div className="min-h-screen pt-32 pb-16">
+      <div className="max-w-[1400px] mx-auto pt-10 px-10">
+        {/* Hero Section*/}
+        <section>
           {/* Centered Content */}
           <div className="text-center max-w-4xl mx-auto mb-16">
             <h1
-              className={`text-5xl sm:text-6xl lg:text-8xl font-bold mb-6 leading-tight ${textColor}`}
+              className={`text-5xl sm:text-6xl lg:text-8xl font-bold mb-6 leading-tight`}
             >
               About Us
             </h1>
 
-            <p
-              className={`text-2xl sm:text-3xl leading-relaxed font-light ${textSecondary}`}
-            >
+            <p className={`text-2xl sm:text-3xl leading-relaxed font-light`}>
               Acknowledged worldwide for the quality, accuracy and capability of
               component measurement products
             </p>
@@ -166,7 +122,7 @@ export default function AboutPage() {
               return (
                 <div
                   key={index}
-                  className={`${cardBg} backdrop-blur-xl border hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 rounded-2xl p-8`}
+                  className={`backdrop-blur-xl border border-[hsl(var(--border-ui))] hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 rounded-2xl p-8`}
                   style={{
                     animation: `fadeInUp 0.6s ease-out ${index * 0.1}s both`,
                   }}
@@ -174,229 +130,174 @@ export default function AboutPage() {
                   <div className="inline-flex p-4 rounded-2xl bg-gradient-to-r from-blue-600 to-blue-700 mb-4">
                     <Icon className="text-white" size={28} />
                   </div>
-                  <h3 className={`text-2xl font-bold mb-3 ${textColor}`}>
+                  <h3 className={`text-2xl font-bold mb-3`}>
                     {highlight.title}
                   </h3>
-                  <p className={`leading-relaxed ${textSecondary}`}>
-                    {highlight.description}
-                  </p>
+                  <p className={`leading-relaxed`}>{highlight.description}</p>
                 </div>
               );
             })}
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Mission Statement */}
-      <section className="py-20 sm:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="relative">
-              <img
-                src="/images/about/mission-image.webp"
-                alt="Our Mission"
-                className="rounded-3xl shadow-2xl w-full h-[500px] object-cover"
-                onError={(e) => {
-                  // Fallback gradient background
-                  (e.target as HTMLImageElement).src =
-                    'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500"%3E%3Cdefs%3E%3ClinearGradient id="grad" x1="0%25" y1="0%25" x2="100%25" y2="100%25"%3E%3Cstop offset="0%25" style="stop-color:rgb(59,130,246);stop-opacity:1" /%3E%3Cstop offset="100%25" style="stop-color:rgb(99,102,241);stop-opacity:1" /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width="400" height="500" fill="url(%23grad)"/%3E%3C/svg%3E';
-                }}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-3xl"></div>
+        {/* Mission Statement */}
+        <section className="py-20 sm:py-32">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div className="relative">
+                <img
+                  src="/images/about/mission-image.webp"
+                  alt="Our Mission"
+                  className="rounded-3xl shadow-2xl w-full h-[500px] object-cover"
+                  onError={(e) => {
+                    // Fallback gradient background
+                    (e.target as HTMLImageElement).src =
+                      'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500"%3E%3Cdefs%3E%3ClinearGradient id="grad" x1="0%25" y1="0%25" x2="100%25" y2="100%25"%3E%3Cstop offset="0%25" style="stop-color:rgb(59,130,246);stop-opacity:1" /%3E%3Cstop offset="100%25" style="stop-color:rgb(99,102,241);stop-opacity:1" /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width="400" height="500" fill="url(%23grad)"/%3E%3C/svg%3E';
+                  }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-3xl"></div>
+              </div>
+
+              <div>
+                <h2 className={`text-4xl sm:text-5xl font-bold mb-6`}>
+                  Our Mission
+                </h2>
+
+                <div className="space-y-6">
+                  <p className={`text-lg leading-relaxed`}>
+                    Our mission is to revolutionize the field of component
+                    measurement through innovation, quality, and commitment. We
+                    aim to empower industries worldwide with precision tools
+                    that enhance efficiency and reliability.
+                  </p>
+
+                  <p className={`text-lg leading-relaxed`}>
+                    By continuously advancing our technologies and services, we
+                    strive to exceed the expectations of our clients. Our focus
+                    on customer success is the driving force behind our pursuit
+                    of excellence in everything we do.
+                  </p>
+
+                  <div className="flex items-start gap-3 pt-4">
+                    <CheckCircle
+                      className="text-blue-600 flex-shrink-0 mt-1"
+                      size={24}
+                    />
+                    <p className={`text-lg`}>
+                      Empowering industries with precision measurement solutions
+                    </p>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <CheckCircle
+                      className="text-blue-600 flex-shrink-0 mt-1"
+                      size={24}
+                    />
+                    <p className={`text-lg`}>
+                      Continuously advancing technologies and services
+                    </p>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <CheckCircle
+                      className="text-blue-600 flex-shrink-0 mt-1"
+                      size={24}
+                    />
+                    <p className={`text-lg`}>
+                      Exceeding client expectations through excellence
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
+        </section>
 
-            <div>
-              <h2
-                className={`text-4xl sm:text-5xl font-bold mb-6 ${textColor}`}
-              >
-                Our Mission
+        {/* Core Values */}
+        <section className="py-20 sm:py-32">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className={`text-4xl sm:text-5xl md:text-6xl font-bold mb-6`}>
+                Core Values
               </h2>
-
-              <div className="space-y-6">
-                <p className={`text-lg ${textSecondary} leading-relaxed`}>
-                  Our mission is to revolutionize the field of component
-                  measurement through innovation, quality, and commitment. We
-                  aim to empower industries worldwide with precision tools that
-                  enhance efficiency and reliability.
-                </p>
-
-                <p className={`text-lg ${textSecondary} leading-relaxed`}>
-                  By continuously advancing our technologies and services, we
-                  strive to exceed the expectations of our clients. Our focus on
-                  customer success is the driving force behind our pursuit of
-                  excellence in everything we do.
-                </p>
-
-                <div className="flex items-start gap-3 pt-4">
-                  <CheckCircle
-                    className="text-blue-600 flex-shrink-0 mt-1"
-                    size={24}
-                  />
-                  <p className={`text-lg ${textSecondary}`}>
-                    Empowering industries with precision measurement solutions
-                  </p>
-                </div>
-
-                <div className="flex items-start gap-3">
-                  <CheckCircle
-                    className="text-blue-600 flex-shrink-0 mt-1"
-                    size={24}
-                  />
-                  <p className={`text-lg ${textSecondary}`}>
-                    Continuously advancing technologies and services
-                  </p>
-                </div>
-
-                <div className="flex items-start gap-3">
-                  <CheckCircle
-                    className="text-blue-600 flex-shrink-0 mt-1"
-                    size={24}
-                  />
-                  <p className={`text-lg ${textSecondary}`}>
-                    Exceeding client expectations through excellence
-                  </p>
-                </div>
-              </div>
+              <p className={`text-xl max-w-3xl mx-auto`}>
+                The principles that guide everything we do
+              </p>
             </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Core Values */}
-      <section className="py-20 sm:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2
-              className={`text-4xl sm:text-5xl md:text-6xl font-bold mb-6 ${textColor}`}
-            >
-              Core Values
-            </h2>
-            <p className={`text-xl ${textSecondary} max-w-3xl mx-auto`}>
-              The principles that guide everything we do
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {coreValues.map((value, index) => {
-              const Icon = value.icon;
-              return (
-                <div key={index} className="group relative">
-                  <div
-                    className={`relative ${cardBg} backdrop-blur-sm border rounded-3xl p-8 sm:p-10 hover:shadow-2xl transition-all duration-500 group-hover:-translate-y-2 h-full`}
-                  >
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+              {coreValues.map((value, index) => {
+                const Icon = value.icon;
+                return (
+                  <div key={index} className="group relative">
                     <div
-                      className={`inline-flex p-4 rounded-2xl bg-gradient-to-r ${value.color} mb-6`}
+                      className={`relative backdrop-blur-sm border border-[hsl(var(--border-ui))] rounded-3xl p-8 sm:p-10 hover:shadow-2xl transition-all duration-500 group-hover:-translate-y-2 h-full`}
                     >
-                      <Icon className="text-white" size={32} />
-                    </div>
+                      <div
+                        className={`inline-flex p-4 rounded-2xl bg-gradient-to-r ${value.color} mb-6`}
+                      >
+                        <Icon className="text-white" size={32} />
+                      </div>
 
-                    <h3
-                      className={`text-2xl sm:text-3xl font-bold ${textColor} mb-4`}
-                    >
-                      {value.title}
-                    </h3>
-
-                    <p className={`${textSecondary} text-lg leading-relaxed`}>
-                      {value.description}
-                    </p>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* Timeline */}
-      <section className="py-20 sm:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className={`text-4xl sm:text-5xl font-bold mb-6 ${textColor}`}>
-              Our Journey
-            </h2>
-            <p className={`text-xl ${textSecondary} max-w-3xl mx-auto`}>
-              78 years of innovation and excellence in precision measurement
-            </p>
-          </div>
-
-          <div className="relative">
-            {/* Timeline line */}
-            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-600 via-blue-700 to-blue-800 hidden lg:block"></div>
-
-            <div className="space-y-12">
-              {milestones.map((milestone, index) => (
-                <div key={index} className="relative pl-0 lg:pl-24">
-                  {/* Timeline dot */}
-                  <div className="absolute left-[26px] top-6 w-5 h-5 rounded-full bg-blue-600 border-4 border-white dark:border-black hidden lg:block"></div>
-
-                  <div
-                    className={`${cardBg} border rounded-2xl p-6 sm:p-8 hover:shadow-xl transition-all duration-300`}
-                  >
-                    <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-4">
-                      <span className="inline-block px-4 py-2 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-full font-bold text-lg">
-                        {milestone.year}
-                      </span>
-                      <h3 className={`text-2xl font-bold ${textColor}`}>
-                        {milestone.title}
+                      <h3 className={`text-2xl sm:text-3xl font-bold mb-4`}>
+                        {value.title}
                       </h3>
+
+                      <p className={`text-lg leading-relaxed`}>
+                        {value.description}
+                      </p>
                     </div>
-                    <p className={`${textSecondary} text-lg leading-relaxed`}>
-                      {milestone.description}
-                    </p>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Global Presence */}
-      <section className="py-20 sm:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className={`text-4xl sm:text-5xl font-bold mb-6 ${textColor}`}>
-              Global Presence
-            </h2>
-            <p className={`text-xl ${textSecondary} max-w-3xl mx-auto`}>
-              Regional offices providing worldwide technical support and
-              services
-            </p>
-          </div>
+        {/* Timeline */}
+        <section className="py-20 sm:py-32">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className={`text-4xl sm:text-5xl font-bold mb-6`}>
+                Our Journey
+              </h2>
+              <p className={`text-xl max-w-3xl mx-auto`}>
+                78 years of innovation and excellence in precision measurement
+              </p>
+            </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {globalOffices.map((office, index) => (
-              <div
-                key={index}
-                className={`${cardBg} border rounded-2xl p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1`}
-              >
-                <div className="flex items-start gap-3">
-                  <MapPin
-                    className="text-blue-600 flex-shrink-0 mt-1"
-                    size={24}
-                  />
-                  <div>
-                    <h3 className={`text-xl font-bold ${textColor} mb-1`}>
-                      {office.region}
-                    </h3>
-                    <p className={`${textSecondary}`}>{office.city}</p>
+            <div className="relative">
+              {/* Timeline line */}
+              <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-600 via-blue-700 to-blue-800 hidden lg:block"></div>
+
+              <div className="space-y-12">
+                {milestones.map((milestone, index) => (
+                  <div key={index} className="relative pl-0 lg:pl-24">
+                    {/* Timeline dot */}
+                    <div className="absolute left-[26px] top-6 w-5 h-5 rounded-full bg-blue-600 border-4 border-[hsl(var(--border-ui))] hidden lg:block"></div>
+
+                    <div
+                      className={`border border-[hsl(var(--border-ui))] rounded-2xl p-6 sm:p-8 hover:shadow-xl transition-all duration-300`}
+                    >
+                      <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-4">
+                        <span className="inline-block px-4 py-2 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-full font-bold text-lg">
+                          {milestone.year}
+                        </span>
+                        <h3 className={`text-2xl font-bold`}>
+                          {milestone.title}
+                        </h3>
+                      </div>
+                      <p className={`text-lg leading-relaxed`}>
+                        {milestone.description}
+                      </p>
+                    </div>
                   </div>
-                </div>
+                ))}
               </div>
-            ))}
+            </div>
           </div>
-
-          <div className="text-center mt-12">
-            <button
-              onClick={() => router.push("/support")}
-              className="bg-blue-600 text-white px-8 py-4 text-lg font-semibold rounded-xl hover:bg-blue-700 transition-all duration-200 inline-flex items-center justify-center gap-2"
-            >
-              View All Locations
-              <ArrowRight size={20} />
-            </button>
-          </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </div>
   );
 }
