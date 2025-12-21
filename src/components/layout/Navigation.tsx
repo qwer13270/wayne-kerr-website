@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import Link from "next/link"; // ← Import Link
 import { Menu, X, Sun, Moon, Gauge, Wrench, Code2 } from "lucide-react";
 import { useTheme } from "next-themes";
-import { useRouter } from "next/navigation";
 import globalLocations from "../../../data/globalLocations.json";
 import NavDropdown from "./NavDropdown";
 import MobileNavDropdown from "./MobileNavDropdown";
@@ -22,7 +21,6 @@ export default function Navigation() {
   const [mobileProductsOpen, setMobileProductsOpen] = useState(false);
   const [mobileCountriesOpen, setMobileCountriesOpen] = useState(false);
   const { setTheme, resolvedTheme } = useTheme();
-  const router = useRouter();
 
   // Dropdown menu items
   const productsItems = [
@@ -135,11 +133,8 @@ export default function Navigation() {
                 </button>
 
                 {/* Contact Us Button */}
-                <button
-                  onClick={() => router.push("/contact")}
-                  className="bg-blue-600 text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-blue-700 transition-all duration-200 shadow-lg"
-                >
-                  Contact Us
+                <button className="bg-blue-600 text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-blue-700 transition-all duration-200 shadow-lg">
+                  <Link href="/contact">Contact Us</Link>
                 </button>
               </div>
 
