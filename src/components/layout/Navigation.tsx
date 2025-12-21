@@ -1,23 +1,18 @@
 "use client";
 
 import React, { useState } from "react";
-import {
-  Menu,
-  X,
-  Sun,
-  Moon,
-  Gauge,
-  Wrench,
-  Code2,
-  Globe,
-  MapPin,
-  Flag,
-} from "lucide-react";
+import Link from "next/link"; // ← Import Link
+import { Menu, X, Sun, Moon, Gauge, Wrench, Code2 } from "lucide-react";
 import { useTheme } from "next-themes";
-import { useRouter } from "next/navigation";
 import globalLocations from "../../../data/globalLocations.json";
 import NavDropdown from "./NavDropdown";
 import MobileNavDropdown from "./MobileNavDropdown";
+import {
+  NAV_ITEM_STYLES,
+  NAV_SURFACE_STYLES,
+  DROPDOWN_SURFACE_STYLES,
+  TEXT_PRIMARY,
+} from "@/src/styles/styles";
 
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -25,22 +20,7 @@ export default function Navigation() {
   const [countriesMenuOpen, setCountriesMenuOpen] = useState(false);
   const [mobileProductsOpen, setMobileProductsOpen] = useState(false);
   const [mobileCountriesOpen, setMobileCountriesOpen] = useState(false);
-  const { theme, setTheme } = useTheme();
-  const router = useRouter();
-
-  const isDark = theme === "dark";
-
-  // Dynamic color variables
-  const textColor = isDark ? "text-white" : "text-gray-900";
-  const navSurfaceStyles = isDark
-    ? "bg-white/5 border-white/20"
-    : "bg-white/55 border-white/60";
-  const dropdownSurfaceStyles = isDark
-    ? "bg-black/80 border-black/80"
-    : "bg-white/80 border-white/80";
-  const navItemStyles = isDark
-    ? "text-gray-300 hover:text-white"
-    : "text-gray-700 hover:text-gray-900";
+  const { setTheme, resolvedTheme } = useTheme();
 
   // Dropdown menu items
   const productsItems = [
@@ -74,36 +54,34 @@ export default function Navigation() {
       <nav className="fixed top-0 left-0 right-0 z-50 py-6 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div
-            className={`backdrop-blur-xl border rounded-full py-3 px-6 shadow-2xl transition-colors duration-300 ${navSurfaceStyles}`}
+            className={`backdrop-blur-xl border rounded-full py-3 px-6 shadow-2xl transition-colors duration-300 ${NAV_SURFACE_STYLES}`}
           >
             <div className="flex justify-between items-center">
               {/* Logo */}
               <div className="flex items-center">
-                <a href="/">
+                <Link href="/">
                   <img
                     src="/images/logo/logo.webp"
                     alt="Wayne Kerr Logo"
-                    className={`h-5 w-auto transition-all duration-300 ${
-                      isDark ? "brightness-0 invert" : ""
-                    }`}
+                    className="h-5 w-auto transition-all duration-300 dark:brightness-0 dark:invert"
                   />
-                </a>
+                </Link>
               </div>
 
               {/* Desktop Menu */}
               <div className="hidden lg:flex items-center space-x-8">
-                <a
+                <Link
                   href="/"
-                  className={`transition-colors text-sm font-medium ${navItemStyles}`}
+                  className={`transition-colors text-sm font-medium ${NAV_ITEM_STYLES}`}
                 >
                   Home
-                </a>
-                <a
+                </Link>
+                <Link
                   href="/about"
-                  className={`transition-colors text-sm font-medium ${navItemStyles}`}
+                  className={`transition-colors text-sm font-medium ${NAV_ITEM_STYLES}`}
                 >
                   About
-                </a>
+                </Link>
 
                 {/* Products Dropdown */}
                 <NavDropdown
@@ -111,16 +89,16 @@ export default function Navigation() {
                   items={productsItems}
                   isOpen={productsMenuOpen}
                   onToggle={setProductsMenuOpen}
-                  navItemStyles={navItemStyles}
-                  navSurfaceStyles={dropdownSurfaceStyles}
+                  navItemStyles={NAV_ITEM_STYLES}
+                  navSurfaceStyles={DROPDOWN_SURFACE_STYLES}
                 />
 
-                <a
+                <Link
                   href="/support"
-                  className={`transition-colors text-sm font-medium ${navItemStyles}`}
+                  className={`transition-colors text-sm font-medium ${NAV_ITEM_STYLES}`}
                 >
                   Support
-                </a>
+                </Link>
 
                 {/* Countries Dropdown */}
                 <NavDropdown
@@ -128,8 +106,8 @@ export default function Navigation() {
                   items={countriesItems}
                   isOpen={countriesMenuOpen}
                   onToggle={setCountriesMenuOpen}
-                  navItemStyles={navItemStyles}
-                  navSurfaceStyles={dropdownSurfaceStyles}
+                  navItemStyles={NAV_ITEM_STYLES}
+                  navSurfaceStyles={DROPDOWN_SURFACE_STYLES}
                 />
               </div>
 
@@ -137,13 +115,17 @@ export default function Navigation() {
               <div className="hidden lg:flex items-center space-x-3">
                 {/* Dark Mode Toggle */}
                 <button
-                  onClick={() => setTheme(isDark ? "light" : "dark")}
+                  onClick={() =>
+                    setTheme(resolvedTheme === "dark" ? "light" : "dark")
+                  }
                   className={`p-2 rounded-full transition-colors ${
-                    isDark ? "hover:bg-white/10" : "hover:bg-gray-900/10"
+                    resolvedTheme === "dark"
+                      ? "hover:bg-white/10"
+                      : "hover:bg-gray-900/10"
                   }`}
                   aria-label="Toggle dark mode"
                 >
-                  {isDark ? (
+                  {resolvedTheme === "dark" ? (
                     <Sun className="text-yellow-400" size={20} />
                   ) : (
                     <Moon className="text-gray-600" size={20} />
@@ -151,11 +133,8 @@ export default function Navigation() {
                 </button>
 
                 {/* Contact Us Button */}
-                <button
-                  onClick={() => router.push("/contact")}
-                  className="bg-blue-600 text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-blue-700 transition-all duration-200 shadow-lg"
-                >
-                  Contact Us
+                <button className="bg-blue-600 text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-blue-700 transition-all duration-200 shadow-lg">
+                  <Link href="/contact">Contact Us</Link>
                 </button>
               </div>
 
@@ -166,9 +145,9 @@ export default function Navigation() {
                 aria-label="Toggle mobile menu"
               >
                 {mobileMenuOpen ? (
-                  <X className={textColor} size={28} />
+                  <X className={TEXT_PRIMARY} size={28} />
                 ) : (
-                  <Menu className={textColor} size={28} />
+                  <Menu className={TEXT_PRIMARY} size={28} />
                 )}
               </button>
             </div>
@@ -177,20 +156,20 @@ export default function Navigation() {
           {/* Mobile Menu */}
           {mobileMenuOpen && (
             <div
-              className={`lg:hidden mt-4 rounded-3xl border p-6 space-y-3 shadow-2xl ${navSurfaceStyles}`}
+              className={`lg:hidden mt-4 rounded-3xl border p-6 space-y-3 shadow-2xl ${NAV_SURFACE_STYLES}`}
             >
-              <a
+              <Link
                 href="/"
-                className={`block py-2 ${textColor} hover:text-blue-600 font-medium`}
+                className={`block py-2 ${TEXT_PRIMARY} hover:text-blue-600 font-medium`}
               >
                 Home
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/about"
-                className={`block py-2 ${textColor} hover:text-blue-600 font-medium`}
+                className={`block py-2 ${TEXT_PRIMARY} hover:text-blue-600 font-medium`}
               >
                 About
-              </a>
+              </Link>
 
               {/* Mobile Products Dropdown */}
               <MobileNavDropdown
@@ -198,15 +177,15 @@ export default function Navigation() {
                 items={productsItems}
                 isOpen={mobileProductsOpen}
                 onToggle={() => setMobileProductsOpen(!mobileProductsOpen)}
-                textColor={textColor}
+                textColor={TEXT_PRIMARY}
               />
 
-              <a
+              <Link
                 href="/support"
-                className={`block py-2 ${textColor} hover:text-blue-600 font-medium`}
+                className={`block py-2 ${TEXT_PRIMARY} hover:text-blue-600 font-medium`}
               >
                 Support
-              </a>
+              </Link>
 
               {/* Mobile Countries Dropdown */}
               <MobileNavDropdown
@@ -214,17 +193,23 @@ export default function Navigation() {
                 items={countriesItems}
                 isOpen={mobileCountriesOpen}
                 onToggle={() => setMobileCountriesOpen(!mobileCountriesOpen)}
-                textColor={textColor}
+                textColor={TEXT_PRIMARY}
               />
 
               <div className="flex items-center gap-3 pt-2">
                 <button
-                  onClick={() => setTheme(isDark ? "light" : "dark")}
+                  onClick={() =>
+                    setTheme(resolvedTheme === "dark" ? "light" : "dark")
+                  }
                   className="flex items-center gap-2 py-2 font-medium"
                 >
-                  {isDark ? <Sun size={20} /> : <Moon size={20} />}
+                  {resolvedTheme === "dark" ? (
+                    <Sun size={20} />
+                  ) : (
+                    <Moon size={20} />
+                  )}
                   <span className="text-sm">
-                    {isDark ? "Light Mode" : "Dark Mode"}
+                    {resolvedTheme === "dark" ? "Light Mode" : "Dark Mode"}
                   </span>
                 </button>
               </div>

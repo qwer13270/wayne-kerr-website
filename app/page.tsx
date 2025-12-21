@@ -2,11 +2,6 @@
 
 import React, { useState, useEffect } from "react";
 import {
-  Menu,
-  X,
-  ChevronDown,
-  Phone,
-  Mail,
   MapPin,
   ArrowRight,
   Award,
@@ -15,27 +10,20 @@ import {
   Globe,
   Shield,
   Target,
-  Zap,
-  Sun,
-  Moon,
   Shuffle,
 } from "lucide-react";
-import Typewriter from "typewriter-effect";
-import Globe3D from "@/src/components/home/Globe3D";
 import clients from "@/data/clients.json";
 import { useTheme } from "next-themes";
 import globalLocations from "@/data/globalLocations.json";
 import { useRouter } from "next/navigation";
+import { BORDER_STYLES, TEXT_SECONDARY } from "@/src/styles/styles";
+import Link from "next/link";
 
 export default function WayneKerrHomepage() {
-  const [mounted, setMounted] = useState(false);
   const { theme } = useTheme();
   const darkMode = theme === "dark";
 
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
-  const router = useRouter();
 
   const globalOffices = globalLocations.map((location) => ({
     region: location.name,
@@ -53,7 +41,6 @@ export default function WayneKerrHomepage() {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [displayedText, setDisplayedText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
-  const [isTyping, setIsTyping] = useState(true);
 
   // Typewriter configuration
   const baseText = "Leader in LCR Meters and ";
@@ -161,20 +148,9 @@ export default function WayneKerrHomepage() {
 
   const marqueeClients = [...clients, ...clients, ...clients];
 
-  const bgColor = darkMode ? "bg-black" : "bg-white";
-  const textColor = darkMode ? "text-white" : "text-gray-900";
-  const textSecondary = darkMode ? "text-gray-400" : "text-gray-600";
-  const cardBg = darkMode
-    ? "bg-white/5 border-white/10"
-    : "bg-white border-gray-200";
-  const navBg = darkMode ? "bg-black/80" : "bg-white/95";
-  const heroBg = darkMode
-    ? "from-blue-950 via-blue-900 to-indigo-950"
-    : "from-blue-600 via-blue-700 to-indigo-700";
-
   return (
     <div
-      className={`min-h-screen ${bgColor} ${textColor} overflow-x-hidden transition-colors duration-300`}
+      className={`min-h-screen overflow-x-hidden transition-colors duration-300`}
     >
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -228,14 +204,14 @@ export default function WayneKerrHomepage() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
               <button className="group bg-white text-blue-900 px-8 py-4 rounded-full font-semibold text-lg hover:shadow-2xl transition-all flex items-center gap-2 w-full sm:w-auto">
-                Explore Products
+                <Link href="/products/instruments">Explore Products</Link>
                 <ArrowRight
                   size={20}
                   className="group-hover:translate-x-1 transition-transform"
                 />
               </button>
               <button className="btn-outline-light px-8 py-4 text-lg w-full sm:w-auto">
-                Get Quote
+                <Link href="/contact">Get Quote</Link>
               </button>
             </div>
           </div>
@@ -258,7 +234,7 @@ export default function WayneKerrHomepage() {
       <section className={`py-12 sm:py-20`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
-            <p className={`text-xl sm:text-2xl mb-12 ${textColor}`}>
+            <p className={`text-xl sm:text-2xl mb-12`}>
               Trusted by{" "}
               <span className="font-bold tracking-tight">
                 Industry Leaders Worldwide
@@ -304,7 +280,7 @@ export default function WayneKerrHomepage() {
       <section className="py-20 sm:py-32 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className={`text-4xl sm:text-5xl font-bold mb-4 ${textColor}`}>
+            <h2 className={`text-4xl sm:text-5xl font-bold mb-4`}>
               Powering Innovation Worldwide
             </h2>
           </div>
@@ -315,7 +291,7 @@ export default function WayneKerrHomepage() {
               return (
                 <div key={index} className="group relative">
                   <div
-                    className={`relative ${cardBg} backdrop-blur-sm border rounded-3xl p-6 sm:p-8 hover:shadow-2xl transition-all duration-500 group-hover:-translate-y-2`}
+                    className={`backdrop-blur-sm border ${BORDER_STYLES} rounded-3xl p-6 sm:p-8 hover:shadow-2xl transition-all duration-500 group-hover:-translate-y-2`}
                   >
                     <div className="inline-flex p-3 rounded-2xl bg-gradient-to-r from-blue-600 to-blue-700 mb-4">
                       <Icon className="text-white" size={24} />
@@ -325,13 +301,11 @@ export default function WayneKerrHomepage() {
                       {stat.value}
                     </div>
 
-                    <div
-                      className={`text-lg sm:text-xl font-semibold ${textColor} mb-1`}
-                    >
+                    <div className={`text-lg sm:text-xl font-semibold mb-1`}>
                       {stat.label}
                     </div>
 
-                    <div className={`text-sm ${textSecondary}`}>
+                    <div className={`text-sm ${TEXT_SECONDARY}`}>
                       {stat.description}
                     </div>
                   </div>
@@ -346,12 +320,10 @@ export default function WayneKerrHomepage() {
       <section className={`py-20 sm:py-32`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2
-              className={`text-4xl sm:text-5xl md:text-6xl font-bold mb-6 ${textColor}`}
-            >
+            <h2 className={`text-4xl sm:text-5xl md:text-6xl font-bold mb-6`}>
               Explore Our Products
             </h2>
-            <p className={`text-xl ${textSecondary} max-w-3xl mx-auto`}>
+            <p className={`text-xl ${TEXT_SECONDARY} max-w-3xl mx-auto`}>
               Industry-leading measurement solutions engineered for excellence
             </p>
           </div>
@@ -361,7 +333,7 @@ export default function WayneKerrHomepage() {
             {productCategories.map((category, index) => (
               <div key={index} className="group relative">
                 <div
-                  className={`relative ${cardBg} border rounded-3xl overflow-hidden hover:shadow-2xl transition-all duration-500 group-hover:-translate-y-2 h-full flex flex-col`}
+                  className={`border ${BORDER_STYLES} rounded-3xl overflow-hidden hover:shadow-2xl transition-all duration-500 group-hover:-translate-y-2 h-full flex flex-col`}
                 >
                   {/* Image Area */}
                   <div className="relative h-64 bg-gradient-to-br from-blue-50 to-purple-50 flex items-center justify-center overflow-hidden">
@@ -386,18 +358,18 @@ export default function WayneKerrHomepage() {
 
                   {/* Content Area */}
                   <div className="p-8 flex flex-col flex-grow">
-                    <h3
-                      className={`text-2xl sm:text-3xl font-bold ${textColor} mb-3`}
-                    >
+                    <h3 className={`text-2xl sm:text-3xl font-bold mb-3`}>
                       {category.name}
                     </h3>
 
-                    <p className={`${textSecondary} mb-6 text-lg flex-grow`}>
+                    <p className={`${TEXT_SECONDARY} mb-6 text-lg flex-grow`}>
                       {category.description}
                     </p>
 
                     <button className="flex items-center gap-2 text-blue-600 font-semibold group-hover:gap-3 transition-all self-start">
-                      Explore Range
+                      <Link href={`/products/${category.name.toLowerCase()}`}>
+                        Explore Range
+                      </Link>
                       <ArrowRight
                         size={20}
                         className="group-hover:translate-x-1 transition-transform"
@@ -415,12 +387,10 @@ export default function WayneKerrHomepage() {
       <section className="py-20 sm:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2
-              className={`text-4xl sm:text-5xl md:text-6xl font-bold mb-6 ${textColor}`}
-            >
+            <h2 className={`text-4xl sm:text-5xl md:text-6xl font-bold mb-6`}>
               Why Choose Wayne Kerr?
             </h2>
-            <p className={`text-xl ${textSecondary} max-w-3xl mx-auto`}>
+            <p className={`text-xl ${TEXT_SECONDARY} max-w-3xl mx-auto`}>
               Seven decades of innovation driving the future of precision
               measurement
             </p>
@@ -432,19 +402,17 @@ export default function WayneKerrHomepage() {
               return (
                 <div key={index} className="group relative">
                   <div
-                    className={`relative ${cardBg} backdrop-blur-sm border rounded-3xl p-8 sm:p-10 hover:shadow-2xl transition-all duration-500 group-hover:-translate-y-2 h-full`}
+                    className={`${BORDER_STYLES} backdrop-blur-sm border rounded-3xl p-8 sm:p-10 hover:shadow-2xl transition-all duration-500 group-hover:-translate-y-2 h-full`}
                   >
                     <div className="inline-flex p-4 rounded-2xl bg-gradient-to-r from-blue-600 to-blue-700 mb-6">
                       <Icon className="text-white" size={32} />
                     </div>
 
-                    <h3
-                      className={`text-2xl sm:text-3xl font-bold ${textColor} mb-4`}
-                    >
+                    <h3 className={`text-2xl sm:text-3xl font-bold mb-4`}>
                       {feature.title}
                     </h3>
 
-                    <p className={`${textSecondary} text-lg leading-relaxed`}>
+                    <p className={`${TEXT_SECONDARY} text-lg leading-relaxed`}>
                       {feature.description}
                     </p>
                   </div>
@@ -457,10 +425,10 @@ export default function WayneKerrHomepage() {
       <section className="py-20 sm:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className={`text-4xl sm:text-5xl font-bold mb-6 ${textColor}`}>
+            <h2 className={`text-4xl sm:text-5xl font-bold mb-6`}>
               Global Presence
             </h2>
-            <p className={`text-xl ${textSecondary} max-w-3xl mx-auto`}>
+            <p className={`text-xl ${TEXT_SECONDARY} max-w-3xl mx-auto`}>
               Regional offices providing worldwide technical support and
               services
             </p>
@@ -470,7 +438,7 @@ export default function WayneKerrHomepage() {
             {globalOffices.map((office, index) => (
               <div
                 key={index}
-                className={`${cardBg} border rounded-2xl p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1`}
+                className={`border ${BORDER_STYLES} rounded-2xl p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1`}
               >
                 <div className="flex items-start gap-3">
                   <MapPin
@@ -478,10 +446,10 @@ export default function WayneKerrHomepage() {
                     size={24}
                   />
                   <div>
-                    <h3 className={`text-xl font-bold ${textColor} mb-1`}>
+                    <h3 className={`text-xl font-bold mb-1`}>
                       {office.region}
                     </h3>
-                    <p className={`${textSecondary}`}>{office.city}</p>
+                    <p className={`${TEXT_SECONDARY}`}>{office.city}</p>
                   </div>
                 </div>
               </div>
@@ -489,11 +457,8 @@ export default function WayneKerrHomepage() {
           </div>
 
           <div className="text-center mt-12">
-            <button
-              onClick={() => router.push("/support")}
-              className="bg-blue-600 text-white px-8 py-4 text-lg font-semibold rounded-xl hover:bg-blue-700 transition-all duration-200 inline-flex items-center justify-center gap-2"
-            >
-              View All Locations
+            <button className="bg-blue-600 text-white px-8 py-4 text-lg font-semibold rounded-xl hover:bg-blue-700 transition-all duration-200 inline-flex items-center justify-center gap-2">
+              <Link href="/support">View All Locations</Link>
               <ArrowRight size={20} />
             </button>
           </div>

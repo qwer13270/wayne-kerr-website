@@ -61,7 +61,7 @@ export default function SupportPage() {
           >
             {/* Animated sliding background */}
             <div
-              className={`absolute top-1 h-[calc(100%-8px)] bg-blue-600 rounded-full transition-all duration-300 ease-in-out ${
+              className={`absolute top-1 h-[calc(100%-8px)] bg-blue-600 dark:bg-blue-500 rounded-full transition-all duration-300 ease-in-out ${
                 activeTab === "technical"
                   ? "left-[calc(50%+2px)] w-[calc(50%-6px)]"
                   : "left-1 w-[calc(50%-6px)]"

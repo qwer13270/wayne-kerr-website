@@ -1,16 +1,15 @@
 "use client";
 import {
-  MapPin,
   Award,
   Target,
   Lightbulb,
   Heart,
   Shield,
   Globe as GlobeIcon,
-  ArrowRight,
   CheckCircle,
 } from "lucide-react";
 import globalLocations from "@/data/globalLocations.json";
+import { BORDER_STYLES } from "@/src/styles/styles";
 
 export default function AboutPage() {
   const milestones = [
@@ -104,12 +103,14 @@ export default function AboutPage() {
           {/* Centered Content */}
           <div className="text-center max-w-4xl mx-auto mb-16">
             <h1
-              className={`text-5xl sm:text-6xl lg:text-8xl font-bold mb-6 leading-tight`}
+              className={`text-5xl sm:text-6xl lg:text-8xl font-bold mb-6 leading-tight text-primary`}
             >
               About Us
             </h1>
 
-            <p className={`text-2xl sm:text-3xl leading-relaxed font-light`}>
+            <p
+              className={`text-2xl sm:text-3xl leading-relaxed font-light text-secondary`}
+            >
               Acknowledged worldwide for the quality, accuracy and capability of
               component measurement products
             </p>
@@ -122,7 +123,7 @@ export default function AboutPage() {
               return (
                 <div
                   key={index}
-                  className={`backdrop-blur-xl border border-[hsl(var(--border-ui))] hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 rounded-2xl p-8`}
+                  className={`backdrop-blur-xl border ${BORDER_STYLES} hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 rounded-2xl p-8`}
                   style={{
                     animation: `fadeInUp 0.6s ease-out ${index * 0.1}s both`,
                   }}
@@ -231,7 +232,7 @@ export default function AboutPage() {
                 return (
                   <div key={index} className="group relative">
                     <div
-                      className={`relative backdrop-blur-sm border border-[hsl(var(--border-ui))] rounded-3xl p-8 sm:p-10 hover:shadow-2xl transition-all duration-500 group-hover:-translate-y-2 h-full`}
+                      className={`relative backdrop-blur-sm border ${BORDER_STYLES} rounded-3xl p-8 sm:p-10 hover:shadow-2xl transition-all duration-500 group-hover:-translate-y-2 h-full`}
                     >
                       <div
                         className={`inline-flex p-4 rounded-2xl bg-gradient-to-r ${value.color} mb-6`}
@@ -277,7 +278,7 @@ export default function AboutPage() {
                     <div className="absolute left-[26px] top-6 w-5 h-5 rounded-full bg-blue-600 border-4 border-[hsl(var(--border-ui))] hidden lg:block"></div>
 
                     <div
-                      className={`border border-[hsl(var(--border-ui))] rounded-2xl p-6 sm:p-8 hover:shadow-xl transition-all duration-300`}
+                      className={`border ${BORDER_STYLES} rounded-2xl p-6 sm:p-8`}
                     >
                       <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-4">
                         <span className="inline-block px-4 py-2 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-full font-bold text-lg">

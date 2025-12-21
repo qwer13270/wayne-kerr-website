@@ -112,7 +112,7 @@ export default function ProductsPageContent({
             {currentProducts.map((product) => (
               <div
                 key={product.id}
-                className={`border border-[hsl(var(--border-ui))] rounded-3xl overflow-hidden transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 h-full flex flex-col`}
+                className={`border border-gray-200 dark:border-white/30 rounded-3xl overflow-hidden transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 h-full flex flex-col`}
               >
                 {/* Product Image */}
                 <div className="aspect-[4/3] bg-secondary overflow-hidden">
