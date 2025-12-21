@@ -2,7 +2,7 @@
 
 import React, { useRef, useEffect } from "react";
 import { ChevronDown, LucideIcon } from "lucide-react";
-
+import Link from "next/link";
 interface NavDropdownProps {
   label: string;
   items: Array<{ label: string; href: string; icon?: LucideIcon }>;
@@ -78,7 +78,7 @@ export default function NavDropdown({
           const isExternal =
             item.href.startsWith("http://") || item.href.startsWith("https://");
           return (
-            <a
+            <Link
               key={item.label}
               href={item.href}
               target={isExternal ? "_blank" : undefined}
@@ -87,7 +87,7 @@ export default function NavDropdown({
             >
               {Icon && <Icon size={18} />}
               {item.label}
-            </a>
+            </Link>
           );
         })}
       </div>

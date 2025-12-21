@@ -2,7 +2,7 @@
 
 import React from "react";
 import { ChevronDown } from "lucide-react";
-
+import Link from "next/link";
 interface MobileNavDropdownProps {
   label: string;
   items: Array<{ label: string; href: string }>;
@@ -40,15 +40,14 @@ export default function MobileNavDropdown({
               item.href.startsWith("http://") ||
               item.href.startsWith("https://");
             return (
-              <a
+              <Link
                 key={item.label}
                 href={item.href}
                 target={isExternal ? "_blank" : undefined}
-                rel={isExternal ? "noopener noreferrer" : undefined}
                 className={`block py-2 text-sm ${textColor} hover:text-blue-600`}
               >
                 {item.label}
-              </a>
+              </Link>
             );
           })}
         </div>
