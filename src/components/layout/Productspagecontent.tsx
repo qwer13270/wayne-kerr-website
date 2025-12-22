@@ -2,6 +2,7 @@
 
 import React, { useState, useMemo } from "react";
 import { Search, ChevronLeft, ChevronRight } from "lucide-react";
+import SearchBar from "../ui/SearchBar";
 const ITEMS_PER_PAGE = 9;
 interface ProductItem {
   id: number;
@@ -74,30 +75,18 @@ export default function ProductsPageContent({
         </div>
 
         {/* Search Bar */}
-        <div className="mb-12 text-center">
-          <div className="relative max-w-[600px] mx-auto">
-            <Search
-              className="absolute left-5 top-1/2 -translate-y-1/2 text-secondary"
-              size={20}
-            />
-            <input
-              type="text"
-              placeholder={`Search ${category} by name or category...`}
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-14 pr-5 py-4 border border-border rounded-xl bg-primary text-primary focus:outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 transition-all"
-            />
-          </div>
-          <div className="mt-4 text-sm text-secondary">
-            {filteredProducts.length > 0 && (
-              <>
-                Showing {startIndex + 1}-
-                {Math.min(startIndex + ITEMS_PER_PAGE, filteredProducts.length)}{" "}
-                of {filteredProducts.length} {category}
-              </>
-            )}
-          </div>
-        </div>
+        <SearchBar
+          value={searchQuery}
+          onChange={setSearchQuery}
+          placeholder={`Search ${category} by name or category...`}
+          maxWidth="600px"
+          showResultsCount={filteredProducts.length > 0}
+          resultsCount={filteredProducts.length}
+          resultsLabel={`Showing ${startIndex + 1}-${Math.min(
+            startIndex + ITEMS_PER_PAGE,
+            filteredProducts.length
+          )} of ${filteredProducts.length} ${category}`}
+        />
 
         {/* Products Grid */}
         {currentProducts.length === 0 ? (

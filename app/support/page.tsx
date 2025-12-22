@@ -4,6 +4,8 @@ import React, { useState, useMemo } from "react";
 import { Search, Phone, Mail, MapPin } from "lucide-react";
 import salesData from "@/data/sales-support.json";
 import technicalData from "@/data/technical-support.json";
+import SearchBar from "../../src/components/ui/SearchBar";
+import { TOGGLE_CONTAINER_STYLES } from "../../src/styles/styles";
 
 interface ContactData {
   id: number;
@@ -52,48 +54,63 @@ export default function SupportPage() {
           </p>
         </div>
 
-        {/* Tabs */}
-        {/* Tabs - Toggle Switch with Sliding Indicator */}
+        {/* Option 3: Underline Tabs Toggle */}
         <div className="flex justify-center mb-8">
           <div
-            className="relative inline-flex rounded-full p-1 gap-1"
-            style={{ backgroundColor: "hsl(var(--bg-secondary))" }}
+            className={`inline-flex gap-2 rounded-xl p-2 ${TOGGLE_CONTAINER_STYLES}`}
           >
-            {/* Animated sliding background */}
-            <div
-              className={`absolute top-1 h-[calc(100%-8px)] bg-blue-600 dark:bg-blue-500 rounded-full transition-all duration-300 ease-in-out ${
-                activeTab === "technical"
-                  ? "left-[calc(50%+2px)] w-[calc(50%-6px)]"
-                  : "left-1 w-[calc(50%-6px)]"
-              }`}
-            />
-
-            {/* Buttons */}
+            {" "}
             <button
               onClick={() => {
                 setActiveTab("sales");
                 setSearchQuery("");
               }}
-              className={`relative z-10 px-8 py-2.5 text-sm font-semibold rounded-full transition-colors duration-300 ${
+              className={`relative px-8 py-3.5 text-sm font-semibold rounded-lg transition-all duration-300 ${
                 activeTab === "sales"
-                  ? "text-white"
-                  : "text-secondary bg-transparent hover:text-primary"
+                  ? "text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20"
+                  : "text-secondary hover:bg-bg-secondary hover:text-primary"
               }`}
             >
-              Sales Support ({salesData.length})
+              Sales Support
+              <span
+                className={`ml-2 inline-flex items-center justify-center px-2 py-0.5 text-xs font-bold rounded-full ${
+                  activeTab === "sales"
+                    ? "bg-blue-100 dark:bg-blue-800/30 text-blue-600 dark:text-blue-400"
+                    : "bg-bg-secondary text-secondary"
+                }`}
+              >
+                {salesData.length}
+              </span>
+              {/* Underline indicator */}
+              {activeTab === "sales" && (
+                <span className="absolute bottom-2 left-[20%] right-[20%] h-[3px] bg-blue-600 dark:bg-blue-500 rounded-full" />
+              )}
             </button>
             <button
               onClick={() => {
                 setActiveTab("technical");
                 setSearchQuery("");
               }}
-              className={`relative z-10 px-8 py-2.5 text-sm font-semibold rounded-full transition-colors duration-300 ${
+              className={`relative px-8 py-3.5 text-sm font-semibold rounded-lg transition-all duration-300 ${
                 activeTab === "technical"
-                  ? "text-white"
-                  : "text-secondary bg-transparent hover:text-primary"
+                  ? "text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20"
+                  : "text-secondary hover:bg-bg-secondary hover:text-primary"
               }`}
             >
-              Technical Support ({technicalData.length})
+              Technical Support
+              <span
+                className={`ml-2 inline-flex items-center justify-center px-2 py-0.5 text-xs font-bold rounded-full ${
+                  activeTab === "technical"
+                    ? "bg-blue-100 dark:bg-blue-800/30 text-blue-600 dark:text-blue-400"
+                    : "bg-bg-secondary text-secondary"
+                }`}
+              >
+                {technicalData.length}
+              </span>
+              {/* Underline indicator */}
+              {activeTab === "technical" && (
+                <span className="absolute bottom-2 left-[20%] right-[20%] h-[3px] bg-blue-600 dark:bg-blue-500 rounded-full" />
+              )}
             </button>
           </div>
         </div>
@@ -101,25 +118,17 @@ export default function SupportPage() {
         {/* Content Area */}
         <div className="bg-primary rounded-b-2xl p-8">
           {/* Search Bar */}
-          <div className="mb-8">
-            <div className="relative max-w-[500px]">
-              <Search
-                className="absolute left-4 top-1/2 -translate-y-1/2 text-secondary"
-                size={20}
-              />
-              <input
-                type="text"
-                placeholder="Search by region, country, or contact person..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-12 pr-4 py-3 border border-border rounded-lg bg-primary text-primary focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
-              />
-            </div>
-            <div className="mt-3 text-sm text-secondary">
-              Showing {filteredData.length}{" "}
-              {activeTab === "sales" ? "sales" : "technical"} support locations
-            </div>
-          </div>
+          <SearchBar
+            value={searchQuery}
+            onChange={setSearchQuery}
+            placeholder="Search by region, country, or contact person..."
+            maxWidth="500px"
+            showResultsCount={true}
+            resultsCount={filteredData.length}
+            resultsLabel={`Showing ${filteredData.length} ${
+              activeTab === "sales" ? "sales" : "technical"
+            } support locations`}
+          />
 
           {/* Contact Cards Grid */}
           {filteredData.length === 0 ? (

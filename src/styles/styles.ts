@@ -13,3 +13,6 @@ export const TEXT_PRIMARY = "text-gray-900 dark:text-white";
 export const TEXT_SECONDARY = "text-gray-600 dark:text-gray-400";
 
 export const BORDER_STYLES = "border-gray-200 dark:border-white/30";
+
+export const TOGGLE_CONTAINER_STYLES =
+  "bg-gray-50 dark:bg-[hsl(217,33%,7%)] shadow-[0_2px_12px_rgba(0,0,0,0.08)] dark:shadow-[0_2px_12px_rgba(0,0,0,0.3)] border border-slate-200 dark:border-slate-700";
