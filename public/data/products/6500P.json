@@ -1,0 +1,155 @@
+{
+  "id": "6500P",
+  "series": "6500P Series",
+  "title": "Precision LCR Meter",
+  "subtitle": "7 models from 20Hz to 5, 10, 15, 20, 30, 50, and 120MHz",
+  "image": "/images/products/lcr-8000g.jpg",
+  "overview": {
+    "paragraphs": [
+      "The 6500P Series HF LCR Meters are precision instruments designed to meet the varied needs of manufacturing and testing with a focus on high frequency component analysis. With a wide range of frequency specifications, these meters are tailored to offer the best match for application requirements and budget constraints.",
+      "Known for their high measurement accuracy and versatility, the 6500P series is an ideal solution for tasks requiring detailed component evaluation and characterization.",
+      "Built with advanced impedance analysis capabilities, the LCR-8000G delivers measurements across a wide frequency range with industry-leading precision. Its intuitive interface and comprehensive feature set make it the ideal choice for both routine testing and complex analysis tasks."
+    ]
+  },
+  "features": [
+    {
+      "title": "High Measurement Accuracy",
+      "description": "Outstanding basic accuracy for capacitance, inductance, and impedance at ±0.05%, with dissipation factor accuracy at ±0.0005 and quality factor accuracy also at ±0.05%"
+    },
+    {
+      "title": "Variable Drive and Bias Levels",
+      "description": "AC drive levels up to 1Vrms or 20mArms and DC bias options of 0 to +40V dc bias voltage and 0 to +100mA dc bias current, with a further option for -40V to +40V dc bias voltage, allowing for component evaluation under realistic operating conditions"
+    },
+    {
+      "title": "Comprehensive Measurement Capabilities",
+      "description": "Capable of characterizing components across a frequency range from 20 Hz to 120 MHz, with models available from 5MHz (6505P) to 120MHz (65120P)"
+    },
+    {
+      "title": "Intuitive Operation",
+      "description": "Features a large 8.4\" VGA color TFT touch screen for ease of use, complemented by clear graphic displays that aid measurement interpretation"
+    },
+    {
+      "title": "Extensive Connectivity Options",
+      "description": "Includes GPIB and Ethernet interfaces for external control and data output, facilitating integration into various test environments. Also offers the flexibility of keyboard and mouse control via PS/2 or USB connections"
+    },
+    {
+      "title": "Data Management",
+      "description": "Enables storage of measurement and setup data via Ethernet or USB flash memory, with capacity for up to 20 setups stored locally for each mode"
+    },
+    {
+      "title": "Safety Features",
+      "description": "Incorporates protection against charged capacitors to prevent damage and ensure instrument longevity"
+    },
+    {
+      "title": "Versatile Component Connections",
+      "description": "Equipped with four front panel BNC connectors for three or four terminal connections, along with fixtures for both leaded and surface mount devices"
+    }
+  ],
+  "specifications": [
+    {
+      "heading": "Measurement Functions",
+      "functions": [
+        { "symbol": "C", "name": "Capacitance" },
+        { "symbol": "L", "name": "Inductance" },
+        { "symbol": "R", "name": "Resistance" },
+        { "symbol": "X", "name": "Reactance" },
+        { "symbol": "G", "name": "Conductance" },
+        { "symbol": "B", "name": "Susceptance" },
+        { "symbol": "D", "name": "Dissipation Factor" },
+        { "symbol": "Q", "name": "Quality Factor" },
+        { "symbol": "Z", "name": "Impedance" },
+        { "symbol": "Y", "name": "Admittance" },
+        { "symbol": "Ø", "name": "Phase Angle" }
+      ]
+    },
+    {
+      "heading": "Frequency Range",
+      "content": [
+        "Frequency step size <1 mHz",
+        "Accuracy of set frequency ±0.005%"
+      ],
+      "modelVariants": [
+        { "model": "6505P", "spec": "20Hz to 5MHz" },
+        { "model": "6510P", "spec": "20Hz to 10MHz" },
+        { "model": "6515P", "spec": "20Hz to 15MHz" },
+        { "model": "6520P", "spec": "20Hz to 20MHz" },
+        { "model": "6530P", "spec": "20Hz to 30MHz" },
+        { "model": "6550P", "spec": "20Hz to 50MHz" },
+        { "model": "65120P", "spec": "20Hz to 120MHz" }
+      ]
+    },
+    {
+      "heading": "AC Drive Level",
+      "content": [
+        "5mV to 1Vrms (varies with frequency)",
+        "100µA to 20mArms (varies with frequency)"
+      ]
+    },
+    {
+      "heading": "Measurement Speeds",
+      "content": [
+        "4 speeds selectable",
+        "Up to 20 measurements per second for test frequencies ≥100 Hz"
+      ]
+    },
+    {
+      "heading": "Accuracy",
+      "content": [
+        "Dissipation factor - ±0.0005 (1+D²)",
+        "Quality factor - ±0.05% (Q+1/Q)",
+        "Capacitance / Inductance / Impedance - ±0.05%"
+      ],
+      "note": "Accuracy depends on frequency, drive level and impedance"
+    },
+    {
+      "heading": "DC Bias Current (Option)",
+      "content": [
+        "/D1 0 to +100mA dc bias current and 0 to +40V dc bias voltage",
+        "/D2 -40V to +40V dc bias voltage"
+      ]
+    },
+    {
+      "heading": "Binning (Option)",
+      "content": [
+        "10 bins with absolute and percentage limits",
+        "25 way d-type interface connector"
+      ],
+      "list": [
+        "/B1 (Non-isolated) Common 0V Bin outputs 0 to 5V (normal) with >10mA current sink capability",
+        "/B2 (isolated) Common 24V input outputs 0 to 24V with >10mA current source capability"
+      ]
+    },
+    {
+      "heading": "Display",
+      "content": ["8.4\" VGA (650 x 480) color TFT with touch panel"]
+    },
+    {
+      "heading": "GPIB Interface",
+      "content": ["External instrument control 24 pin IEEE 488 connector"]
+    },
+    {
+      "heading": "USB Interface",
+      "content": [
+        "Two Universal Serial Bus (USB) interfaces",
+        "USB 1.1 compliant"
+      ]
+    },
+    {
+      "heading": "Network Interface",
+      "content": ["10/100-BASETX Ethernet controller", "RJ45 connector"]
+    }
+  ],
+  "options": [
+    {
+      "title": "/K option - Materials Test",
+      "description": "Advanced materials characterization and dielectric testing capabilities",
+      "pdfUrl": "/datasheets/options/k-option-materials-test.pdf"
+    },
+    {
+      "title": "/M option - Multi Measurement Mode",
+      "description": "Simultaneous multi-parameter measurement for enhanced productivity",
+      "pdfUrl": "/datasheets/options/m-option-multi-measurement.pdf"
+    }
+  ],
+  "datasheet": "/datasheets/instruments/WK6500P.pdf"
+}

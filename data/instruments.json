@@ -21,7 +21,8 @@
     "title": "High Frequency LCR Meter",
     "description": "The 6500P series LCR meters feature extended test frequencies, high accuracy, and a large, high-resolution color display.",
     "image": "/images/products/instruments/6500P.webp",
-    "datasheet": "/datasheets/instruments/WK6500P.pdf"
+    "datasheet": "/datasheets/instruments/WK6500P.pdf",
+    "productId": "6500P"
   },
   {
     "id": 4,
