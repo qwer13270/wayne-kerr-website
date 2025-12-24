@@ -125,7 +125,7 @@ export default function ProductModal({
       onClick={onClose}
     >
       <div
-        className={`${TOGGLE_CONTAINER_STYLES} rounded-3xl max-w-[900px] w-full max-h-[90vh] overflow-hidden shadow-2xl`}
+        className={`${TOGGLE_CONTAINER_STYLES} rounded-3xl w-[900px] h-[750px] overflow-hidden shadow-2xl`}
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}

@@ -186,7 +186,7 @@ export default function WayneKerrHomepage() {
           <div className="space-y-8">
             <div className="hidden sm:inline-block">
               <div className="px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-sm text-white mb-6">
-                🏆 Trusted by industry leaders for 78+ years
+                Trusted by industry leaders for 78+ years
               </div>
             </div>
 
