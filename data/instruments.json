@@ -95,5 +95,54 @@
     "description": "Measures resistance from 0.001 mΩ to 1.999 MΩ with ±0.1% accuracy and features a four-wire test system with RS232/HANDLER interface.",
     "image": "/images/products/instruments/3100.webp",
     "datasheet": "/datasheets/instruments/WK3100.pdf"
+  },
+  {
+    "id": 13,
+    "series": "6500B System",
+    "title": "80Amp DC Bias Test System",
+    "description": "The 6500 System is engineered to support DC bias currents up to 80A. With options for extending capabilities through parallel connection of additional 6565B bias units, the 6500 System offers scalable solutions tailored to meet advanced testing needs.",
+    "image": "/images/products/instruments/6500B_system.webp"
+  },
+  {
+    "id": 14,
+    "series": "5400 System",
+    "title": "400A DC Bias Test System",
+    "description": "5400/3265 400A DC bias system with 1mS ultra-fast measurement speed, basic accuracy up to 0.02%, AC parametric measurement up to 10MHz, providing 5Vrms/200mA powerful AAC signal drive, it is an efficient and accurate test solution.",
+    "image": "/images/products/instruments/5400_system.webp"
+  },
+  {
+    "id": 15,
+    "series": "3260B System",
+    "title": "300A DC Bias Test System",
+    "description": "The equipment includes 12 units of 3265B with 500 kHz measurement at 300A, 10 units of 3265B with 1 MHz measurement at 250A, and 2 units of 3265BQ with 3 MHz measurement at 50A, all featuring a 7-inch WVGA touchscreen for ease of use.",
+    "image": "/images/products/instruments/3260B_system.webp"
+  },
+  {
+    "id": 16,
+    "series": "DB23X Series",
+    "title": "CLR Measurements",
+    "description": "The DB23x Series provides precise and rapid testing of capacitors, including film/foil, tantalum, and ceramic types, with unique double frequency testing and high-speed sorting capabilities. Ideal for both laboratory and industrial use, these instruments ensure high-quality output and efficient operations.",
+    "image": "/images/products/instruments/DB23X.webp"
+  },
+  {
+    "id": 17,
+    "series": "DB26X Series",
+    "title": "Insulation Measurement",
+    "description": "The DB26X Series Megohmmeters offer fast and precise measurement of leakage currents and insulation resistance, featuring dual high-voltage power supplies for efficient pre-charge and fine-charge cycles. Ideal for testing up to 5kV, they enhance sorting machine performance and are versatile for both industrial and laboratory use.",
+    "image": "/images/products/instruments/DB26X.webp"
+  },
+  {
+    "id": 18,
+    "series": "JP3X Series",
+    "title": "High Voltage Insulation Measurement",
+    "description": "The JP3X Series High Voltage Insulation Testers offer non-destructive testing up to 36kV, identifying insulation weaknesses and faults without damaging components. Ideal for testing cables, generators, and electrical motors, these testers detect ionization through sound signals.",
+    "image": "/images/products/instruments/JP3X.webp"
+  },
+  {
+    "id": 19,
+    "series": "CLT10",
+    "title": "3rd Harmonic Testing",
+    "description": "The CLT10 System ensures component reliability by measuring 3rd harmonic distortion of a sinewave current, providing fast and effective quality control. It is suitable for testing metal-film resistors, capacitors, and audio-grade components, and meets international standards like IEC-440.",
+    "image": "/images/products/instruments/CLT10.webp"
   }
 ]
