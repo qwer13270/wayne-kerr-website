@@ -5,7 +5,8 @@
     "title": "Impulse Tester",
     "description": "Specializes in testing inter-layer short circuits in motors, transformers, and inductors, and supports various test modes including area ratio, area difference, corona number, and corona amount.",
     "image": "/images/products/instruments/7820.webp",
-    "datasheet": "/datasheets/instruments/WK7820.pdf"
+    "datasheet": "/datasheets/instruments/WK7820.pdf",
+    "productId": "7820"
   },
   {
     "id": 2,

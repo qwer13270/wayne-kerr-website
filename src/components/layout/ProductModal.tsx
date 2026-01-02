@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo, useCallback } from "react";
 import { X } from "lucide-react";
 import {
   TEXT_SECONDARY,
@@ -42,7 +42,7 @@ interface ProductDetails {
     list?: string[];
     note?: string;
   }[];
-  options: {
+  options?: {
     title: string;
     description: string;
     pdfUrl: string;
@@ -68,14 +68,7 @@ export default function ProductModal({
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  // Fetch product data when modal opens
-  useEffect(() => {
-    if (isOpen && productId) {
-      fetchProductData();
-    }
-  }, [isOpen, productId]);
-
-  const fetchProductData = async () => {
+  const fetchProductData = useCallback(async () => {
     setLoading(true);
     setError(null);
     try {
@@ -91,7 +84,14 @@ export default function ProductModal({
     } finally {
       setLoading(false);
     }
-  };
+  }, [productId]);
+
+  // Fetch product data when modal opens
+  useEffect(() => {
+    if (isOpen && productId) {
+      fetchProductData();
+    }
+  }, [isOpen, productId, fetchProductData]);
 
   // Close modal on ESC key
   useEffect(() => {
@@ -116,6 +116,25 @@ export default function ProductModal({
       document.body.style.overflow = "auto";
     };
   }, [isOpen]);
+
+  // Define available tabs based on product data
+  const availableTabs = useMemo(
+    () =>
+      [
+        "overview",
+        "features",
+        "specifications",
+        ...(productData?.options ? ["options"] : []),
+      ] as const,
+    [productData?.options]
+  );
+
+  // Reset activeTab if current tab is not available
+  useEffect(() => {
+    if (productData && !availableTabs.includes(activeTab)) {
+      setActiveTab("overview");
+    }
+  }, [productData, activeTab, availableTabs]);
 
   if (!isOpen) return null;
 
@@ -157,7 +176,7 @@ export default function ProductModal({
         <div
           className={`flex gap-2 px-10 ${MODAL_TABS_CONTAINER_BG} ${MODAL_TABS_CONTAINER_BORDER} overflow-x-auto`}
         >
-          {["overview", "features", "specifications", "options"].map((tab) => (
+          {availableTabs.map((tab) => (
             <button
               key={tab}
               onClick={() =>
@@ -341,7 +360,7 @@ export default function ProductModal({
               )}
 
               {/* Options Tab */}
-              {activeTab === "options" && (
+              {activeTab === "options" && productData.options && (
                 <div className="animate-fadeIn">
                   <h3 className="text-2xl font-bold text-primary mb-4">
                     Available Options
