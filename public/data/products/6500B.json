@@ -189,19 +189,19 @@
   "options": [
     {
       "title": "/E option - Equivalent Circuit Analysis",
-      "pdfUrl": "/datasheets/options/e-option-equivalent-circuit.pdf"
+      "pdfUrl": "/datasheets/options/6500B/6500B E option.pdf"
     },
     {
       "title": "/K option - Materials Test",
-      "pdfUrl": "/datasheets/options/k-option-materials-test.pdf"
+      "pdfUrl": "/datasheets/options/6500B/6500B K option.pdf"
     },
     {
       "title": "/M option - Multi Measurement Mode",
-      "pdfUrl": "/datasheets/options/m-option-multi-measurement.pdf"
+      "pdfUrl": "/datasheets/options/6500B/6500B M option.pdf"
     },
     {
       "title": "/Y option - Polar Complex Plots",
-      "pdfUrl": "/datasheets/options/y-option-polar-plots.pdf"
+      "pdfUrl": "/datasheets/options/6500B/6500B Y option.pdf"
     }
   ],
   "datasheet": "/datasheets/instruments/WK6500B.pdf"

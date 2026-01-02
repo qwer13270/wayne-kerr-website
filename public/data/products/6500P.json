@@ -140,11 +140,11 @@
   "options": [
     {
       "title": "/K option - Materials Test",
-      "pdfUrl": "/datasheets/options/k-option-materials-test.pdf"
+      "pdfUrl": "/datasheets/options/6500P/6500P K option.pdf"
     },
     {
       "title": "/M option - Multi Measurement Mode",
-      "pdfUrl": "/datasheets/options/m-option-multi-measurement.pdf"
+      "pdfUrl": "/datasheets/options/6500P/6500P M option.pdf"
     }
   ],
   "datasheet": "/datasheets/instruments/WK6500P.pdf"
