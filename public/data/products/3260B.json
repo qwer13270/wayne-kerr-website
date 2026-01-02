@@ -1,0 +1,129 @@
+{
+  "id": "3260B",
+  "series": "3260B Series",
+  "title": "Precision Magnetics Analyzer",
+  "subtitle": "1 model: 3260B (20 Hz to 3 MHz)",
+  "image": "/images/products/transparent/3260.png",
+  "overview": {
+    "paragraphs": [
+      "The 3260B Precision Magnetics Analyzer is a instrument designed for the comprehensive characterization of components, particularly suited to the needs of telecom transformer testing and SMD inductor evaluation. Offering a wide frequency range of 20 Hz to 3 MHz and a basic accuracy of 0.1%, it facilitates precise analysis of a component's performance under various operating conditions including different frequencies, AC drive levels, and DC bias currents."
+    ]
+  },
+  "applications": [
+    "Telecom Transformer Testing",
+    "SMD Inductor Evaluation",
+    "High Current Component Tests"
+  ],
+  "features": [
+    {
+      "title": "Wide Frequency Range",
+      "description": "20 Hz to 3MHz allows for detailed component analysis across a broad spectrum of frequencies"
+    },
+    {
+      "title": "High Precision",
+      "description": "0.1% basic accuracy ensures reliable measurement results"
+    },
+    {
+      "title": "Versatile Measurement Functions",
+      "description": "Capable of measuring Z, L, C, Rac, Ø, Q, D, Rdc, and Turns Ratio"
+    },
+    {
+      "title": "Graphical Analysis",
+      "description": "Graph measured parameters against frequency, AC drive level, or DC bias current for thorough component evaluation"
+    },
+    {
+      "title": "Internal and External DC Bias",
+      "description": "Internal bias up to 1A; external bias up to 250A with optional 3265B DC Bias Units, enabling tests on components requiring high current"
+    },
+    {
+      "title": "Bin Handler Mode",
+      "description": "Sort components into up to 10 bins based on absolute values or percentage, enhancing production efficiency"
+    },
+    {
+      "title": "Intuitive Operation",
+      "description": "Designed for straightforward, user-friendly interaction"
+    },
+    {
+      "title": "Print and Archive Results",
+      "description": "Direct printing of test results via parallel Centronics interface for analysis and archiving"
+    },
+    {
+      "title": "PC Control and Analysis",
+      "description": "IEEE 488 GPIB interface and LabVIEW™ driver support for control and data analysis via a PC"
+    }
+  ],
+  "specifications": [
+    {
+      "heading": "Measurement Function",
+      "content": ["L, Z, Rdc, C, Q, D, Rac, Angle"]
+    },
+    {
+      "heading": "Frequency Range",
+      "content": ["20 Hz to 3 MHz Option"]
+    },
+    {
+      "heading": "Drive Level",
+      "content": [
+        "1 mV to 10 V rms into open circuit",
+        "50 µA to 200 mA rms into short circuit"
+      ]
+    },
+    {
+      "heading": "Internal DC Bias Supply",
+      "content": ["1 mA to 1 A"]
+    },
+    {
+      "heading": "Insulation (Option)",
+      "content": ["Test voltages 100 V, 200 V, or 500 V DC, user selectable"]
+    },
+    {
+      "heading": "Measurement Speeds",
+      "content": ["4 speeds selectable (20/sec max)"]
+    },
+    {
+      "heading": "Measurement Ranges",
+      "content": [
+        "R 0.01 mΩ to > 2 GΩ",
+        "L 0.1 nH to >1000H",
+        "C 5 fF to > 1 F"
+      ]
+    },
+    {
+      "heading": "Accuracy",
+      "content": [
+        "L/Rac/Z/Cp ±0.1%",
+        "Q ±0.1% (Q+1/Q)",
+        "D ±0.001 (1+ D²)",
+        "Turns ratio ±0.1%",
+        "Rdc ±0.5%"
+      ]
+    },
+    {
+      "heading": "Input Specification",
+      "content": [
+        "Power supply 230 V AC ±10% or 115 V AC ±10% (selectable)",
+        "50 to 400 Hz",
+        "400VA maximum consumption"
+      ]
+    },
+    {
+      "heading": "Display",
+      "content": [
+        "High contrast monochrome LCD 320 x 240 dot with CFL back lighting",
+        "Visible area 115 x 86mm",
+        "Viewing angle 45°"
+      ]
+    },
+    {
+      "heading": "Measurement Connections",
+      "content": [
+        "8 front panel BNC sockets",
+        "2- or 4-wire (Kelvin) measurements with screen at ground potential",
+        "Equivalent circuit symbols on screen",
+        "Separate terminals for primary and secondary connections",
+        "LEDs indicate active terminals"
+      ]
+    }
+  ],
+  "datasheet": "/datasheets/instruments/WK3260B.pdf"
+}

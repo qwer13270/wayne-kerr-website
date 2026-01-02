@@ -1,0 +1,156 @@
+{
+  "id": "3100Series",
+  "series": "3100 Series",
+  "title": "Programmable Low-Ohm Meter",
+  "subtitle": "Precision resistance measurements from 0.001mΩ to 1.9999MΩ",
+  "image": "/images/products/transparent/3100.png",
+  "overview": {
+    "paragraphs": [
+      "The WK 3100 is a Programmable Low-Ohm Meter designed to offer precise resistance measurements across a wide range, from 0.001mΩ to 1.9999MΩ. Its advanced features and high-speed capabilities make it ideal for use in automation systems and various testing environments, ensuring accurate component evaluation with minimal temperature influence."
+    ]
+  },
+  "applications": [
+    "Electronics manufacturing and quality control environments requiring precise resistance measurement",
+    "Testing environments where high speed and accurate component analysis are critical",
+    "Laboratories and R&D centers needing versatile, reliable, and accurate testing equipment for component characterization"
+  ],
+  "features": [
+    {
+      "title": "Broad Measurement Range",
+      "description": "Capable of measuring resistance from 0.001mΩ to 1.9999MΩ, ensuring flexibility in handling a wide array of components"
+    },
+    {
+      "title": "High Accuracy",
+      "description": "Provides excellent accuracy levels of ±0.1% of the reading, enhancing the reliability of test results"
+    },
+    {
+      "title": "Advanced Measurement Modes",
+      "description": "Offers Level and Pulse measurement modes, with Pulse Mode reducing temperature influence during tests"
+    },
+    {
+      "title": "Fast Testing Capability",
+      "description": "Equipped with a high-speed Fast Analog-to-Digital Converter (FADC), achieving maximum test speeds of up to 14ms to accelerate testing processes"
+    },
+    {
+      "title": "Comprehensive Display and Controls",
+      "description": "Features a 240 x 64 graphic LCD display for clear, detailed readouts and easy navigation through test settings"
+    },
+    {
+      "title": "Versatile Trigger and Test Modes",
+      "description": "Supports both internal and external triggering, with auto or manual ranging and zeroing calibration for enhanced precision"
+    },
+    {
+      "title": "Comprehensive Sorting and Comparing Functions",
+      "description": "Includes BIN Sorting and HI/LOW limit comparator functions to facilitate component sorting and quality control assessments"
+    },
+    {
+      "title": "Connectivity Options",
+      "description": "Comes with RS232 and HANDLER combinatorial interfaces, facilitating integration with other systems"
+    }
+  ],
+  "specifications": [
+    {
+      "heading": "Measurement Range",
+      "content": [
+        "Level: 0.001 mΩ ~ 1.9999MΩ",
+        "Pulse: 0.001 mΩ ~ 1.9999Ω"
+      ]
+    },
+    {
+      "heading": "Level Mode Specifications",
+      "list": [
+        "20 mΩ range: 0.000 ~ 19.999, 0.001mΩ resolution, 1A dc current, ±(0.1% of reading + 5 digits) accuracy",
+        "200 mΩ range: 0.00 ~ 199.99, 0.01mΩ resolution, 100mA dc current, ±(0.1% of reading + 5 digits) accuracy",
+        "2Ω range: 0.0000 ~ 19.999, 0.0001Ω resolution, 100mA dc current, ±(0.1% of reading + 5 digits) accuracy",
+        "20 Ω range: 0.000 ~ 19.999, 0.001Ω resolution, 10mA dc current, ±(0.1% of reading + 5 digits) accuracy",
+        "20 Ω range (high): 0.000 ~ 10.000, 0.01Ω resolution, 1mA dc current, ±(0.1% of reading + 5 digits) accuracy",
+        "2 kΩ range: 0.0000 ~ 1.9999, 0.0001kΩ resolution, 1mA dc current, ±(0.1% of reading + 5 digits) accuracy",
+        "20 kΩ range: 0.000 ~ 19.999, 0.001kΩ resolution, 100µA dc current, ±(0.1% of reading + 5 digits) accuracy",
+        "200 kΩ range: 0.00 ~ 199.99, 0.01kΩ resolution, 10µA dc current, ±(0.1% of reading + 5 digits) accuracy",
+        "2 MΩ range: 0.0000 ~ 1.9999, 0.0001MΩ resolution, 1µA dc current, ±(0.1% of reading + 5 digits) accuracy"
+      ]
+    },
+    {
+      "heading": "Pulse Mode Specifications",
+      "list": [
+        "20 mΩ range: 0.000 ~ 19.999, 0.001mΩ resolution, ±50mA current, ±(0.5% of reading + 10 digits) accuracy",
+        "200 mΩ range: 0.00 ~ 199.99, 0.01mΩ resolution, ±50mA current, ±(0.5% of reading + 10 digits) accuracy",
+        "2Ω range: 0.0000 ~ 1.9999, 0.0001Ω resolution, ±50mA current, ±(0.2% of reading + 10 digits) accuracy"
+      ]
+    },
+    {
+      "heading": "Test Speed",
+      "content": [
+        "LEVEL: Slow: 135ms, Fast: 68ms, Max.: 14ms",
+        "PULSE: Slow: 310ms, Fast: 170ms, Max.: 140ms"
+      ]
+    },
+    {
+      "heading": "Open Circuit Voltage",
+      "content": [
+        "20 mΩ ~ 20 Ω: <1.0V",
+        "200 Ω ~ 2 MΩ: < 5.5V"
+      ]
+    },
+    {
+      "heading": "Temperature Coefficient",
+      "content": ["±(0.01% + 0.5 digits) / °C"]
+    },
+    {
+      "heading": "Test Mode",
+      "content": ["4-Wire test"]
+    },
+    {
+      "heading": "Display LCD",
+      "content": ["240 × 64 Graphic display, 4 1/2 digitals"]
+    },
+    {
+      "heading": "Trigger Mode",
+      "content": ["Internal, External"]
+    },
+    {
+      "heading": "Ranging",
+      "content": ["Auto or Manual"]
+    },
+    {
+      "heading": "Functions",
+      "content": ["Auto ranging, Zeroing calibration"]
+    },
+    {
+      "heading": "Interface",
+      "content": ["RS232/HANDLER combinatorial interface"]
+    },
+    {
+      "heading": "Memory",
+      "content": ["Up to 100 sets of memory"]
+    },
+    {
+      "heading": "Battery Backup",
+      "content": ["Measurement status: Measure range, Comparator setting"]
+    },
+    {
+      "heading": "Comparator",
+      "content": [
+        "HI/LO: Judgment comparator STD value setting, Hi/Low Limit setting, Pass/Fail Judgment, Alarm Indicate",
+        "BIN sorting: Sorting comparator Reference value & HI-LO Limits setting by BIN NO. or STEPS mode, Limit of DCR Value, 8 BIN for sorting & BIN SUM count"
+      ]
+    },
+    {
+      "heading": "Accessories",
+      "content": ["Test clips, Power cord, Operation manual, Certificate of calibration"]
+    },
+    {
+      "heading": "Power",
+      "content": ["115/230 V ±10%, 50/60 Hz"]
+    },
+    {
+      "heading": "Dimensions",
+      "content": ["270(W) x 110(H) x 310(D) mm"]
+    },
+    {
+      "heading": "Weight",
+      "content": ["4.5 kg"]
+    }
+  ],
+  "datasheet": "/datasheets/instruments/WK3100.pdf"
+}

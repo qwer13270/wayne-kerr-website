@@ -1,0 +1,208 @@
+{
+  "id": "6500B",
+  "series": "6500B Series",
+  "title": "Precision Impedance Analyzer",
+  "subtitle": "7 models from 20Hz to 5, 10, 15, 20, 30, 50, and 120MHz",
+  "image": "/images/products/transparent/6500B.png",
+  "overview": {
+    "paragraphs": [
+      "The 6500B series Precision Impedance Analyzers deliver unparalleled precision in component testing, with a frequency range up to 120 MHz. They stand out in the market with a basic measurement accuracy of ±0.05%, making them the premier choice for applications in passive component design, dielectric material characterization, and manufacturing tests. The series is designed to meet the needs of engineers requiring high-frequency component evaluations with exceptional accuracy."
+    ]
+  },
+  "applications": [
+    "Passive component design",
+    "Dielectric material characterization",
+    "High-frequency component evaluation",
+    "Quality control and archiving",
+    "Educational purposes"
+  ],
+  "features": [
+    {
+      "title": "High Precision Measurements",
+      "description": "Characterize components with supreme accuracy across a wide frequency range from 20 MHz to 120 MHz, ensuring detailed analysis and quality assurance"
+    },
+    {
+      "title": "Versatile Measurement Options",
+      "description": "Capacitance, inductance, and impedance measurements feature a basic accuracy of ±0.05%. Additional accuracy includes dissipation factor accuracy of ±0.0005 and quality factor accuracy of ±0.05%"
+    },
+    {
+      "title": "Graphical Sweep Capabilities",
+      "description": "Perform graphical sweeps of two measured parameters across frequency, drive level, and DC bias, displayed on a large, clear color screen. Available display formats include series or parallel equivalent circuit models"
+    },
+    {
+      "title": "Advanced Analysis Tools",
+      "description": "Equipped with Equivalent Circuit Analysis for modeling and curve fitting, alongside traditional LCR Meter mode for straightforward measurements. Features include resonance search and the option for polar and complex plots"
+    },
+    {
+      "title": "Ease of Use",
+      "description": "A large TFT touch screen offers an intuitive user interface, simplifying complex measurements and data analysis"
+    },
+    {
+      "title": "Connectivity and Control",
+      "description": "Fully programmable via GPIB and LAN interfaces, with options for keyboard and mouse controls. External monitor or projector connections are available for large screen displays, enhancing visibility in production or educational settings"
+    },
+    {
+      "title": "Data Management",
+      "description": "Efficiently store and retrieve measurement and setup data through Ethernet or USB flash memory. Supports up to 20 local storage setups for each mode"
+    },
+    {
+      "title": "Safety Features",
+      "description": "Integrated protection against charged capacitors to prevent damage and ensure longevity"
+    },
+    {
+      "title": "Additional Options",
+      "description": "Variable AC drive levels up to 1Vrms or 20mArms, DC bias options ranging from 0 to +40V, and bin handling for quality control processes"
+    }
+  ],
+  "specifications": [
+    {
+      "heading": "Measurement Functions",
+      "content": [
+        "Capacitance (C), Inductance (L), Resistance (R), Reactance (X), Conductance (G), Susceptance (B)",
+        "Dissipation Factor (D), Quality Factor (Q), Impedance (Z)",
+        "Admittance (Y), Phase Angle (Ø)"
+      ]
+    },
+    {
+      "heading": "Frequency Range",
+      "content": [
+        "Frequency step size 0.1 mHz",
+        "Accuracy of set frequency ±0.005%"
+      ],
+      "modelVariants": [
+        { "model": "6505B", "spec": "20Hz to 5MHz" },
+        { "model": "6510B", "spec": "20Hz to 10MHz" },
+        { "model": "6515B", "spec": "20Hz to 15MHz" },
+        { "model": "6520B", "spec": "20Hz to 20MHz" },
+        { "model": "6530B", "spec": "20Hz to 30MHz" },
+        { "model": "6550B", "spec": "20Hz to 50MHz" },
+        { "model": "65120B", "spec": "20Hz to 120MHz" }
+      ]
+    },
+    {
+      "heading": "AC Drive Level",
+      "content": [
+        "5mV to 1Vrms (varies with frequency)",
+        "100µA to 20mArms (varies with frequency)"
+      ]
+    },
+    {
+      "heading": "Measurement Speeds",
+      "content": [
+        "4 speeds selectable",
+        "Up to 20 measurements per second for test frequencies ≥100 Hz"
+      ]
+    },
+    {
+      "heading": "Accuracy",
+      "content": [
+        "Dissipation factor - ±0.0005 (1+D²)",
+        "Quality factor - ±0.05% (Q+1/Q)",
+        "Capacitance / Inductance / Impedance - ±0.05%"
+      ],
+      "note": "Accuracy depend on frequency, drive level and impedance"
+    },
+    {
+      "heading": "DC Bias Current (Option)",
+      "content": [
+        "/D1 0 to +100mA dc bias current and 0 to +40V dc bias voltage",
+        "/D2 -40V to +40V dc bias voltage"
+      ]
+    },
+    {
+      "heading": "Binning (Option)",
+      "content": [
+        "10 bins with absolute and percentage limits",
+        "25 way d-type interface connector"
+      ],
+      "list": [
+        "/B1 (Non-isolated) Common 0V Bin outputs 0 to 5V (normal) with >10mA current sink capability",
+        "/B2 (isolated) Common 24V input outputs 0 to 24V with >10mA current source capability"
+      ]
+    },
+    {
+      "heading": "Input Specification",
+      "content": [
+        "Power supply - Input voltage 90 V AC to 264 V AC (Autoranging)",
+        "Mains frequency 47 to 63 Hz"
+      ]
+    },
+    {
+      "heading": "Display",
+      "content": ["8.4\" VGA (640 x 480) color TFT with touch panel"]
+    },
+    {
+      "heading": "Measurement Connections",
+      "content": [
+        "Four front panel BNC connectors permit two, three or four terminal connections with the screens at ground potential",
+        "1J1011 Component Fixture (supplied as standard) allows connection to leaded components and devices"
+      ]
+    },
+    {
+      "heading": "Printer",
+      "content": [
+        "HP-PCL compatible graphics printing (local and network)",
+        "Centronics / parallel printer port, Epson compatible text/ticket printing (local)"
+      ]
+    },
+    {
+      "heading": "Remote Trigger",
+      "content": [
+        "Rear panel BNC with internal pull-up, operates on logic low or contact closure"
+      ]
+    },
+    {
+      "heading": "GPIB Interface",
+      "content": ["External instrument control 24 pin IEEE 488 connector"]
+    },
+    {
+      "heading": "USB Interface",
+      "content": [
+        "Two Universal Serial Bus (USB) interfaces",
+        "USB 1.1 compliant"
+      ]
+    },
+    {
+      "heading": "VGA Interface",
+      "content": [
+        "15-way D-type connector to drive an external monitor in addition to the internal screen"
+      ]
+    },
+    {
+      "heading": "Network Interface",
+      "content": ["10/100-BASETX Ethernet controller", "RJ45 connector"]
+    },
+    {
+      "heading": "Keyboard Interface",
+      "content": [
+        "Standard USB or PS/2 keyboard port. Instrument front panel remains active with keyboard plugged in"
+      ]
+    },
+    {
+      "heading": "Mouse Interface",
+      "content": [
+        "Standard USB or PS/2 mouse port",
+        "Touch screen remains enabled when the mouse is connected"
+      ]
+    }
+  ],
+  "options": [
+    {
+      "title": "/E option - Equivalent Circuit Analysis",
+      "pdfUrl": "/datasheets/options/e-option-equivalent-circuit.pdf"
+    },
+    {
+      "title": "/K option - Materials Test",
+      "pdfUrl": "/datasheets/options/k-option-materials-test.pdf"
+    },
+    {
+      "title": "/M option - Multi Measurement Mode",
+      "pdfUrl": "/datasheets/options/m-option-multi-measurement.pdf"
+    },
+    {
+      "title": "/Y option - Polar Complex Plots",
+      "pdfUrl": "/datasheets/options/y-option-polar-plots.pdf"
+    }
+  ],
+  "datasheet": "/datasheets/instruments/WK6500B.pdf"
+}

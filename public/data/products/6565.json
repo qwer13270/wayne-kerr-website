@@ -1,0 +1,90 @@
+{
+  "id": "6565",
+  "series": "6565 Series",
+  "title": "HF DC Bias Unit",
+  "subtitle": "3 models: 20 Hz to 5 MHz, 20 Hz to 30 MHz, and 20 Hz to 120 MHz",
+  "image": "/images/products/transparent/6565.png",
+  "overview": {
+    "paragraphs": [
+      "The 6565 HF DC Bias Unit is a specialized accessory designed to work seamlessly with the Wayne Kerr 6500 series analyzers, including both the 6500B Precision Impedance Analyzer and the 6500P HF LCR Meter. Its primary function is to supply DC bias current to the Device Under Test (DUT) during AC measurements, enhancing the testing capabilities of the 6500 series analyzers for comprehensive component analysis."
+    ]
+  },
+  "applications": [
+    "Measuring inductance variations under different DC bias current levels",
+    "Testing and characterizing wound components",
+    "Conducting comparative frequency sweep for impedance and phase angle measurements",
+    "Quality control in electronic component manufacturing",
+    "Applying varying DC bias currents during tests"
+  ],
+  "features": [
+    {
+      "title": "DC Bias Current Supply",
+      "description": "Provides up to 10 A of DC current per unit, with the capability to connect up to eight units in parallel for a maximum output of 80 A"
+    },
+    {
+      "title": "Compatibility and Versatility",
+      "description": "Compatible with any 6500 analyzer model, offering flexibility across a wide range of frequencies from 20 Hz to 120 MHz, depending on the chosen 6565 model"
+    },
+    {
+      "title": "Integrated Measurement Display",
+      "description": "Features a digital ammeter for monitoring DC bias current values and an indicator LED for bias current status"
+    },
+    {
+      "title": "Enhanced Measurement Techniques",
+      "description": "Supports sophisticated measurement strategies, including the sweeping of DC Bias Current from 0A up to the DUT's rated maximum and frequency sweeps at different DC bias current levels for comparative analysis"
+    },
+    {
+      "title": "Safety and Protection",
+      "description": "Equipped with Wayne Kerr fixtures that include a safety interlock circuit and additional protection circuits to safeguard both the operator and the equipment under potential fault conditions"
+    }
+  ],
+  "specifications": [
+    {
+      "heading": "Measurement Functions",
+      "content": ["The 6565 series of DC bias units must be used in conjunction with either the 6500B Precision Impedance Analyzer or the 6500P HF LCR Meter"]
+    },
+    {
+      "heading": "Frequency Range",
+      "modelVariants": [
+        { "model": "6565-05", "spec": "20 Hz to 5 MHz" },
+        { "model": "6565-30", "spec": "20 Hz to 30 MHz" },
+        { "model": "6565-120", "spec": "20 Hz to 120MHz" }
+      ]
+    },
+    {
+      "heading": "Compliance Voltage",
+      "content": [
+        "9V maximum at 1 V ac drive level",
+        "10V maximum at 0.25 V ac drive level"
+      ]
+    },
+    {
+      "heading": "Basic Accuracy",
+      "content": ["±1%, Varies with measurement speed, frequency and options chosen"]
+    },
+    {
+      "heading": "Measurement Fixtures",
+      "content": [
+        "1026 is applicable for currents up to 20 A and the 1027 for currents up to 40 A",
+        "For SMD use the 1031 adaptor must be used in addition to the selected 1026 or 1027"
+      ]
+    },
+    {
+      "heading": "Input Specification",
+      "content": [
+        "Universal 85 to 265 V AC, 47 to 63 Hz",
+        "Input current 4.2 A rms max.",
+        "Power factor Meets EN61000-3-2",
+        "Unit powers up automatically when connected to a powered analyzer. Isolating switch provided"
+      ]
+    },
+    {
+      "heading": "Measurement Connections",
+      "content": [
+        "I2C bus link controls application of DC current and monitors status of analyzer",
+        "Status data includes excessive voltage drop and over temperature"
+      ]
+    }
+  ],
+  "datasheet": "/datasheets/instruments/WK6565.pdf"
+}

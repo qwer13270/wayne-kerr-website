@@ -1,0 +1,128 @@
+{
+  "id": "6400B",
+  "series": "6400B Series",
+  "title": "Precision Component Analyzer",
+  "subtitle": "2 models: 6430B (20 Hz to 500 kHz) and 6440B (20 Hz to 3 MHz)",
+  "image": "/images/products/transparent/6400.png",
+  "overview": {
+    "paragraphs": [
+      "The 6400B Precision Component Analyzer stands out for its comprehensive and accurate testing of passive components up to 3 MHz. It's particularly tailored for capacitor manufacturers, offering fast automatic production testing and complete design characterization. With a focus on high performance at an unbeatable price, the 6400B achieves a basic accuracy of 0.02%, making it a valuable tool for passive component designers, manufacturing tests, materials design and testing, as well as circuit designers evaluating component characteristics."
+    ]
+  },
+  "applications": [
+    "Capacitor manufacturers for fast automatic production testing",
+    "Designers of passive components seeking detailed characterization",
+    "Circuit designers evaluating component characteristics at frequencies up to 3 MHz"
+  ],
+  "features": [
+    {
+      "title": "High Precision Testing",
+      "description": "Achieves a basic measurement accuracy of 0.02%, ensuring thorough and accurate component evaluation"
+    },
+    {
+      "title": "Fast Automatic Testing",
+      "description": "Designed for rapid production testing, capable of performing up to eight different tests on each component with multi-frequency mode for performance evaluation over a specified frequency range"
+    },
+    {
+      "title": "Comprehensive Measurement Functions",
+      "description": "Includes a graphical sweep across all measurement functions, offering detailed analysis capabilities"
+    },
+    {
+      "title": "Large LCD Display",
+      "description": "Features a large, easy-to-read LCD display, enhancing the user interface for simplified operation"
+    },
+    {
+      "title": "Protection Against Charged Capacitors",
+      "description": "Incorporates an Overload Protection Unit (1J1100) to safeguard against charged capacitors, ensuring durability and reliability"
+    },
+    {
+      "title": "Resonant Frequency Calculation",
+      "description": "Automatically calculates the resonant frequency of components, along with their equivalent series or parallel circuit values at that frequency"
+    }
+  ],
+  "specifications": [
+    {
+      "heading": "Measurement Functions",
+      "content": [
+        "Inductance (L), impedance (Z), DC resistance (Rdc), capacitance (C)",
+        "Series or Parallel Equivalent Circuit C+R, C+D, C+Q, L+R, L+Q",
+        "Series equivalent circuit only X+R, X+D, X+Q",
+        "Parallel equivalent circuit only C+G, B+G, B+D, B+Q",
+        "Polar Form Z + Phase Angle, Y + Phase Angle"
+      ]
+    },
+    {
+      "heading": "Frequency Range",
+      "modelVariants": [
+        { "model": "6430B", "spec": "20 Hz to 500 kHz > 1000 steps (> 1500 steps with analysis option fitted)" },
+        { "model": "6440B", "spec": "20 Hz to 3 MHz > 1800 steps" }
+      ]
+    },
+    {
+      "heading": "Drive Level (Rdc)",
+      "content": ["100 mV or 1 V with 100 Ω source resistance"]
+    },
+    {
+      "heading": "Internal DC Bias Supply",
+      "content": ["2 V with rapid charge capacitor bias"]
+    },
+    {
+      "heading": "DC Bias Voltage (External)",
+      "content": ["External supply of up to ±60 V may be connected via rear panel"]
+    },
+    {
+      "heading": "Measurement Speeds",
+      "content": [
+        "4 speeds selectable",
+        "Up to 20 measurements per second for test frequencies ≥100 Hz"
+      ]
+    },
+    {
+      "heading": "Measurement Ranges",
+      "content": [
+        "R, Z 0.01 mΩ to > 2 GΩ",
+        "G, Y 1 nS to > 2 kS",
+        "L 0.1 nH to > 2 kH",
+        "C 1 fF to > 1 F",
+        "D 0.00001 to >1000",
+        "Q 0.00001 to >1000",
+        "Rdc 0.1 mΩ to > 10 MΩ"
+      ]
+    },
+    {
+      "heading": "Accuracy",
+      "content": [
+        "L/C ±0.05%",
+        "R ±0.02%",
+        "Q ± 0.05 %(Q + 1/Q)",
+        "D ±0.0002(1+ D²)",
+        "Rdc ± 0.1%"
+      ],
+      "note": "Accuracy varies with component range measurement speed and frequency"
+    },
+    {
+      "heading": "Input Specification",
+      "content": [
+        "Power supply 230 V AC ±10% or 115 V AC ±10% (selectable)",
+        "Mains frequency 50/60 Hz",
+        "150VA maximum consumption"
+      ]
+    },
+    {
+      "heading": "Display",
+      "content": [
+        "Monochrome LCD, 320x240 resolution, CFL backlight, high contrast",
+        "Visible area 115 x 86mm",
+        "Viewing angle 45°"
+      ]
+    },
+    {
+      "heading": "Measurement Connections",
+      "content": [
+        "4 front panel BNC sockets",
+        "4-wire (Kelvin) measurements with screen at ground potential"
+      ]
+    }
+  ],
+  "datasheet": "/datasheets/instruments/WK6400B.pdf"
+}

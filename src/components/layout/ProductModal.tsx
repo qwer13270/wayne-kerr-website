@@ -44,8 +44,9 @@ interface ProductDetails {
   }[];
   options?: {
     title: string;
-    description: string;
-    pdfUrl: string;
+    description?: string; // For options with PDF links
+    items?: string[]; // For bullet-pointed options
+    pdfUrl?: string;
   }[];
   datasheet?: string;
 }
@@ -366,29 +367,77 @@ export default function ProductModal({
                     Available Options
                   </h3>
                   <p className={`${TEXT_SECONDARY} leading-relaxed mb-8`}>
-                    Enhance your system with these optional features. Click any
-                    option to view detailed specifications.
+                    Enhance your system with these optional features.
+                    {productData.options.some((opt) => opt.pdfUrl) &&
+                      " Click any option to view detailed specifications."}
                   </p>
 
                   <div className="space-y-4 mb-8">
-                    {productData.options.map((option, index) => (
-                      <a
-                        key={index}
-                        href={option.pdfUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={`flex items-center gap-4 p-6 bg-gray-50 dark:bg-slate-800 border border-border rounded-xl transition-all duration-300 hover:bg-blue-50 dark:hover:bg-blue-950/20 hover:border-blue-600 hover:translate-x-2 group`}
-                      >
-                        <div className="flex-1">
-                          <div className="text-base font-bold text-primary mb-1">
-                            {option.title}
+                    {productData.options.map((option, index) =>
+                      option.pdfUrl ? (
+                        // Options with PDF links
+                        <a
+                          key={index}
+                          href={option.pdfUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={`block p-6 bg-gray-50 dark:bg-slate-800 border border-border rounded-xl transition-all duration-300 hover:bg-blue-50 dark:hover:bg-blue-950/20 hover:border-blue-600 hover:translate-x-2 group`}
+                        >
+                          <div className="flex items-start justify-between gap-4">
+                            <div className="flex-1">
+                              <div className="flex items-center gap-3 mb-2">
+                                <div className="text-lg font-bold text-primary">
+                                  {option.title}
+                                </div>
+                              </div>
+                              {option.description && (
+                                <p
+                                  className={`text-sm ${TEXT_SECONDARY} leading-relaxed pl-5`}
+                                >
+                                  {option.description}
+                                </p>
+                              )}
+                            </div>
+                            <div className="text-blue-600 dark:text-blue-400 text-2xl transition-transform duration-300 group-hover:translate-x-2">
+                              →
+                            </div>
                           </div>
+                        </a>
+                      ) : (
+                        // Options without PDF links (with bullet points)
+                        <div
+                          key={index}
+                          className={`p-6 bg-gray-50 dark:bg-slate-800 border border-border rounded-xl`}
+                        >
+                          <div className="flex items-center gap-3 mb-3">
+                            <div className="text-lg font-bold text-primary">
+                              {option.title}
+                            </div>
+                          </div>
+                          {option.items && option.items.length > 0 ? (
+                            <ul className="space-y-2 pl-5">
+                              {option.items.map((item, idx) => (
+                                <li
+                                  key={idx}
+                                  className={`relative pl-5 ${TEXT_SECONDARY} text-sm leading-relaxed`}
+                                >
+                                  <span className="absolute left-0 text-blue-600 dark:text-blue-400 font-bold">
+                                    •
+                                  </span>
+                                  {item}
+                                </li>
+                              ))}
+                            </ul>
+                          ) : option.description ? (
+                            <p
+                              className={`text-sm ${TEXT_SECONDARY} leading-relaxed pl-5`}
+                            >
+                              {option.description}
+                            </p>
+                          ) : null}
                         </div>
-                        <div className="text-blue-600 text-2xl transition-transform duration-300 group-hover:translate-x-2">
-                          →
-                        </div>
-                      </a>
-                    ))}
+                      )
+                    )}
                   </div>
                 </div>
               )}

@@ -140,12 +140,10 @@
   "options": [
     {
       "title": "/K option - Materials Test",
-      "description": "Advanced materials characterization and dielectric testing capabilities",
       "pdfUrl": "/datasheets/options/k-option-materials-test.pdf"
     },
     {
       "title": "/M option - Multi Measurement Mode",
-      "description": "Simultaneous multi-parameter measurement for enhanced productivity",
       "pdfUrl": "/datasheets/options/m-option-multi-measurement.pdf"
     }
   ],

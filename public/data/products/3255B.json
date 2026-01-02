@@ -1,0 +1,130 @@
+{
+  "id": "3255B",
+  "series": "3255B Series",
+  "title": "Inductance Analyzer",
+  "subtitle": "3 models: 3255BL (20 Hz to 200 kHz), 3255B (20 Hz to 500 kHz), and 3255BQ (20 Hz to 1 MHz)",
+  "image": "/images/products/transparent/3255.png",
+  "overview": {
+    "paragraphs": [
+      "The 3255B range of Inductance Analyzers offers precision characterization of devices across a spectrum of conditions. Available in three versions – 3255BL (up to 200kHz), 3255B (up to 500kHz), and 3255BQ (up to 1MHz) – these analyzers are ideal for comprehensive parametric tests during the component development phase, assessing performance over diverse frequencies, AC drive levels, or DC bias currents."
+    ]
+  },
+  "applications": [
+    "Component manufacturers",
+    "R&D teams examining component performance",
+    "AC parameter and DC resistance measurements",
+    "Quality control departments needing efficient, precise sorting and testing"
+  ],
+  "features": [
+    {
+      "title": "Versatile Frequency Range",
+      "description": "Models cover a wide frequency range from 20 Hz to 3MHz, accommodating a broad spectrum of test requirements"
+    },
+    {
+      "title": "High Accuracy",
+      "description": "Achieves basic accuracy of 0.1%, ensuring precise measurement results"
+    },
+    {
+      "title": "Adjustable AC Drive and DC Bias",
+      "description": "AC drive level settings range from 1 mV to 10 V, with internal DC bias currents adjustable from 1 mA to 1 A (optional). External DC bias capabilities up to 125 A with the 3265B DC Bias Units"
+    },
+    {
+      "title": "Extended DC Bias for SMD Inductors",
+      "description": "Supports SMD inductor tests up to 50 A with the 1009 DC Bias Fixture, compatible with 3255B and 3265B/25A units for thorough device evaluation at operational bias currents"
+    },
+    {
+      "title": "Bin Sorting Function",
+      "description": "Offers component sorting into up to ten bins based on absolute values or percentage of values, facilitating quality control and component selection"
+    },
+    {
+      "title": "Safety Features",
+      "description": "Includes safety interlock systems and protection against over-temperature, excess voltage drop, and sense lead failure, ensuring user safety and equipment reliability"
+    },
+    {
+      "title": "Intuitive Operation",
+      "description": "Designed for straightforward, user-friendly operation with fast measurement speeds (up to 20 measurements per second), making it suitable for both lab and production environments"
+    },
+    {
+      "title": "Connectivity and Control",
+      "description": "Features GPIB control with LabVIEW™ driver support for integration into automated test setups. Results can be directly printed using the parallel Centronics interface for analysis and archiving"
+    },
+    {
+      "title": "Customizable Test Fixtures",
+      "description": "Offers interchangeable component test carriers for versatility in testing different devices, with a design and manufacturing service available for device-specific fixtures"
+    }
+  ],
+  "specifications": [
+    {
+      "heading": "Frequency Range",
+      "modelVariants": [
+        { "model": "3255BL", "spec": "20 Hz to 200 kHz" },
+        { "model": "3255B", "spec": "20 Hz to 500 kHz" },
+        { "model": "3255BQ", "spec": "20 Hz to 1 MHz" }
+      ]
+    },
+    {
+      "heading": "Measurement Function",
+      "content": ["Z, Ø, L, C, Rac, Rdc, Q, D, turns ratio"]
+    },
+    {
+      "heading": "Drive Level",
+      "content": [
+        "Source impedance 50 Ω",
+        "1 mV to 10V rms into open circuit",
+        "50 µA to 200 mA rms into short circuit",
+        "Automatic Level Control (ALC) maintains level applied to DUT at ±2%, ±1 mV of set voltage or ±2%, ±0.1 mA of set current, reduces to ±4% below 100 Hz"
+      ]
+    },
+    {
+      "heading": "Internal DC Bias (Option)",
+      "content": ["1 mA to 1 A"]
+    },
+    {
+      "heading": "Measurement Speeds",
+      "content": ["4 speeds selectable (20/sec max)"]
+    },
+    {
+      "heading": "Measurement Ranges",
+      "content": [
+        "R 0.05 mΩ to > 2 MΩ",
+        "L 1 nH to >1000H",
+        "C 0.01 fF to > 250mF",
+        "Turn Ratio 100:1 to 1:100"
+      ]
+    },
+    {
+      "heading": "Accuracy",
+      "content": [
+        "L/Rac/Z/Cp ±0.1%",
+        "Q ±0.1% (Q+1/Q)",
+        "D ±0.001 (1+ D²)",
+        "Rdc ±0.5%"
+      ]
+    },
+    {
+      "heading": "Input Specification",
+      "content": [
+        "Power supply 230 V AC ±10% or 115 V AC ±10% (selectable)",
+        "50 to 400 Hz",
+        "150VA maximum consumption"
+      ]
+    },
+    {
+      "heading": "Display",
+      "content": [
+        "High contrast monochrome LCD 320 x 240 dot with CFL back lighting",
+        "Visible area 115 x 86mm",
+        "Viewing angle 45°"
+      ]
+    },
+    {
+      "heading": "Measurement Connections",
+      "content": [
+        "4 front panel BNC sockets",
+        "4-wire (Kelvin) measurements with screen at ground potential",
+        "Equivalent circuit symbols on screen"
+      ]
+    }
+  ],
+  "datasheet": "/datasheets/instruments/WK3255B.pdf"
+}
