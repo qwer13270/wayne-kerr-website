@@ -1,0 +1,104 @@
+{
+  "id": "3265B",
+  "series": "3265B Series",
+  "title": "DC Bias Unit",
+  "subtitle": "2 models: 3265B (25A) and 3265BQ (25A)",
+  "image": "/images/products/transparent/3265.png",
+  "overview": {
+    "paragraphs": [
+      "The 3265B DC Bias Units are designed to work seamlessly with Wayne Kerr's Inductance Analyzers (3255B series) and the 3260B Precision Magnetics Analyzer. These units enable precise evaluation of components under high DC bias currents up to 250A, making them indispensable for testing wound devices and inductors under real-world application conditions."
+    ]
+  },
+  "applications": [
+    "Component tests in research, development, and production environments",
+    "Evaluating the performance of wound components and SMD inductors",
+    "AC parameter and DC resistance measurements",
+    "Enhancing the testing capabilities of Wayne Kerr Machines"
+  ],
+  "features": [
+    {
+      "title": "High DC Bias Capability",
+      "description": "Offers DC bias currents from 25 mA to 25A in steps of 25 mA with a single unit, and up to 250A with five units connected in parallel"
+    },
+    {
+      "title": "Versatility",
+      "description": "Compatible with the 3255BL for currents up to 50A, and the 3260B Analyzer for comprehensive SMD inductor tests up to 50A with the optional 1009 DC Bias Fixture"
+    },
+    {
+      "title": "Safety and Protection",
+      "description": "Features a safety interlock system, alongside protection against over-temperature, excess voltage drop, and sense lead failure, ensuring user safety and equipment reliability"
+    },
+    {
+      "title": "Precision Testing",
+      "description": "Supports a wide frequency range from 20 Hz to 3MHz, with a basic accuracy of 0.1%, for measurement functions including L, R, D, Q, Z"
+    },
+    {
+      "title": "Compliance Voltage",
+      "description": "Provides up to 11 V DC compliance voltage to accommodate a wide range of test conditions"
+    },
+    {
+      "title": "Ease of Use",
+      "description": "Includes four front panel mounted BNC connectors and two captive high current cables for straightforward setup and operation"
+    },
+    {
+      "title": "Flexible Configuration",
+      "description": "Allows for both 4 and 2 terminal measurements, with the option to connect up to 5 bias units in parallel for increased output current"
+    },
+    {
+      "title": "Customizable Testing",
+      "description": "Interchangeable component test carriers and a carrier design and manufacturing service offer flexibility for device-specific testing"
+    }
+  ],
+  "specifications": [
+    {
+      "heading": "Measurement Function",
+      "content": [
+        "In impedance mode: L, Z, R, Q, D",
+        "Not applicable to Rdc, or transformer measurements"
+      ]
+    },
+    {
+      "heading": "Frequency Range",
+      "content": [
+        "3255BL 20 Hz to 200 kHz (not compatible with 3265B/25A and 3265BQ/25A)",
+        "3255B 20 Hz to 500 kHz",
+        "3255BQ 20 Hz to 1 MHz",
+        "3260B 20 Hz to 3 MHz (3265BQ/25A)"
+      ]
+    },
+    {
+      "heading": "Compliance Voltage",
+      "content": [
+        "Maximum compliance voltage is 11 V DC with a 0.25 V AC drive under 12 kHz, and 10 V at a 1 V AC drive level",
+        "Above 12 kHz, reduce by 0.5 V"
+      ]
+    },
+    {
+      "heading": "Basic Accuracy",
+      "content": ["±1% variance, dependent on measurement speed, frequency, and selected options"]
+    },
+    {
+      "heading": "Measurement Speeds",
+      "content": ["4 speeds selectable (20/sec max)"]
+    },
+    {
+      "heading": "Input Specification",
+      "content": [
+        "Universal 90 to 255 V AC, 47 to 63 Hz",
+        "Input current 9 A rms max.",
+        "Power factor >0.9",
+        "Unit powers up automatically when connected to a powered analyzer. Isolating switch provided"
+      ]
+    },
+    {
+      "heading": "Measurement Connections",
+      "content": [
+        "2-terminals measurement via M8 studs",
+        "4-terminal measurement via Kelvin leads and M8 studs",
+        "Measurement terminals internally protected by 1.6A fuses against normal inductor back-EMF or accidental disconnection of inductor",
+        "Front panel fuses easily replaced"
+      ]
+    }
+  ],
+  "datasheet": "/datasheets/instruments/WK3265B.pdf"
+}

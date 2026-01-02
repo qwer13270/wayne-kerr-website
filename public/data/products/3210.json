@@ -1,0 +1,226 @@
+{
+  "id": "3210Series",
+  "series": "3210 Series",
+  "title": "3-in-1 Safety Tester",
+  "subtitle": "2 models: WK3210B and WK3210C",
+  "image": "/images/products/transparent/3210.png",
+  "overview": {
+    "paragraphs": [
+      "The WK 3210 Series is a comprehensive 3-in-1 tester, designed to perform AC, DC, and Insulation Resistance (IR) tests. Equipped with features that meet various international safety standards such as UL, CSA, TÜV, VDE, and CE, the WK 3210 Series is an ideal solution for thorough and reliable safety testing."
+    ]
+  },
+  "applications": [
+    "Safety compliance testing in manufacturing and development environments",
+    "Routine and complex testing tasks in electrical equipment and component testing labs",
+    "Quality assurance processes where safety and compliance are critical"
+  ],
+  "features": [
+    {
+      "title": "Versatile Testing Functions",
+      "description": "Offers AC, DC, and IR testing capabilities, ensuring comprehensive coverage of safety testing requirements"
+    },
+    {
+      "title": "Advanced Detection",
+      "description": "Includes ARC Detection as a standard function to identify discharge faults, enhancing testing accuracy and safety"
+    },
+    {
+      "title": "High-Speed Performance",
+      "description": "Achieves a fast cut-off time of 0.4ms, optimizing testing efficiency and throughput"
+    },
+    {
+      "title": "Extensive Memory Capacity",
+      "description": "Features 100 sets of memory, with each memory set allowing up to 9 different test parameters"
+    },
+    {
+      "title": "Multiple Phase Ports",
+      "description": "The WK3210B model offers 2 phase ports, while the WK3210C model provides 8 phase ports, catering to a range of testing needs"
+    }
+  ],
+  "specifications": [
+    {
+      "heading": "Scan Test",
+      "modelVariants": [
+        { "model": "WK 3210B", "spec": "2 Ports phase" },
+        { "model": "WK 3210C", "spec": "8 Ports phase" }
+      ]
+    },
+    {
+      "heading": "Without Voltage Test",
+      "content": ["AC/DC/IR"]
+    },
+    {
+      "heading": "Output Voltage",
+      "content": [
+        "AC: 0 ~ 5000V / DC: 0 ~ 6000V",
+        "Digital setting (4 digits)",
+        "10V/ step, adjustable with < / > keys"
+      ]
+    },
+    {
+      "heading": "Voltage Regulation",
+      "content": ["≤1 % + 5V"]
+    },
+    {
+      "heading": "Waveform & Frequency",
+      "content": ["Sine Wave 50Hz / 60Hz selectable"]
+    },
+    {
+      "heading": "Voltmeter Accuracy",
+      "content": ["4 digits, ± 1% of reading +5 digits"]
+    },
+    {
+      "heading": "Output Current",
+      "content": ["AC: 0.001mA ~ 15.00mA, DC: 0.001mA ~ 7.5mA"]
+    },
+    {
+      "heading": "Current Meter Accuracy",
+      "content": ["4 digits, ± 1.5% of reading +5 digits"]
+    },
+    {
+      "heading": "Arc Detection",
+      "content": [
+        "0.5mA ~ 15mA (DC 0.5mA ~ 7.5mA)",
+        "Function: 0.01 mA/ Steps (0.0 mA is OFF)"
+      ]
+    },
+    {
+      "heading": "Test Time",
+      "content": ["0.5 ~ 999.9 Sec (±20 mS), 0.1 sec/ Steps (0.0 sec is OFF)"]
+    },
+    {
+      "heading": "Ramp Up Time",
+      "content": ["0.1 ~ 999.9 Sec (±20 mS), 0.1 sec/ Steps (0.0 sec is OFF)"]
+    },
+    {
+      "heading": "PASS / FAIL",
+      "content": ["Windows comparator system"]
+    },
+    {
+      "heading": "Judgement",
+      "content": [
+        "HI-limit: 0.10 ~ 15.00mA, Digital setting (4 digits), 0.001 mA / Steps",
+        "LO-limit: 0.05 ~ 7.50mA, Digital setting (4 digits), 0.001 mA / (0.5 ~ 7.50mA), 0.01 mA Steps",
+        "Arc Detection: 0.5mA ~ 15mA / Steps (LO-limit & Arc Detection setting 0.0mA is OFF)",
+        "Accuracy ± (1% of setting +50µA)"
+      ]
+    },
+    {
+      "heading": "Insulation Resistance Test - Measuring Voltage",
+      "content": ["DC: 100 ~ 1000V, Digital setting, 10V / steps"]
+    },
+    {
+      "heading": "Insulation Resistance Test - Voltmeter Accuracy",
+      "content": ["DC: 100 ~ 1000V, Digital setting, 10V / steps"]
+    },
+    {
+      "heading": "Insulation Resistance Test - Measuring Range",
+      "content": ["1 ~ 9,999 MΩ"]
+    },
+    {
+      "heading": "Insulation Resistance Test - Measuring Accuracy",
+      "content": [
+        "≥500V: 1~1000MΩ, 5% of reading",
+        "≥500V: 1001~9999MΩ, 15% of reading",
+        "<500V: 1~200MΩ, 10% of reading",
+        "<500V: 201~9999MΩ, 15% of reading"
+      ]
+    },
+    {
+      "heading": "Test Time",
+      "content": ["0.5 to 999.9 sec.(20ms), 0.1sec/Steps.(0.0 sec is OFF)"]
+    },
+    {
+      "heading": "Test Modes",
+      "content": [
+        "Auto Test: Up to 9 test steps with different test parameters",
+        "Single Test: Execution withstanding voltage test or insulation resistance test",
+        "Auto Scanning: Linked with Scan Box, it performs Test auto test for objects having two or more points"
+      ]
+    },
+    {
+      "heading": "Output Power Source Protection Function",
+      "content": ["Fast Output Cut off: < 0.4ms"]
+    },
+    {
+      "heading": "Other Functions",
+      "content": [
+        "Panel Operation Lock: YES",
+        "Power On Data Rally: YES",
+        "Reset Protection Key: YES"
+      ]
+    },
+    {
+      "heading": "Display",
+      "content": ["240x64 Dot Graphic LCM, CFL back light display"]
+    },
+    {
+      "heading": "Signal Output",
+      "content": ["PASS, FAIL, and TEST with relay contact signal"]
+    },
+    {
+      "heading": "Data Hold",
+      "content": ["YES"]
+    },
+    {
+      "heading": "Judgement Result Display",
+      "content": ["PASS/ FAIL and Alarm"]
+    },
+    {
+      "heading": "Memory Storage",
+      "content": ["01 to 99, 99 sets of memory, each set of memory includes 9 steps"]
+    },
+    {
+      "heading": "Remote Control",
+      "content": ["9 Pins D-type connector, TEST/RESET/RMT_ENABLE"]
+    },
+    {
+      "heading": "Interlock Function",
+      "content": ["The test voltage cannot be generated unless the interlock input terminal is short-circuited"]
+    },
+    {
+      "heading": "Ambient Temperature and Relative Humidity",
+      "content": [
+        "Specifications range: 5 to 35ºC (41 to 95ºF), 20 to 80%RH",
+        "Operable range: 0 to 40ºC (32 to 104ºF), 20 to 80%RH",
+        "Storage range: -20 to 70ºC (4 to 158ºF), 80%RH"
+      ]
+    },
+    {
+      "heading": "Power Requirement",
+      "content": [
+        "Line Voltage: A: 90 ~ 110V B: 104 ~ 125V C: 194 ~ 236V D: 207 ~ 250V",
+        "Frequency: 50 or 60 Hz",
+        "Power Consumption: When no-load: < 70 VA, When with Rated Load: > 300 VA"
+      ]
+    },
+    {
+      "heading": "Insulation Resistance",
+      "content": ["30MΩ, with 500V DC"]
+    },
+    {
+      "heading": "Withstanding Voltage",
+      "content": ["1,000 VAC, for 1 minute"]
+    },
+    {
+      "heading": "Dimension",
+      "modelVariants": [
+        { "model": "WK3210B", "spec": "365(W) x 105(H) x 350(D) mm" },
+        { "model": "WK3210C", "spec": "365(W) x 165(H) x 350(D) mm" }
+      ]
+    },
+    {
+      "heading": "Weight",
+      "modelVariants": [
+        { "model": "WK3210B", "spec": "10kg" },
+        { "model": "WK3210C", "spec": "15kg" }
+      ]
+    },
+    {
+      "heading": "Accessories",
+      "content": [
+        "Operation Manual, Power cord, 3P-2P AC adapter plug, High test lead wire / 1 meter long, 2A Fuse / fast blow (in fuse holder), Certificate of calibration"
+      ]
+    }
+  ],
+  "datasheet": "/datasheets/instruments/WK3210.pdf"
+}

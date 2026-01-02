@@ -1,0 +1,182 @@
+{
+  "id": "7820Series",
+  "series": "7820 Series",
+  "title": "Impulse Tester",
+  "subtitle": "3 models from 30V to 1200V, 100V to 5000V, and 500V to 10kV",
+  "image": "/images/products/transparent/7820.png",
+  "overview": {
+    "paragraphs": [
+      "The WK 7820 Series Impulse Tester is designed to deliver high-performance impulse testing, ranging from a low voltage of 30V up to a high voltage of 10kV. With models offering single to eight channels, this series caters to a broad spectrum of testing requirements in the industry. Featuring a state-of-the-art 32-bit CPU and high-density SMD technology, the WK 7820 series provides precision and ease of use with its 7-inch TFT color display, enhancing user experience and operational efficiency."
+    ]
+  },
+  "applications": [
+    "Quality control and R&D in manufacturing environments dealing with electrical components and assemblies",
+    "Safety testing in electrical engineering and construction sectors",
+    "Educational and testing institutions requiring detailed analysis and characterization of electrical components"
+  ],
+  "features": [
+    {
+      "title": "Versatile Voltage Range",
+      "description": "Models in the WK 7820 series can test impulses from 30V to 10kV, accommodating a wide variety of testing scenarios"
+    },
+    {
+      "title": "High-Speed Performance",
+      "description": "Achieves a maximum measuring speed of 6 measurements per second, with a waveform sampling rate of up to 200Msps, ensuring fast and accurate testing"
+    },
+    {
+      "title": "Advanced Corona Extraction",
+      "description": "Incorporates a patent high-fidelity corona extraction algorithm, allowing for detailed analysis of the insulation properties of products"
+    },
+    {
+      "title": "Multi-Channel Testing",
+      "description": "Offers configurations from 1 up to 8 channels, providing flexibility for tests requiring multiple simultaneous measurements"
+    },
+    {
+      "title": "Comprehensive Memory and Storage",
+      "description": "Equipped with a storage depth of 6k Bytes and the capability to store 20 groups of instrument settings for efficient test setup and execution"
+    },
+    {
+      "title": "Flexible Interface Options",
+      "description": "Includes RS232C, USB, LAN, and Handler interfaces for comprehensive connectivity and remote control capabilities"
+    },
+    {
+      "title": "Durable and Reliable Design",
+      "description": "Ensures robust performance with features like foot control interface and system firmware upgradable via USB"
+    }
+  ],
+  "specifications": [
+    {
+      "heading": "Impulse Voltage",
+      "modelVariants": [
+        { "model": "7820-1", "spec": "30V to 1200V, 5V steps" },
+        { "model": "7820-2", "spec": "100V to 5000V, 10V steps" },
+        { "model": "7820-3", "spec": "500V to 10kV, 20V steps" }
+      ]
+    },
+    {
+      "heading": "Voltage Accuracy",
+      "modelVariants": [
+        { "model": "7820-1", "spec": "±(5% set value +5V)" },
+        { "model": "7820-2", "spec": "±(5% set value +15V)" },
+        { "model": "7820-3", "spec": "±(5% set value +25V)" }
+      ]
+    },
+    {
+      "heading": "Readback Accuracy",
+      "modelVariants": [
+        { "model": "7820-1", "spec": "±(5% actual value +5V)" },
+        { "model": "7820-2", "spec": "±(5% actual value +15V)" },
+        { "model": "7820-3", "spec": "±(5% actual value +25V)" }
+      ]
+    },
+    {
+      "heading": "Inductance Test Range",
+      "modelVariants": [
+        { "model": "7820-1", "spec": "≥1µH" },
+        { "model": "7820-2", "spec": "≥10µH" },
+        { "model": "7820-3", "spec": "≥20µH" }
+      ]
+    },
+    {
+      "heading": "Impulse Energy",
+      "modelVariants": [
+        { "model": "7820-1", "spec": "Max.: 0.02 Joule" },
+        { "model": "7820-2", "spec": "Max.: 0.25 Joule" },
+        { "model": "7820-3", "spec": "Max.: 0.5 Joule" }
+      ]
+    },
+    {
+      "heading": "Test Speed",
+      "modelVariants": [
+        { "model": "7820-1", "spec": "6 times/second" },
+        { "model": "7820-2", "spec": "6 times/second" },
+        {
+          "model": "7820-3",
+          "spec": "3 times/second (when 10kV impulse voltage is output)"
+        }
+      ]
+    },
+    {
+      "heading": "Channels",
+      "content": ["1 (configurable up to 8 channels)"]
+    },
+    {
+      "heading": "Pulses Applied",
+      "content": ["Max.: 32"]
+    },
+    {
+      "heading": "Input Impedance",
+      "content": ["5MΩ"]
+    },
+    {
+      "heading": "Display",
+      "content": [
+        "800x480 dots, 65k color TFT",
+        "Waveform Display Range: 600x256"
+      ]
+    },
+    {
+      "heading": "Waveform Acquisition",
+      "content": [
+        "Sampling rate: Max. 200Msps, 8 levels adjustable",
+        "Resolution: 8 Bits",
+        "Memory Depth: 6k Bytes",
+        "Average: 1 to 32"
+      ]
+    },
+    {
+      "heading": "Comparison Methods",
+      "list": [
+        "Area Size Comparison",
+        "Differential Area Comparison",
+        "Corona Discharge Comparison",
+        "Differential Phase Comparison"
+      ],
+      "note": "Comparison with Standard Waveform"
+    },
+    {
+      "heading": "Waveform Measurement",
+      "content": ["Voltage/Frequency/Time"]
+    },
+    {
+      "heading": "Trigger Mode",
+      "content": ["Manual/External/Bus/Internal"]
+    },
+    {
+      "heading": "Detection Output",
+      "content": ["OK/NG display/LED/Alarm"]
+    },
+    {
+      "heading": "Measurement Statistics",
+      "content": ["Statistics for measurement results"]
+    },
+    {
+      "heading": "Memory",
+      "content": [
+        "20 groups of standard waveform data and instrument setup can be stored in internal non-volatile memory",
+        "USB flash memory can be used as external memory"
+      ]
+    },
+    {
+      "heading": "Interface",
+      "content": ["Handler, RS232C, USB Device, USB Host, LAN"]
+    },
+    {
+      "heading": "Power Supply",
+      "content": ["220V ±10% 50Hz/60Hz ±5%"]
+    },
+    {
+      "heading": "Power Consumption",
+      "content": ["≤200VA"]
+    },
+    {
+      "heading": "Working Environment",
+      "content": ["Temperature: 0°C to 40°C", "Humidity: ≤75% R.H."]
+    },
+    {
+      "heading": "Safety and Electromagnetic Compatibility",
+      "content": ["IEC61010-1:2001, IEC61326-2-1:2005"]
+    }
+  ],
+  "datasheet": "/datasheets/instruments/WK7820Series.pdf"
+}

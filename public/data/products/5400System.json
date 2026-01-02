@@ -1,0 +1,93 @@
+{
+  "id": "WK5400System",
+  "series": "5400/3265 System",
+  "title": "300A DC Bias Test System",
+  "subtitle": "High current DC bias system with configurations from 50A to 600A",
+  "image": "/images/products/transparent/5400System.png",
+  "overview": {
+    "paragraphs": [
+      "5400/3265 300A DC bias system with 1mS ultra-fast measurement speed, basic accuracy up to 0.02%, AC parametric measurement up to 10MHz, providing 5Vrms/200mA powerful AAC signal drive, DC bias current up to 600A, support fast graphic scanning, equipped with a 7-inch WVGA touch screen, and through the USB, GPIB and LAN interface Programmable via USB, GPIB and LAN interfaces, it is an efficient and accurate test solution."
+    ]
+  },
+  "features": [
+    {
+      "title": "Ultra-Fast Measurement Speed",
+      "description": "1mS ultra-fast measurement speed for high-throughput testing environments"
+    },
+    {
+      "title": "High Accuracy",
+      "description": "Basic accuracy up to 0.02% ensuring precise and reliable measurements"
+    },
+    {
+      "title": "Wide Frequency Range",
+      "description": "AC parametric measurement up to 10MHz for comprehensive component characterization"
+    },
+    {
+      "title": "Powerful Signal Drive",
+      "description": "Provides 5Vrms/200mA powerful AC signal drive for testing various components"
+    },
+    {
+      "title": "High DC Bias Current Capability",
+      "description": "DC bias current up to 600A with multiple 3265B units, suitable for high-power inductor testing"
+    },
+    {
+      "title": "Fast Graphic Scanning",
+      "description": "Supports fast graphic scanning for detailed component analysis and visualization"
+    },
+    {
+      "title": "Modern User Interface",
+      "description": "Equipped with a 7-inch WVGA touch screen for intuitive operation and data visualization"
+    },
+    {
+      "title": "Comprehensive Connectivity",
+      "description": "Programmable via USB, GPIB and LAN interfaces for flexible integration into automated test systems"
+    }
+  ],
+  "specifications": [
+    {
+      "heading": "System Configurations",
+      "modelVariants": [
+        { "model": "3265B × 2", "spec": "50A DC Bias Current" },
+        { "model": "3265B × 10", "spec": "250A DC Bias Current" },
+        { "model": "3265B × 12", "spec": "300A DC Bias Current" },
+        { "model": "3265B × 12", "spec": "600A DC Bias Current" }
+      ]
+    },
+    {
+      "heading": "Test Parameters",
+      "content": [
+        "Capacitance (C), Inductance (L), Resistance (R), Conductance (G), Susceptance (B), Reactance (X)",
+        "Loss Factor (D), Quality Factor (Q), Impedance (Z), Admittance (Y), Phase Angle (θ)"
+      ]
+    },
+    {
+      "heading": "Measurement Speed",
+      "content": ["1ms ultra-fast measurement"]
+    },
+    {
+      "heading": "Basic Accuracy",
+      "content": ["Up to 0.02%"]
+    },
+    {
+      "heading": "Frequency Range",
+      "content": ["AC parametric measurement up to 10MHz"]
+    },
+    {
+      "heading": "AC Signal Drive",
+      "content": ["5Vrms/200mA"]
+    },
+    {
+      "heading": "DC Bias Current",
+      "content": ["Up to 600A (with 12 × 3265B units)"]
+    },
+    {
+      "heading": "Display",
+      "content": ["7-inch WVGA touch screen"]
+    },
+    {
+      "heading": "Interfaces",
+      "content": ["USB, GPIB, LAN"]
+    }
+  ],
+  "datasheet": "/datasheets/systems/WK5400-3265System.pdf"
+}

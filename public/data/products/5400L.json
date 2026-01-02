@@ -1,0 +1,145 @@
+{
+  "id": "5400L",
+  "series": "5400L Series",
+  "title": "High Current LCR Meter Test System",
+  "subtitle": "3 models: 5400L5 (10 Hz to 5 MHz), 5400L8 (10 Hz to 8 MHz), and 5400L10 (10 Hz to 10 MHz)",
+  "image": "/images/products/transparent/5400L.png",
+  "overview": {
+    "paragraphs": [
+      "The 5400L Machine is a LCR Meter for high current test system. The DC Bias Current source WK3265B machines are connected to the Bias Adapter of the 5400 directly with a dedicated wiring system. This makes it is easier to set up and maintain the system."
+    ]
+  },
+  "applications": [
+    "High current inductance testing",
+    "Saturation current testing",
+    "AC parameter and DC resistance measurements",
+    "Comprehensive component characterization"
+  ],
+  "features": [
+    {
+      "title": "Versatile Testing Modes",
+      "description": "Includes Meter Mode, MultiBias Mode, and Calibration Mode as standard, with an optional Graph Mode for comprehensive testing capabilities"
+    },
+    {
+      "title": "High Current Testing",
+      "description": "External DC bias current source capability up to 250A/1MHz or 600A/500kHz, utilizing 10 or 12 x 3265B DC Bias Units for high current inductance testing"
+    },
+    {
+      "title": "Advanced Measurement Accuracy",
+      "description": "Basic accuracy of 0.05% and measurement frequency range from 10Hz to 10MHz, ensuring precise and reliable results"
+    },
+    {
+      "title": "Simultaneous Parameter Measurement",
+      "description": "Single trigger operation produces both AC parameter and DC Resistance measurements, displaying up to 4 different parameters at up to 3 different spot frequencies simultaneously"
+    },
+    {
+      "title": "Comprehensive Correction Features",
+      "description": "Offers Open/Short Circuit Trims, HF Compensation, and Load Compensation in Boost/Normal mode for accuracy and stability"
+    },
+    {
+      "title": "Efficient Operation Interface",
+      "description": "Features a user-friendly UI, allowing for simple setup and operation"
+    },
+    {
+      "title": "Saturation I(Sat) Testing",
+      "description": "Capable of performing saturation current testing using curve sweeping or the MultiBias fast test mode"
+    },
+    {
+      "title": "Automatic Level Control (ALC)",
+      "description": "Maintains constant voltage or current at the Device Under Test for accurate measurements"
+    },
+    {
+      "title": "Flexible Connectivity",
+      "description": "Remote control capabilities via GPIB, LAN, and USB interfaces for easy integration into existing test setups"
+    },
+    {
+      "title": "Energy-Saving Features",
+      "description": "Smart switching mode automatically shuts down the 3265B bias source units when operating in Standalone Mode, conserving energy"
+    },
+    {
+      "title": "Upgradeable Software",
+      "description": "Ensures the system remains up-to-date with the latest features and improvements. Technical support is readily available, fast, and convenient"
+    }
+  ],
+  "specifications": [
+    {
+      "heading": "Frequency Range",
+      "content": ["Frequency Resolution: ≤1mHz"],
+      "modelVariants": [
+        { "model": "5400L5", "spec": "10Hz to 5MHz" },
+        { "model": "5400L8", "spec": "10Hz to 8MHz" },
+        { "model": "5400L10", "spec": "10Hz to 10MHz" }
+      ]
+    },
+    {
+      "heading": "AC Drive",
+      "content": [
+        "AC Voltage Range: 10mV ~ 5Vrms",
+        "AC Voltage Resolution: <1% of setting",
+        "AC Current Range: 200µA ~ 200mArms",
+        "AC Current Resolution: <1% of setting",
+        "Automatic Level Control (ALC): ON or OFF",
+        "Source Resistance: Normal Mode: 50Ω; Boost Mode: 25Ω",
+        "Maintains constant voltage or constant current at the Device Under Test"
+      ]
+    },
+    {
+      "heading": "DC Resistance (Rdc)",
+      "content": [
+        "DC Voltage Range: 10mV ~ 5V",
+        "DC Voltage Resolution: 1mV",
+        "DC Resistance Resolution: 10µΩ"
+      ]
+    },
+    {
+      "heading": "Built-in DC Bias",
+      "content": ["Maximum current: Reserved temporarily"]
+    },
+    {
+      "heading": "External DC Bias",
+      "content": ["Maximum voltage: Reserved temporarily"]
+    },
+    {
+      "heading": "External DC Bias Current using 3265B or 3265BQ DC Bias Units",
+      "content": [
+        "Maximum Current and Frequency:",
+        "300A at 500kHz",
+        "250A at 1MHz",
+        "50A at 3MHz",
+        "DC Bias Current Resolution: 25mA"
+      ]
+    }
+  ],
+  "options": [
+    {
+      "title": "Firmware Options",
+      "items": [
+        "1J5400OPG: Analysis Function (Graphs)",
+        "1J5400OPD: Data Logging - Measurement and results storing in real time"
+      ]
+    },
+    {
+      "title": "Internal Hardware",
+      "items": [
+        "1J5400DCBIASKIT: One interface board and cables to control 6 x 3265B DC Bias Units"
+      ]
+    },
+    {
+      "title": "Bin Handler Options",
+      "items": [
+        "/5B1: Non-isolated 5V signals",
+        "/5B2: Isolated 24V signals",
+        "/5B3: Universal optical coupling card"
+      ]
+    },
+    {
+      "title": "External Hardware",
+      "items": [
+        "1J1041: 300A High current two-wire DIP fixture",
+        "1J1031: High current two-wire SMD adaptor for 1J1041 fixture",
+        "1J1054: DIP fixture replacement (for 1054 supplied as standard with 5400)"
+      ]
+    }
+  ],
+  "datasheet": "/datasheets/instruments/WK5400L.pdf"
+}

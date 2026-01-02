@@ -140,13 +140,11 @@
   "options": [
     {
       "title": "/K option - Materials Test",
-      "description": "Advanced materials characterization and dielectric testing capabilities",
-      "pdfUrl": "/datasheets/options/k-option-materials-test.pdf"
+      "pdfUrl": "/datasheets/options/6500P/6500P K option.pdf"
     },
     {
       "title": "/M option - Multi Measurement Mode",
-      "description": "Simultaneous multi-parameter measurement for enhanced productivity",
-      "pdfUrl": "/datasheets/options/m-option-multi-measurement.pdf"
+      "pdfUrl": "/datasheets/options/6500P/6500P M option.pdf"
     }
   ],
   "datasheet": "/datasheets/instruments/WK6500P.pdf"

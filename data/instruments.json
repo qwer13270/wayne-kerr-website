@@ -5,7 +5,8 @@
     "title": "Impulse Tester",
     "description": "Specializes in testing inter-layer short circuits in motors, transformers, and inductors, and supports various test modes including area ratio, area difference, corona number, and corona amount.",
     "image": "/images/products/instruments/7820.webp",
-    "datasheet": "/datasheets/instruments/WK7820.pdf"
+    "datasheet": "/datasheets/instruments/WK7820.pdf",
+    "productId": "7820"
   },
   {
     "id": 2,
@@ -13,7 +14,8 @@
     "title": "Impedance Analyzer",
     "description": "High-precision analyzers featuring a user-friendly graphical interface, high-resolution color display, 0.05% basic accuracy, a minimum frequency of 20Hz, and a maximum frequency of up to 120MHz.",
     "image": "/images/products/instruments/6500B.webp",
-    "datasheet": "/datasheets/instruments/WK6500B.pdf"
+    "datasheet": "/datasheets/instruments/WK6500B.pdf",
+    "productId": "6500B"
   },
   {
     "id": 3,
@@ -30,7 +32,8 @@
     "title": "High Frequency DC Bias",
     "description": "The 6565 DC Bias Units are used to evaluate components at currents up to 80A and are compatible with the Wayne Kerr 6500B and 6500P models of precision analyzers.",
     "image": "/images/products/instruments/6565.webp",
-    "datasheet": "/datasheets/instruments/WK6565.pdf"
+    "datasheet": "/datasheets/instruments/WK6565.pdf",
+    "productId": "6565"
   },
   {
     "id": 5,
@@ -38,7 +41,8 @@
     "title": "Precision Component Analyzer",
     "description": "The 6400 Series provides thorough and accurate testing of any passive component with market-leading accuracy.",
     "image": "/images/products/instruments/6440B.webp",
-    "datasheet": "/datasheets/instruments/WK6400B.pdf"
+    "datasheet": "/datasheets/instruments/WK6400B.pdf",
+    "productId": "6400B"
   },
   {
     "id": 6,
@@ -46,7 +50,8 @@
     "title": "High Current Test System LCR Meter",
     "description": "High-current inductance testing systems with external DC bias up to 300A, 0.05% basic accuracy, a frequency range of 10Hz to 10MHz, and the capability for simultaneous multi-parameter measurements.",
     "image": "/images/products/instruments/5400L.webp",
-    "datasheet": "/datasheets/instruments/WK5400L.pdf"
+    "datasheet": "/datasheets/instruments/WK5400L.pdf",
+    "productId": "5400L"
   },
   {
     "id": 7,
@@ -54,7 +59,8 @@
     "title": "LCR Meters",
     "description": "User-friendly LCR meters with extensive functions for accurate, fast measurements from 20Hz to 1MHz, ideal for various test and production environments.",
     "image": "/images/products/instruments/4300.webp",
-    "datasheet": "/datasheets/instruments/WK4300.pdf"
+    "datasheet": "/datasheets/instruments/WK4300.pdf",
+    "productId": "4300"
   },
   {
     "id": 8,
@@ -62,7 +68,8 @@
     "title": "DC Bias Current Unit",
     "description": "Enable high current component evaluation with the Wayne Kerr 3255B Inductance Analyzer or 3260B Precision Magnetics Analyzer, offering bias current settings from 25mA to 25A in 25mA steps.",
     "image": "/images/products/instruments/3265B.webp",
-    "datasheet": "/datasheets/instruments/WK3265B.pdf"
+    "datasheet": "/datasheets/instruments/WK3265B.pdf",
+    "productId": "3265B"
   },
   {
     "id": 9,
@@ -70,7 +77,8 @@
     "title": "Precision Magnetics Analyzer",
     "description": "Provides comprehensive magnetic component analysis up to 3MHz, including true 4-terminal primary to secondary parameters, through 8 front panel BNCs.",
     "image": "/images/products/instruments/3260B.webp",
-    "datasheet": "/datasheets/instruments/WK3260B.pdf"
+    "datasheet": "/datasheets/instruments/WK3260B.pdf",
+    "productId": "3260B"
   },
   {
     "id": 10,
@@ -78,7 +86,8 @@
     "title": "Inductance Analyzer",
     "description": "Versatile and accurate inductance analyzers designed for straightforward device characterization.",
     "image": "/images/products/instruments/3255B.webp",
-    "datasheet": "/datasheets/instruments/WK3255B.pdf"
+    "datasheet": "/datasheets/instruments/WK3255B.pdf",
+    "productId": "3255B"
   },
   {
     "id": 11,
@@ -86,7 +95,8 @@
     "title": "Hi-Pot Tester",
     "description": "3-in-1 tester combines AC/DC/IR withstand voltage tests with AC settings of 0.10 to 5000V and 0.10mA to 15.00mA, DC settings of 0 to 6000V and 0.10mA to 7.50mA.",
     "image": "/images/products/instruments/3210.webp",
-    "datasheet": "/datasheets/instruments/WK3210.pdf"
+    "datasheet": "/datasheets/instruments/WK3210.pdf",
+    "productId": "3210"
   },
   {
     "id": 12,
@@ -94,7 +104,8 @@
     "title": "Micro-Ohm Meter",
     "description": "Measures resistance from 0.001 mΩ to 1.999 MΩ with ±0.1% accuracy and features a four-wire test system with RS232/HANDLER interface.",
     "image": "/images/products/instruments/3100.webp",
-    "datasheet": "/datasheets/instruments/WK3100.pdf"
+    "datasheet": "/datasheets/instruments/WK3100.pdf",
+    "productId": "3100"
   },
   {
     "id": 13,
@@ -108,7 +119,8 @@
     "series": "5400 System",
     "title": "400A DC Bias Test System",
     "description": "5400/3265 400A DC bias system with 1mS ultra-fast measurement speed, basic accuracy up to 0.02%, AC parametric measurement up to 10MHz, providing 5Vrms/200mA powerful AAC signal drive, it is an efficient and accurate test solution.",
-    "image": "/images/products/instruments/5400_system.webp"
+    "image": "/images/products/instruments/5400_system.webp",
+    "productId": "5400System"
   },
   {
     "id": 15,

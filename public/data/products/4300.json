@@ -1,0 +1,144 @@
+{
+  "id": "4300",
+  "series": "4300 Series",
+  "title": "LCR Meter",
+  "subtitle": "4 models from 20 Hz to 100 kHz, 200 kHz, 500 kHz, and 1 MHz",
+  "image": "/images/products/transparent/4300.png",
+  "overview": {
+    "paragraphs": [
+      "The 4300 Series LCR meters offer a blend of simplicity and functionality, making accurate and rapid measurements possible from 20Hz to 1MHz. Designed with versatility in mind, these meters are suitable for a wide range of applications within both testing and production settings."
+    ]
+  },
+  "applications": [
+    "Component manufacturers and quality control laboratories",
+    "Research and development departments",
+    "Production line testing",
+    "Educational purposes"
+  ],
+  "features": [
+    {
+      "title": "Broad Frequency Range",
+      "description": "Capable of testing components from 20Hz to 1 MHz, particularly the 43100 model, catering to a wide array of applications"
+    },
+    {
+      "title": "High Accuracy",
+      "description": "Offers a basic accuracy of 0.1%, ensuring reliable and precise measurements"
+    },
+    {
+      "title": "Fast Measurement Time",
+      "description": "Less than 25ms measurement time, enhancing productivity in fast-paced environments"
+    },
+    {
+      "title": "Versatile Measurement Parameters",
+      "description": "Supports a comprehensive set of parameters including C, L, Z, Y, X, B, Rac, Rdc, G, Q, D, and Ø"
+    },
+    {
+      "title": "Dual Test Mode",
+      "description": "Allows for consecutive measurements with two different instrument parameters, such as two AC measurements at different frequencies or an AC and a Rdc measurement"
+    },
+    {
+      "title": "Display Capability",
+      "description": "Can display up to four parameters simultaneously in two test mode, providing comprehensive data at a glance"
+    },
+    {
+      "title": "Adjustable Drive Level",
+      "description": "Offers a drive level range from 10mV to 2Vrms, accommodating various test conditions"
+    },
+    {
+      "title": "Measurement Setup Recall",
+      "description": "Enables saving and recalling up to 20 measurement setups with user-defined names for efficient testing"
+    },
+    {
+      "title": "Multiple Interfaces",
+      "description": "Features standard RS232, GPIB, USB, or LAN interfaces for external control"
+    }
+  ],
+  "specifications": [
+    {
+      "heading": "Measurement Functions",
+      "content": [
+        "Impedance (Z), Phase Angle (Ø), Capacitance (C), Dissipation Factor (D), Inductance (L), Quality Factor (Q)",
+        "AC Resistance (Rac), Reactance (X), Susceptance (B), Conductance (G), Admittance (Y)",
+        "DC Resistance (Rdc) is an option (/R) on all models"
+      ]
+    },
+    {
+      "heading": "Frequency Range",
+      "modelVariants": [
+        { "model": "4310", "spec": "20Hz to 100kHz" },
+        { "model": "4320", "spec": "20Hz to 200kHz" },
+        { "model": "4350", "spec": "20Hz to 500kHz" },
+        { "model": "43100", "spec": "20Hz to 1MHz" }
+      ]
+    },
+    {
+      "heading": "Frequency Steps",
+      "content": [
+        "5 Hz - 20 Hz to 1 kHz",
+        "50 Hz - 1 kHz to 10 kHz",
+        "500 Hz - 10 kHz to 100 kHz",
+        "5 kHz - 100 kHz to 1 MHz"
+      ]
+    },
+    {
+      "heading": "Measurement Function - DC Resistance (Rdc)",
+      "content": ["option (/R)"]
+    },
+    {
+      "heading": "Series/Parallel Equivalent Circuit",
+      "content": ["Any combination"]
+    },
+    {
+      "heading": "Polar Form",
+      "content": ["Z + Ø, Y + Ø"]
+    },
+    {
+      "heading": "Drive Level (AC measurements)",
+      "content": [
+        "Open circuit: 10 mV to 2V rms",
+        "Voltage step size: 10 mV (200 steps)",
+        "Short circuit: 100 µA to 20 mA rms",
+        "Current step size: 100 µA (200 steps)",
+        "Signal source impedance: 100Ω"
+      ]
+    },
+    {
+      "heading": "DC Bias Voltage",
+      "content": [
+        "Internal - 2 Vdc",
+        "External - up to ±40V may be connected via rear panel"
+      ]
+    },
+    {
+      "heading": "Measurement Speeds",
+      "content": [
+        "Four selectable speeds for all measurement functions",
+        "Up to 50 measurements per second depending on test frequency and setup condition"
+      ]
+    },
+    {
+      "heading": "Measurement Ranges",
+      "content": [
+        "Z, R, X  0.01 mΩ to > 1 GΩ",
+        "Y, B, G  0.1 nS to > 2 kS",
+        "L 1 nH to > 2 kH",
+        "C 0.01 pF to > 1 F",
+        "D, Q 0.0001 to 9999.9",
+        "Phase Angle -180° to +180°",
+        "Rdc 0.1 mΩ to > 100 MΩ"
+      ]
+    },
+    {
+      "heading": "Binning (Optional)",
+      "content": [
+        "User programmable PASS and FAIL bins",
+        "25 way D-type interface connector"
+      ],
+      "list": [
+        "Option /B1 (non-isolated) - Common 0V. Bin outputs 0 to 5V (nominal) with >10 mA current sink capability",
+        "Option /B2 (isolated) - Common 24V input. Outputs 0 to 24V with >10 mA current source capability"
+      ]
+    }
+  ],
+  "datasheet": "/datasheets/instruments/WK4300.pdf"
+}
