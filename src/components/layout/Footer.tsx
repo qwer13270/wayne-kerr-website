@@ -3,9 +3,13 @@
 import React from "react";
 import { Phone, Mail, MapPin } from "lucide-react";
 import { useTheme } from "next-themes";
+import { useTranslations } from "next-intl";
 import Link from "next/link";
+
 export default function Footer() {
-  const { theme, setTheme } = useTheme();
+  const { theme } = useTheme();
+  const t = useTranslations("footer");
+  const tNav = useTranslations("navigation");
 
   const isDark = theme === "dark";
   const backgroundClass = isDark
@@ -29,54 +33,80 @@ export default function Footer() {
                 isDark ? "brightness-0 invert" : ""
               }`}
             />
-            <p className={sectionText}>
-              Leaders in precision component measurement since 1946
-            </p>
+            <p className={sectionText}>{t("tagline")}</p>
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4">Products</h4>
+            <h4 className="font-semibold mb-4">{t("products")}</h4>
             <ul className="space-y-2 text-gray-400">
-              {["Instruments", "Accessories", "Softwares"].map((item) => (
-                <li key={item}>
-                  <Link
-                    href={`/products/${item.toLowerCase()}`}
-                    className={`transition-colors ${linkColors}`}
-                  >
-                    {item}
-                  </Link>
-                </li>
-              ))}
+              <li>
+                <Link
+                  href="/products/instruments"
+                  className={`transition-colors ${linkColors}`}
+                >
+                  {tNav("instruments")}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/products/accessories"
+                  className={`transition-colors ${linkColors}`}
+                >
+                  {tNav("accessories")}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/products/softwares"
+                  className={`transition-colors ${linkColors}`}
+                >
+                  {tNav("softwares")}
+                </Link>
+              </li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4">Company</h4>
+            <h4 className="font-semibold mb-4">{t("company")}</h4>
             <ul className="space-y-2 text-gray-400">
-              {["About", "Support", "Contact"].map((item) => (
-                <li key={item}>
-                  <Link
-                    href={`/${item.toLowerCase()}`}
-                    className={`transition-colors ${linkColors}`}
-                  >
-                    {item}
-                  </Link>
-                </li>
-              ))}
+              <li>
+                <Link
+                  href="/about"
+                  className={`transition-colors ${linkColors}`}
+                >
+                  {tNav("about")}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/support"
+                  className={`transition-colors ${linkColors}`}
+                >
+                  {tNav("support")}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/contact"
+                  className={`transition-colors ${linkColors}`}
+                >
+                  {tNav("contact")}
+                </Link>
+              </li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4">Contact</h4>
+            <h4 className="font-semibold mb-4">{t("contact")}</h4>
             <ul className="space-y-2 text-gray-400">
               <li className={`flex items-center gap-2 ${sectionText}`}>
-                <Phone size={16} /> +1 234 567 8900
+                <Phone size={16} /> {t("phone")}
               </li>
               <li className={`flex items-center gap-2 ${sectionText}`}>
-                <Mail size={16} /> info@waynekerr.com
+                <Mail size={16} /> {t("email")}
               </li>
               <li className={`flex items-center gap-2 ${sectionText}`}>
-                <MapPin size={16} /> Global Locations
+                <MapPin size={16} /> {t("locations")}
               </li>
             </ul>
           </div>
@@ -85,7 +115,7 @@ export default function Footer() {
         <div
           className={`border-t ${borderClass} pt-8 text-center ${sectionText}`}
         >
-          <p>&copy; 2024 Wayne Kerr Electronics. All rights reserved.</p>
+          <p>{t("rights")}</p>
         </div>
       </div>
     </footer>

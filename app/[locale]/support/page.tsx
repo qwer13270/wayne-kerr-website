@@ -4,8 +4,8 @@ import React, { useState, useMemo } from "react";
 import { Search, Phone, Mail, MapPin } from "lucide-react";
 import salesData from "@/data/sales-support.json";
 import technicalData from "@/data/technical-support.json";
-import SearchBar from "../../src/components/ui/SearchBar";
-import { TOGGLE_CONTAINER_STYLES } from "../../src/styles/styles";
+import SearchBar from "../../../src/components/ui/SearchBar";
+import { TOGGLE_CONTAINER_STYLES } from "../../../src/styles/styles";
 
 interface ContactData {
   id: number;

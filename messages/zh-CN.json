@@ -1,0 +1,146 @@
+{
+  "navigation": {
+    "home": "首页",
+    "about": "关于我们",
+    "products": "产品",
+    "instruments": "仪器",
+    "accessories": "配件",
+    "softwares": "软件",
+    "support": "支持",
+    "contact": "联系我们",
+    "countries": "国家"
+  },
+  "home": {
+    "hero": {
+      "badge": "78年来深受业界领导者信赖",
+      "typewriter": {
+        "base": "LCR测试仪领导者及",
+        "word1": "阻抗分析仪",
+        "word2": "精密测试",
+        "word3": "测量解决方案"
+      },
+      "subtitle": "精确度与创新的完美结合",
+      "cta": {
+        "explore": "探索产品",
+        "contact": "联系我们"
+      }
+    },
+    "trustedBy": {
+      "title": "深受业界领导者信赖"
+    },
+    "stats": {
+      "title": "推动全球创新",
+      "yearsLabel": "卓越年份",
+      "yearsDesc": "业界领导地位",
+      "modelsLabel": "机型选择",
+      "modelsDesc": "多元化解决方案",
+      "countriesLabel": "国家",
+      "countriesDesc": "全球布局",
+      "distributorsLabel": "经销商",
+      "distributorsDesc": "全球支持"
+    },
+    "products": {
+      "title": "探索我们的产品",
+      "subtitle": "为卓越而设计的业界领先测量解决方案",
+      "exploreButton": "探索系列",
+      "instruments": {
+        "count": "19+ 型号",
+        "description": "多样化的机器选择，旨在满足不同的测量需求。"
+      },
+      "accessories": {
+        "count": "24+ 项目",
+        "description": "一系列配件，专为补充和扩展我们仪器的功能而量身定制。"
+      },
+      "softwares": {
+        "count": "3+ 套装",
+        "description": "专业软件，可直接从您的电脑进行机器控制和数据分析。"
+      }
+    },
+    "features": {
+      "title": "为什么选择 Wayne Kerr？",
+      "subtitle": "七十年的创新推动精密测量的未来",
+      "quality": {
+        "title": "卓越品质",
+        "description": "专为在严苛环境中提供耐用性和稳定性能而设计。"
+      },
+      "precision": {
+        "title": "精密准确",
+        "description": "保证最高水准的准确度，确保完美的测量。"
+      },
+      "multifunctional": {
+        "title": "多功能性",
+        "description": "经过精心设计，可处理各行业的广泛测量任务。"
+      }
+    },
+    "globalPresence": {
+      "title": "全球据点",
+      "subtitle": "区域办事处提供全球技术支持和服务",
+      "regionalOffice": "区域办事处",
+      "viewAllButton": "查看所有据点"
+    }
+  },
+  "about": {
+    "title": "关于我们",
+    "subtitle": "在元件测量产品的质量、精确度和能力方面享誉全球",
+    "prestigious": {
+      "title": "卓越声誉",
+      "description": "Wayne Kerr Electronics成立于1946年英国伦敦，在过去78年中已成为全球领先的电子测试设备制造商。"
+    },
+    "professional": {
+      "title": "专业品质",
+      "description": "专注于提供高精确度、高质量和高性能的元件测试设备（LCR测试仪、阻抗分析仪、高频LCR测试仪）"
+    },
+    "worldwide": {
+      "title": "全球服务",
+      "description": "Wayne Kerr Electronics已在美国、德国、新加坡、印度、日本、中国和台湾设立区域办事处，提供全球技术支持和服务"
+    },
+    "mission": {
+      "title": "我们的使命",
+      "description": "我们的使命是通过创新、质量和承诺，彻底改变元件测量领域。我们致力于为全球产业提供精密工具，提升效率和可靠性。",
+      "values": [
+        "以精密测量解决方案赋能产业",
+        "持续推进技术和服务",
+        "通过卓越表现超越客户期望"
+      ]
+    },
+    "coreValues": {
+      "title": "核心价值",
+      "subtitle": "指导我们一切行动的原则",
+      "innovation": {
+        "title": "创新",
+        "description": "我们开创先进的测量技术，为精确度和可靠性设立新的行业标准。"
+      },
+      "commitment": {
+        "title": "承诺",
+        "description": "我们对客户成功的承诺驱使我们提供卓越的服务和支持，确保满意度和信任。"
+      },
+      "quality": {
+        "title": "质量",
+        "description": "我们提供的每项产品都是我们对质量承诺的证明，专为耐用性和性能而设计。"
+      }
+    },
+    "journey": {
+      "title": "我们的历程",
+      "subtitle": "78年的创新与卓越精密测量"
+    }
+  },
+  "footer": {
+    "tagline": "自1946年以来精密元件测量的领导者",
+    "products": "产品",
+    "company": "公司",
+    "contact": "联系方式",
+    "phone": "+1 234 567 8900",
+    "email": "info@waynekerr.com",
+    "locations": "全球据点",
+    "rights": "© 2024 Wayne Kerr Electronics. 版权所有。"
+  },
+  "countries": {
+    "us": "美国",
+    "uk": "英国",
+    "germany": "德国",
+    "china": "中国",
+    "japan": "日本",
+    "taiwan": "台湾",
+    "india": "印度"
+  }
+}

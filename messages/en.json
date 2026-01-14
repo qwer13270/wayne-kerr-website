@@ -1,0 +1,101 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "products": "Products",
+    "instruments": "Instruments",
+    "accessories": "Accessories",
+    "softwares": "Softwares",
+    "support": "Support",
+    "contact": "Contact Us",
+    "countries": "Countries"
+  },
+  "home": {
+    "hero": {
+      "badge": "Trusted by industry leaders for 78+ years",
+      "typewriter": {
+        "base": "Leader in LCR Meters and ",
+        "word1": "Impedance Analyzers",
+        "word2": "Precision Testing",
+        "word3": "Measurement Solutions"
+      },
+      "subtitle": "Where Accuracy Meets Innovation",
+      "cta": {
+        "explore": "Explore Products",
+        "contact": "Contact Us"
+      }
+    },
+    "trustedBy": {
+      "title": "Trusted by Industry Leaders"
+    },
+    "stats": {
+      "title": "Powering Innovation Worldwide",
+      "yearsLabel": "Years of Excellence",
+      "yearsDesc": "Industry leadership",
+      "modelsLabel": "Machine Options",
+      "modelsDesc": "Diverse solutions",
+      "countriesLabel": "Countries",
+      "countriesDesc": "Global presence",
+      "distributorsLabel": "Distributors",
+      "distributorsDesc": "Worldwide support"
+    },
+    "products": {
+      "title": "Explore Our Products",
+      "subtitle": "Industry-leading measurement solutions engineered for excellence",
+      "exploreButton": "Explore Range",
+      "instruments": {
+        "count": "19+ Models",
+        "description": "Diverse selection of machines designed to meet different measurement needs."
+      },
+      "accessories": {
+        "count": "24+ Items",
+        "description": "Comprehensive selection of accessories to enhance your measurement capabilities."
+      },
+      "softwares": {
+        "count": "3+ Packages",
+        "description": "Advanced software packages for data analysis and instrument control."
+      }
+    },
+    "features": {
+      "title": "Why Choose Wayne Kerr?",
+      "subtitle": "Seven decades of innovation driving the future of precision measurement",
+      "quality": {
+        "title": "Exceptional Quality",
+        "description": "Every product meets the highest standards of precision and reliability, backed by rigorous testing."
+      },
+      "precision": {
+        "title": "Precision Accuracy",
+        "description": "Industry-leading accuracy ensures your measurements are consistently reliable and repeatable."
+      },
+      "multifunctional": {
+        "title": "Multi-Functional",
+        "description": "Engineered to handle a wide range of measurement tasks across various industries."
+      }
+    },
+    "globalPresence": {
+      "title": "Global Presence",
+      "subtitle": "Regional offices providing worldwide technical support and services",
+      "regionalOffice": "Regional Office",
+      "viewAllButton": "View All Locations"
+    }
+  },
+  "footer": {
+    "tagline": "Leaders in precision component measurement since 1946",
+    "products": "Products",
+    "company": "Company",
+    "contact": "Contact",
+    "phone": "+1 234 567 8900",
+    "email": "info@waynekerr.com",
+    "locations": "Global Locations",
+    "rights": "© 2024 Wayne Kerr Electronics. All rights reserved."
+  },
+  "countries": {
+    "us": "US",
+    "uk": "UK",
+    "germany": "Germany",
+    "china": "China",
+    "japan": "Japan",
+    "taiwan": "Taiwan",
+    "india": "India"
+  }
+}

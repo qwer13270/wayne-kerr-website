@@ -1,4 +1,4 @@
-import ProductsPageContent from "../../../src/components/layout/Productspagecontent";
+import ProductsPageContent from "../../../../src/components/layout/Productspagecontent";
 import { notFound } from "next/navigation";
 
 // This would be your actual data - replace with your JSON imports or API calls
