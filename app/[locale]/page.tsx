@@ -14,20 +14,22 @@ import {
   Shuffle,
 } from "lucide-react";
 import clients from "@/data/clients.json";
-import { useTheme } from "next-themes";
 import { useTranslations } from "next-intl";
 import globalLocations from "@/data/globalLocations.json";
 import { BORDER_STYLES, TEXT_SECONDARY } from "@/src/styles/styles";
 import Link from "next/link";
 import type { Locale } from "@/i18n/request";
+import {
+  HERO_SECTION_BG,
+  HALF_CIRCLE_BRIDGE_SHADOW,
+  HALF_CIRCLE_BRIDGE_BG,
+  CLIENT_LOGO_STYLES,
+} from "@/src/styles/styles";
 
 export default function WayneKerrHomepage() {
   // In client components, useParams() returns params directly (not a Promise!)
   const params = useParams();
   const locale = params.locale as Locale;
-
-  const { theme } = useTheme();
-  const darkMode = theme === "dark";
 
   // Get translations
   const t = useTranslations("home");
@@ -165,11 +167,7 @@ export default function WayneKerrHomepage() {
             className="w-full h-full object-cover"
           />
           <div
-            className={`absolute inset-0 backdrop-blur-sm transition-all duration-500 ${
-              darkMode
-                ? "bg-gradient-to-br from-black/75 via-gray-900/65 to-black/75"
-                : "bg-gradient-to-br from-blue-900/80 via-black-800/30 to-black-900/80"
-            }`}
+            className={`absolute inset-0 backdrop-blur-sm transition-all duration-500 ${HERO_SECTION_BG}`}
           ></div>
         </div>
 
@@ -224,28 +222,23 @@ export default function WayneKerrHomepage() {
 
         {/* Half-circle bridge into next section */}
         <div
-          className={`absolute bottom-[-40%] left-1/2 -translate-x-1/2 w-[160%] h-[50%] rounded-[999px] blur-2xl opacity-100 pointer-events-none transition-colors duration-500 ${
-            darkMode ? "bg-black" : "bg-white"
-          }`}
-          style={{
-            boxShadow: darkMode
-              ? "0 -60px 140px rgba(0,0,0,0.85)"
-              : "0 -60px 140px rgb(255, 255, 255)",
-          }}
+          className={`absolute bottom-[-40%] left-1/2 -translate-x-1/2 w-[160%] h-[50%] rounded-[999px] blur-2xl opacity-100 pointer-events-none transition-colors duration-500 ${HALF_CIRCLE_BRIDGE_BG} ${HALF_CIRCLE_BRIDGE_SHADOW}`}
         />
       </section>
 
       {/* Trusted By Section */}
       <section className="py-12 sm:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
-            <h3 className={`text-lg ${TEXT_SECONDARY} font-medium`}>
-              {t("trustedBy.title")}
-            </h3>
+          <div className="text-center mb-10">
+            <p className={`text-xl sm:text-2xl mb-12`}>
+              {t("trustedBy.prefix")}{" "}
+              <span className="font-bold tracking-tight">
+                {t("trustedBy.highlight")}
+              </span>
+            </p>
           </div>
-
           <div className="relative overflow-hidden">
-            <div className="flex animate-marquee">
+            <div className="flex gap-10 animate-client-marquee py-6">
               {marqueeClients.map((client, index) => (
                 <div
                   key={`${client.name}-${index}`}
@@ -256,9 +249,7 @@ export default function WayneKerrHomepage() {
                       .toLowerCase()
                       .replace(" ", "-")}.png`}
                     alt={client.name}
-                    className={`h-14 sm:h-16 w-auto object-contain transition ${
-                      darkMode ? "opacity-90" : "brightness-0 contrast-125"
-                    }`}
+                    className={`h-14 sm:h-16 w-auto object-contain transition ${CLIENT_LOGO_STYLES}`}
                   />
                 </div>
               ))}

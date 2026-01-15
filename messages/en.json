@@ -26,7 +26,8 @@
       }
     },
     "trustedBy": {
-      "title": "Trusted by Industry Leaders"
+      "prefix": "Trusted by",
+      "highlight": "Industry Leaders Worldwide"
     },
     "stats": {
       "title": "Powering Innovation Worldwide",
