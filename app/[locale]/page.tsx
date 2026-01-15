@@ -212,7 +212,7 @@ export default function WayneKerrHomepage() {
                 </button>
               </Link>
               <Link href={`/${locale}/contact`}>
-                <button className="group bg-blue-600/10 backdrop-blur-sm border border-white/20 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-blue-600/20 transition-all flex items-center gap-2 w-full sm:w-auto">
+                <button className="btn-outline-light px-8 py-4 text-lg w-full sm:w-auto">
                   {t("hero.cta.contact")}
                 </button>
               </Link>
