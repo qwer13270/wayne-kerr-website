@@ -1,4 +1,7 @@
 "use client";
+
+import { useParams } from "next/navigation";
+import { useTranslations } from "next-intl";
 import {
   Award,
   Target,
@@ -10,61 +13,60 @@ import {
 } from "lucide-react";
 import globalLocations from "@/data/globalLocations.json";
 import { BORDER_STYLES } from "@/src/styles/styles";
+import type { Locale } from "@/i18n/request";
 
 export default function AboutPage() {
+  const params = useParams();
+  const locale = params.locale as Locale;
+
+  // Get translations
+  const t = useTranslations("about");
+
   const milestones = [
     {
       year: "1946",
-      title: "Foundation in London",
-      description:
-        "Wayne Kerr Electronics was established in London, UK, beginning our journey in precision measurement.",
+      title: t("journey.milestones.1946.title"),
+      description: t("journey.milestones.1946.description"),
     },
     {
       year: "1960s",
-      title: "Industry Recognition",
-      description:
-        "Gained worldwide recognition for quality and accuracy in component measurement products.",
+      title: t("journey.milestones.1960s.title"),
+      description: t("journey.milestones.1960s.description"),
     },
     {
       year: "1980s",
-      title: "Global Expansion",
-      description:
-        "Established regional offices across continents to provide worldwide technical support.",
+      title: t("journey.milestones.1980s.title"),
+      description: t("journey.milestones.1980s.description"),
     },
     {
       year: "2000s",
-      title: "Technology Leadership",
-      description:
-        "Became the world's leading manufacturer of electronic test equipment and LCR meters.",
+      title: t("journey.milestones.2000s.title"),
+      description: t("journey.milestones.2000s.description"),
     },
     {
-      year: "Today",
-      title: "78+ Years of Excellence",
-      description:
-        "Continuing to innovate and serve customers across 57 countries with precision solutions.",
+      year: t("journey.milestones.today.year"),
+      title: t("journey.milestones.today.title"),
+      description: t("journey.milestones.today.description"),
     },
   ];
 
   const coreValues = [
     {
       icon: Lightbulb,
-      title: "Innovation",
-      description:
-        "We pioneer advanced measurement technologies that set new industry standards for accuracy and reliability.",
+      title: t("coreValues.innovation.title"),
+      description: t("coreValues.innovation.description"),
       color: "from-blue-600 to-blue-700",
     },
     {
       icon: Heart,
-      title: "Commitment",
-      description:
-        "Our dedication to customer success drives us to deliver great service and support, ensuring satisfaction and trust.",
+      title: t("coreValues.commitment.title"),
+      description: t("coreValues.commitment.description"),
       color: "from-blue-600 to-blue-700",
     },
     {
       icon: Shield,
-      title: "Quality",
-      description:
-        "Every product we offer is a testament to our commitment to quality, designed for durability and performance.",
+      title: t("coreValues.quality.title"),
+      description: t("coreValues.quality.description"),
       color: "from-blue-600 to-blue-700",
     },
   ];
@@ -72,28 +74,22 @@ export default function AboutPage() {
   const highlights = [
     {
       icon: Award,
-      title: "Prestigious",
-      description:
-        "Founded in 1946 in London, UK, Wayne Kerr Electronics has become the world's leading manufacturer of electronic test equipment over the past 78 years.",
+      title: t("prestigious.title"),
+      description: t("prestigious.description"),
     },
     {
       icon: Target,
-      title: "Professional",
-      description:
-        "Specialized in providing the high accuracy, quality, and capabilities in component testing equipment (LCR Meter, Impedance Analyzer, High Frequency LCR Meter)",
+      title: t("professional.title"),
+      description: t("professional.description"),
     },
     {
       icon: GlobeIcon,
-      title: "Worldwide",
-      description:
-        "Wayne Kerr Electronics has established regional offices in U.S.A, Germany, Singapore, India, Japan, China, and Taiwan for worldwide technical supports and services",
+      title: t("worldwide.title"),
+      description: t("worldwide.description"),
     },
   ];
 
-  const globalOffices = globalLocations.map((location) => ({
-    region: location.name,
-    city: "Regional Office",
-  }));
+  const missionValues = t.raw("mission.values") as string[];
 
   return (
     <div className="min-h-screen pt-32 pb-16">
@@ -105,14 +101,13 @@ export default function AboutPage() {
             <h1
               className={`text-5xl sm:text-6xl lg:text-8xl font-bold mb-6 leading-tight text-primary`}
             >
-              About Us
+              {t("title")}
             </h1>
 
             <p
               className={`text-2xl sm:text-3xl leading-relaxed font-light text-secondary`}
             >
-              Acknowledged worldwide for the quality, accuracy and capability of
-              component measurement products
+              {t("subtitle")}
             </p>
           </div>
 
@@ -148,7 +143,7 @@ export default function AboutPage() {
               <div className="relative">
                 <img
                   src="/images/about/mission-image.webp"
-                  alt="Our Mission"
+                  alt={t("mission.title")}
                   className="rounded-3xl shadow-2xl w-full h-[500px] object-cover"
                   onError={(e) => {
                     // Fallback gradient background
@@ -161,53 +156,23 @@ export default function AboutPage() {
 
               <div>
                 <h2 className={`text-4xl sm:text-5xl font-bold mb-6`}>
-                  Our Mission
+                  {t("mission.title")}
                 </h2>
 
                 <div className="space-y-6">
                   <p className={`text-lg leading-relaxed`}>
-                    Our mission is to revolutionize the field of component
-                    measurement through innovation, quality, and commitment. We
-                    aim to empower industries worldwide with precision tools
-                    that enhance efficiency and reliability.
+                    {t("mission.description")}
                   </p>
 
-                  <p className={`text-lg leading-relaxed`}>
-                    By continuously advancing our technologies and services, we
-                    strive to exceed the expectations of our clients. Our focus
-                    on customer success is the driving force behind our pursuit
-                    of excellence in everything we do.
-                  </p>
-
-                  <div className="flex items-start gap-3 pt-4">
-                    <CheckCircle
-                      className="text-blue-600 flex-shrink-0 mt-1"
-                      size={24}
-                    />
-                    <p className={`text-lg`}>
-                      Empowering industries with precision measurement solutions
-                    </p>
-                  </div>
-
-                  <div className="flex items-start gap-3">
-                    <CheckCircle
-                      className="text-blue-600 flex-shrink-0 mt-1"
-                      size={24}
-                    />
-                    <p className={`text-lg`}>
-                      Continuously advancing technologies and services
-                    </p>
-                  </div>
-
-                  <div className="flex items-start gap-3">
-                    <CheckCircle
-                      className="text-blue-600 flex-shrink-0 mt-1"
-                      size={24}
-                    />
-                    <p className={`text-lg`}>
-                      Exceeding client expectations through excellence
-                    </p>
-                  </div>
+                  {missionValues.map((value: string, index: number) => (
+                    <div key={index} className="flex items-start gap-3">
+                      <CheckCircle
+                        className="text-blue-600 flex-shrink-0 mt-1"
+                        size={24}
+                      />
+                      <p className={`text-lg`}>{value}</p>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
@@ -219,10 +184,10 @@ export default function AboutPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className={`text-4xl sm:text-5xl md:text-6xl font-bold mb-6`}>
-                Core Values
+                {t("coreValues.title")}
               </h2>
               <p className={`text-xl max-w-3xl mx-auto`}>
-                The principles that guide everything we do
+                {t("coreValues.subtitle")}
               </p>
             </div>
 
@@ -260,10 +225,10 @@ export default function AboutPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className={`text-4xl sm:text-5xl font-bold mb-6`}>
-                Our Journey
+                {t("journey.title")}
               </h2>
               <p className={`text-xl max-w-3xl mx-auto`}>
-                78 years of innovation and excellence in precision measurement
+                {t("journey.subtitle")}
               </p>
             </div>
 

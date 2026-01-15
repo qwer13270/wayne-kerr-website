@@ -80,6 +80,75 @@
       "viewAllButton": "View All Locations"
     }
   },
+  "about": {
+    "title": "About Us",
+    "subtitle": "Acknowledged worldwide for the quality, accuracy and capability of component measurement products",
+    "prestigious": {
+      "title": "Prestigious",
+      "description": "Founded in 1946 in London, UK, Wayne Kerr Electronics has become the world's leading manufacturer of electronic test equipment over the past 78 years."
+    },
+    "professional": {
+      "title": "Professional",
+      "description": "Specialized in providing the high accuracy, quality, and capabilities in component testing equipment (LCR Meter, Impedance Analyzer, High Frequency LCR Meter)"
+    },
+    "worldwide": {
+      "title": "Worldwide",
+      "description": "Wayne Kerr Electronics has established regional offices in U.S.A, Germany, Singapore, India, Japan, China, and Taiwan for worldwide technical supports and services"
+    },
+    "regionalOffice": "Regional Office",
+    "mission": {
+      "title": "Our Mission",
+      "description": "Our mission is to revolutionize the field of component measurement through innovation, quality, and commitment. We aim to empower industries worldwide with precision tools that enhance efficiency and reliability.",
+      "values": [
+        "Empowering industries with precision measurement solutions",
+        "Continuously advancing technologies and services",
+        "Exceeding client expectations through excellence"
+      ]
+    },
+    "coreValues": {
+      "title": "Core Values",
+      "subtitle": "The principles that guide everything we do",
+      "innovation": {
+        "title": "Innovation",
+        "description": "We pioneer advanced measurement technologies that set new industry standards for accuracy and reliability."
+      },
+      "commitment": {
+        "title": "Commitment",
+        "description": "Our dedication to customer success drives us to deliver great service and support, ensuring satisfaction and trust."
+      },
+      "quality": {
+        "title": "Quality",
+        "description": "Every product we offer is a testament to our commitment to quality, designed for durability and performance."
+      }
+    },
+    "journey": {
+      "title": "Our Journey",
+      "subtitle": "78 years of innovation and excellence in precision measurement",
+      "milestones": {
+        "1946": {
+          "title": "Foundation in London",
+          "description": "Wayne Kerr Electronics was established in London, UK, beginning our journey in precision measurement."
+        },
+        "1960s": {
+          "title": "Industry Recognition",
+          "description": "Gained worldwide recognition for quality and accuracy in component measurement products."
+        },
+        "1980s": {
+          "title": "Global Expansion",
+          "description": "Established regional offices across continents to provide worldwide technical support."
+        },
+        "2000s": {
+          "title": "Technology Leadership",
+          "description": "Became the world's leading manufacturer of electronic test equipment and LCR meters."
+        },
+        "today": {
+          "year": "Today",
+          "title": "78+ Years of Excellence",
+          "description": "Continuing to innovate and serve customers across 57 countries with precision solutions."
+        }
+      }
+    }
+  },
   "footer": {
     "tagline": "Leaders in precision component measurement since 1946",
     "products": "Products",
