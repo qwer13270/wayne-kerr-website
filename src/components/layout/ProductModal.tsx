@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useMemo, useCallback } from "react";
 import { X } from "lucide-react";
+import { useTranslations } from "next-intl";
 import {
   TEXT_SECONDARY,
   TOGGLE_CONTAINER_STYLES,
@@ -62,6 +63,7 @@ export default function ProductModal({
   onClose,
   productId,
 }: ProductModalProps) {
+  const t = useTranslations("products.modal");
   const [activeTab, setActiveTab] = useState<
     "overview" | "features" | "specifications" | "options"
   >("overview");
@@ -154,10 +156,10 @@ export default function ProductModal({
         >
           <div>
             <div className="text-sm font-semibold text-blue-600 dark:text-blue-400 mb-2 uppercase tracking-wide">
-              {productData?.series || "Loading..."}
+              {productData?.series || t("header.loading")}
             </div>
             <h2 className="text-3xl font-bold text-primary mb-2">
-              {productData?.title || "Product Details"}
+              {productData?.title || t("header.defaultTitle")}
             </h2>
             {productData?.subtitle && (
               <p className={`text-sm ${TEXT_SECONDARY}`}>
@@ -191,7 +193,7 @@ export default function ProductModal({
                   : `${MODAL_TAB_INACTIVE_TEXT} ${MODAL_TAB_INACTIVE_BG} ${MODAL_TAB_HOVER_TEXT} ${MODAL_TAB_HOVER_BG}`
               }`}
             >
-              <span className="capitalize">{tab}</span>
+              <span className="capitalize">{t(`tabs.${tab}`)}</span>
               {activeTab === tab && (
                 <span className="absolute bottom-0 left-0 right-0 h-[3px] bg-blue-600 dark:bg-blue-500" />
               )}
@@ -204,9 +206,7 @@ export default function ProductModal({
           {loading && (
             <div className="text-center py-20">
               <div className="inline-block w-12 h-12 border-4 border-blue-600 border-t-transparent rounded-full animate-spin"></div>
-              <p className={`mt-4 ${TEXT_SECONDARY}`}>
-                Loading product details...
-              </p>
+              <p className={`mt-4 ${TEXT_SECONDARY}`}>{t("loading.message")}</p>
             </div>
           )}
 
@@ -219,7 +219,7 @@ export default function ProductModal({
                 onClick={fetchProductData}
                 className="mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all"
               >
-                Retry
+                {t("error.retry")}
               </button>
             </div>
           )}
@@ -230,7 +230,7 @@ export default function ProductModal({
               {activeTab === "overview" && (
                 <div className="animate-fadeIn">
                   <h3 className="text-2xl font-bold text-primary mb-4">
-                    Product Overview
+                    {t("content.overview.title")}
                   </h3>
                   {productData.overview.paragraphs.map((paragraph, index) => (
                     <p
@@ -247,7 +247,7 @@ export default function ProductModal({
               {activeTab === "features" && (
                 <div className="animate-fadeIn">
                   <h3 className="text-2xl font-bold text-primary mb-4">
-                    Key Features
+                    {t("content.features.title")}
                   </h3>
                   <ul className="space-y-0">
                     {productData.features.map((feature, index) => (
@@ -272,7 +272,7 @@ export default function ProductModal({
               {activeTab === "specifications" && (
                 <div className="animate-fadeIn">
                   <h3 className="text-2xl font-bold text-primary mb-6">
-                    Technical Specifications
+                    {t("content.specifications.title")}
                   </h3>
                   {productData.specifications.map((spec, index) => (
                     <div
@@ -364,12 +364,12 @@ export default function ProductModal({
               {activeTab === "options" && productData.options && (
                 <div className="animate-fadeIn">
                   <h3 className="text-2xl font-bold text-primary mb-4">
-                    Available Options
+                    {t("content.options.title")}
                   </h3>
                   <p className={`${TEXT_SECONDARY} leading-relaxed mb-8`}>
-                    Enhance your system with these optional features.
+                    {t("content.options.description")}
                     {productData.options.some((opt) => opt.pdfUrl) &&
-                      " Click any option to view detailed specifications."}
+                      ` ${t("content.options.clickToView")}`}
                   </p>
 
                   <div className="space-y-4 mb-8">

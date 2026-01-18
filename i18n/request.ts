@@ -1,5 +1,5 @@
-import { getRequestConfig } from 'next-intl/server';
-import { routing } from './routing';
+import { getRequestConfig } from "next-intl/server";
+import { routing } from "./routing";
 
 export default getRequestConfig(async ({ requestLocale }) => {
   // This typically corresponds to the `[locale]` segment
@@ -11,11 +11,13 @@ export default getRequestConfig(async ({ requestLocale }) => {
   }
 
   // Load and merge all translation files for the locale
-  const [common, home, about, contact] = await Promise.all([
+  const [common, home, about, contact, support, products] = await Promise.all([
     import(`../messages/${locale}/common.json`),
     import(`../messages/${locale}/home.json`),
     import(`../messages/${locale}/about.json`),
-    import(`../messages/${locale}/contact.json`)
+    import(`../messages/${locale}/contact.json`),
+    import(`../messages/${locale}/support.json`),
+    import(`../messages/${locale}/products.json`),
   ]);
 
   // Merge all translation files into a single messages object
@@ -23,12 +25,14 @@ export default getRequestConfig(async ({ requestLocale }) => {
     ...common.default,
     ...home.default,
     ...about.default,
-    ...contact.default
+    ...contact.default,
+    ...support.default,
+    ...products.default,
   };
 
   return {
     locale,
-    messages
+    messages,
   };
 });
 
@@ -37,7 +41,7 @@ export const { locales, defaultLocale } = routing;
 export type Locale = (typeof locales)[number];
 
 export const localeNames: Record<Locale, string> = {
-  'en': 'English',
-  'zh-TW': '繁體中文',
-  'zh-CN': '简体中文',
+  en: "English",
+  "zh-TW": "繁體中文",
+  "zh-CN": "简体中文",
 };

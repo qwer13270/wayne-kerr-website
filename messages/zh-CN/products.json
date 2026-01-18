@@ -1,0 +1,58 @@
+{
+  "products": {
+    "hero": {
+      "title": "产品 - {category}",
+      "subtitle": "分析仪、LCR测试仪和直流偏置型号、欧姆表、层间短路测试仪"
+    },
+    "search": {
+      "placeholder": "按名称或类别搜索 {category}...",
+      "resultsLabel": "显示第 {start}-{end} 项，共 {total} 项 {category}"
+    },
+    "emptyState": {
+      "title": "未找到 {category}",
+      "message": "请尝试调整您的搜索条件"
+    },
+    "buttons": {
+      "datasheet": "数据表",
+      "learnMore": "了解更多"
+    },
+    "pagination": {
+      "previous": "上一页",
+      "next": "下一页"
+    },
+    "modal": {
+      "header": {
+        "loading": "加载中...",
+        "defaultTitle": "产品详情"
+      },
+      "tabs": {
+        "overview": "概述",
+        "features": "特性",
+        "specifications": "规格",
+        "options": "选项"
+      },
+      "loading": {
+        "message": "正在加载产品详情..."
+      },
+      "error": {
+        "retry": "重试"
+      },
+      "content": {
+        "overview": {
+          "title": "产品概述"
+        },
+        "features": {
+          "title": "主要特性"
+        },
+        "specifications": {
+          "title": "技术规格"
+        },
+        "options": {
+          "title": "可选配置",
+          "description": "使用这些可选功能增强您的系统。",
+          "clickToView": "点击任何选项以查看详细规格。"
+        }
+      }
+    }
+  }
+}

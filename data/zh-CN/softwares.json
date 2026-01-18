@@ -1,0 +1,25 @@
+[
+  {
+    "id": 1,
+    "series": "WK IQC",
+    "title": "数据记录",
+    "description": "WK 数据记录系统是所有 WK 机器的通用工具，用于收集测量数据并增强所有 WK 型号的用户界面和应用。通过 PC 收集测量数据。",
+    "image": "/images/products/software/data-logging.webp",
+    "datasheet": "/datasheets/softwares/data-logging.pdf"
+  },
+  {
+    "id": 2,
+    "series": "WK Factory View",
+    "title": "Factory View 2014 Pro",
+    "description": "FactoryView 2014 Pro 是一款多功能、用户友好的 WK 仪器软件，提供多模式测试和数据分析，并支持双语。通过 PC 可视化和控制您的机器。",
+    "image": "/images/products/software/factory-view.webp",
+    "datasheet": "/datasheets/softwares/factory-view.pdf"
+  },
+  {
+    "id": 3,
+    "series": "WK Mesco View",
+    "title": "Mesco View for Windows",
+    "description": "MESCOView for Windows 通过直观的用户界面实现全面的元件测试，支持 Wayne Kerr LCR 分析仪，并提供数据导出至 EXCEL 功能。通过 PC 控制您的机器。",
+    "image": "/images/products/software/mesco-view.webp"
+  }
+]

@@ -2,6 +2,7 @@
 
 import React, { useState, useMemo } from "react";
 import { Search, Phone, Mail, MapPin } from "lucide-react";
+import { useTranslations } from "next-intl";
 import salesData from "@/data/sales-support.json";
 import technicalData from "@/data/technical-support.json";
 import SearchBar from "../../../src/components/ui/SearchBar";
@@ -20,6 +21,7 @@ interface ContactData {
 }
 
 export default function SupportPage() {
+  const t = useTranslations("support");
   const [activeTab, setActiveTab] = useState<"sales" | "technical">("sales");
   const [searchQuery, setSearchQuery] = useState("");
 
@@ -46,11 +48,10 @@ export default function SupportPage() {
         {/* Header */}
         <div className="text-center mb-10">
           <h1 className="text-5xl font-bold mb-4 text-primary">
-            Service, Repair & Sales Contacts
+            {t("hero.title")}
           </h1>
           <p className="text-lg text-secondary leading-relaxed max-w-[900px] mx-auto">
-            For any technical and sales support, please contact us with detailed
-            information about your product and the assistance needed.
+            {t("hero.subtitle")}
           </p>
         </div>
 
@@ -71,7 +72,7 @@ export default function SupportPage() {
                   : "text-secondary hover:bg-bg-secondary hover:text-primary"
               }`}
             >
-              Sales Support
+              {t("tabs.sales")}
               <span
                 className={`ml-2 inline-flex items-center justify-center px-2 py-0.5 text-xs font-bold rounded-full ${
                   activeTab === "sales"
@@ -97,7 +98,7 @@ export default function SupportPage() {
                   : "text-secondary hover:bg-bg-secondary hover:text-primary"
               }`}
             >
-              Technical Support
+              {t("tabs.technical")}
               <span
                 className={`ml-2 inline-flex items-center justify-center px-2 py-0.5 text-xs font-bold rounded-full ${
                   activeTab === "technical"
@@ -121,24 +122,22 @@ export default function SupportPage() {
           <SearchBar
             value={searchQuery}
             onChange={setSearchQuery}
-            placeholder="Search by region, country, or contact person..."
+            placeholder={t("search.placeholder")}
             maxWidth="500px"
             showResultsCount={true}
             resultsCount={filteredData.length}
-            resultsLabel={`Showing ${filteredData.length} ${
-              activeTab === "sales" ? "sales" : "technical"
-            } support locations`}
+            resultsLabel={t(`search.resultsLabel.${activeTab}`, {
+              count: filteredData.length,
+            })}
           />
 
           {/* Contact Cards Grid */}
           {filteredData.length === 0 ? (
             <div className="text-center py-20">
               <h3 className="text-xl font-semibold text-secondary mb-2">
-                No contacts found
+                {t("emptyState.title")}
               </h3>
-              <p className="text-secondary">
-                Try adjusting your search criteria
-              </p>
+              <p className="text-secondary">{t("emptyState.message")}</p>
             </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -199,13 +198,13 @@ export default function SupportPage() {
 
                   {/* Contact Button */}
                   <a
-                    href={`mailto:${contact.email}?subject=${
-                      activeTab === "sales" ? "Sales" : "Technical"
-                    } Support`}
+                    href={`mailto:${contact.email}?subject=${t(
+                      `contact.emailSubject.${activeTab}`
+                    )}`}
                     className="inline-flex items-center justify-center w-full gap-2 px-4 py-2.5 bg-blue-600 text-white text-sm font-semibold rounded-lg hover:bg-blue-700 transition-all"
                   >
                     <Mail size={16} />
-                    Contact
+                    {t("contact.button")}
                   </a>
                 </div>
               ))}

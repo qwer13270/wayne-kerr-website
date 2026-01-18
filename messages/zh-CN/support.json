@@ -1,0 +1,30 @@
+{
+  "support": {
+    "hero": {
+      "title": "服务、维修和销售联系方式",
+      "subtitle": "如需任何技术和销售支持，请与我们联系，并提供您产品的详细信息以及所需的协助。"
+    },
+    "tabs": {
+      "sales": "销售支持",
+      "technical": "技术支持"
+    },
+    "search": {
+      "placeholder": "按地区、国家或联系人搜索...",
+      "resultsLabel": {
+        "sales": "显示 {count} 个销售支持地点",
+        "technical": "显示 {count} 个技术支持地点"
+      }
+    },
+    "emptyState": {
+      "title": "未找到联系人",
+      "message": "请尝试调整您的搜索条件"
+    },
+    "contact": {
+      "button": "联系",
+      "emailSubject": {
+        "sales": "销售支持",
+        "technical": "技术支持"
+      }
+    }
+  }
+}

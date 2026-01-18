@@ -1,0 +1,58 @@
+{
+  "products": {
+    "hero": {
+      "title": "Products - {category}",
+      "subtitle": "The Analyzers, LCR Meters, and DC Bias Models, Ohm meter, Interlayer Short Circuit Tester"
+    },
+    "search": {
+      "placeholder": "Search {category} by name or category...",
+      "resultsLabel": "Showing {start}-{end} of {total} {category}"
+    },
+    "emptyState": {
+      "title": "No {category} found",
+      "message": "Try adjusting your search criteria"
+    },
+    "buttons": {
+      "datasheet": "Datasheet",
+      "learnMore": "Learn More"
+    },
+    "pagination": {
+      "previous": "Previous",
+      "next": "Next"
+    },
+    "modal": {
+      "header": {
+        "loading": "Loading...",
+        "defaultTitle": "Product Details"
+      },
+      "tabs": {
+        "overview": "Overview",
+        "features": "Features",
+        "specifications": "Specifications",
+        "options": "Options"
+      },
+      "loading": {
+        "message": "Loading product details..."
+      },
+      "error": {
+        "retry": "Retry"
+      },
+      "content": {
+        "overview": {
+          "title": "Product Overview"
+        },
+        "features": {
+          "title": "Key Features"
+        },
+        "specifications": {
+          "title": "Technical Specifications"
+        },
+        "options": {
+          "title": "Available Options",
+          "description": "Enhance your system with these optional features.",
+          "clickToView": "Click any option to view detailed specifications."
+        }
+      }
+    }
+  }
+}

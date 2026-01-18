@@ -1,0 +1,30 @@
+{
+  "support": {
+    "hero": {
+      "title": "Service, Repair & Sales Contacts",
+      "subtitle": "For any technical and sales support, please contact us with detailed information about your product and the assistance needed."
+    },
+    "tabs": {
+      "sales": "Sales Support",
+      "technical": "Technical Support"
+    },
+    "search": {
+      "placeholder": "Search by region, country, or contact person...",
+      "resultsLabel": {
+        "sales": "Showing {count} sales support locations",
+        "technical": "Showing {count} technical support locations"
+      }
+    },
+    "emptyState": {
+      "title": "No contacts found",
+      "message": "Try adjusting your search criteria"
+    },
+    "contact": {
+      "button": "Contact",
+      "emailSubject": {
+        "sales": "Sales Support",
+        "technical": "Technical Support"
+      }
+    }
+  }
+}

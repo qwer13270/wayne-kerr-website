@@ -1,0 +1,187 @@
+[
+  {
+    "id": 1,
+    "series": "1EVA40100 系列",
+    "title": "开尔文夹（细爪）",
+    "description": "40100 具有细尖爪，适用于狭窄空间或细线。40150 是 4300 系列 LCR 电表的经济实惠替代品，40180 是 40100 的大爪变体。",
+    "image": "/images/products/accessories/1EVA40100.webp",
+    "datasheet": "/datasheets/accessories/1EVA40100.pdf"
+  },
+  {
+    "id": 2,
+    "series": "1EVA40125",
+    "title": "SMD 镊子",
+    "description": "40125 HF SMD 镊子用于将 Wayne Kerr 6500 分析仪连接到具有端盖端子的表面贴装元件。",
+    "image": "/images/products/accessories/1EVA40125.webp",
+    "datasheet": "/datasheets/accessories/1EVA40125.pdf"
+  },
+  {
+    "id": 3,
+    "series": "1EVA40120",
+    "title": "SMD 镊子",
+    "description": "40120 是一对专为接触无引线元件而设计的芯片元件镊子，电缆端接 BNC 连接器。",
+    "image": "/images/products/accessories/1EVA40120.webp",
+    "datasheet": "/datasheets/accessories/1EVA40120.pdf"
+  },
+  {
+    "id": 4,
+    "series": "1EV1905X",
+    "title": "SMD 探针导线（配 1023）",
+    "description": "1905X 是一个 4-2 BNC 转换器加导线，配备两个弹簧针探针，用于接触电路板上的表面贴装元件，并与带状混合元件和芯片元件连接。",
+    "image": "/images/products/accessories/1EV1905X.webp",
+    "datasheet": "/datasheets/accessories/1EV1905X.pdf"
+  },
+  {
+    "id": 5,
+    "series": "1EV1905A",
+    "title": "SMD 探针导线",
+    "description": "1905A 导线配备两个弹簧针探针，用于接触电路板上的表面贴装元件，并与带状混合元件和芯片元件连接。",
+    "image": "/images/products/accessories/1EV1905A.webp",
+    "datasheet": "/datasheets/accessories/1EV1905X.pdf"
+  },
+  {
+    "id": 6,
+    "series": "1EV1505",
+    "title": "四端点导线",
+    "description": "1EV1505 是一条 600 毫米延伸电缆，仪器端接四个 BNC 连接器，元件端接四个独立的鳄鱼夹。",
+    "image": "/images/products/accessories/1EV1505.webp"
+  },
+  {
+    "id": 7,
+    "series": "1J1100",
+    "title": "保护单元",
+    "description": "1100 保护单元专为 6430B 或 6440B 元件分析仪设计，可吸收高达 25 焦耳的能量并在过载情况下熔断保险丝，从而防止测试设备损坏。",
+    "image": "/images/products/accessories/1J1100.webp"
+  },
+  {
+    "id": 8,
+    "series": "1J10362",
+    "title": "两端点底部接触 SMD 夹具",
+    "description": "10362 是一个两端点底部接触 SMD 夹具，与 3260 + 3265 系统配合使用时可支持 250 A 直流偏置。",
+    "image": "/images/products/accessories/1J10362.webp"
+  },
+  {
+    "id": 9,
+    "series": "1J1036",
+    "title": "两端点传统夹具",
+    "description": "1036 是一个两端点传统夹具，可处理 250A 偏置电流。仅可与 3260+3265 系统配合使用。",
+    "image": "/images/products/accessories/1J1036.webp"
+  },
+  {
+    "id": 10,
+    "series": "1J1025",
+    "title": "接地元件探针",
+    "description": "1025 探针允许 6500 进行接地参考阻抗测量。在正常使用中，6500 无法测量一个端子直接参考接地的元件，但 1025 探针是解决此限制的方案。",
+    "image": "/images/products/accessories/1J1025.webp",
+    "datasheet": "/datasheets/accessories/1J1025.pdf"
+  },
+  {
+    "id": 11,
+    "series": "1J1023",
+    "title": "BNC 4-2 转接器",
+    "description": "1023 转接器允许两端点配件与四端点分析仪（如 4300 和 6500）配合使用，这些分析仪的前面板没有 2 端点/4 端点切换功能。",
+    "image": "/images/products/accessories/1J1023.webp"
+  },
+  {
+    "id": 12,
+    "series": "1J1016 (164)",
+    "title": "SMD 2/4 端点 125A 夹具",
+    "description": "1016 SMD 两端点和 10164 SMD 四端点大电流夹具将 Wayne Kerr 分析仪（3255B/3260B）和直流偏置单元（3265B）连接到表面贴装被测元件，支持高达 125 A 直流偏置电流。",
+    "image": "/images/products/accessories/1J1016 (164).webp",
+    "datasheet": "/datasheets/accessories/1J1016 (164).pdf"
+  },
+  {
+    "id": 13,
+    "series": "1J1015/10154",
+    "title": "两端点 125A 夹具",
+    "description": "1015 传统本体两端点大电流夹具用于将 Wayne Kerr 分析仪（3255B 或 3260B）和直流偏置单元（3265B）系统连接到传统本体被测元件，并传递高达 125 A 直流偏置电流。",
+    "image": "/images/products/accessories/1J1015.webp",
+    "datasheet": "/datasheets/accessories/1J1015.pdf"
+  },
+  {
+    "id": 14,
+    "series": "1J10264(74, 84)",
+    "title": "四端点 SMD 夹具",
+    "description": "10264、10274 和 10284 夹具专为与 6565 直流偏置单元配合使用而设计，便于与底部接触表面贴装元件进行四端点连接，分别允许测试容量高达 20A、40A 和 80A。",
+    "image": "/images/products/accessories/1J10264(74, 84).webp",
+    "datasheet": "/datasheets/accessories/1J1031.pdf"
+  },
+  {
+    "id": 15,
+    "series": "1J1020",
+    "title": "介电材料夹具",
+    "description": "1020 夹具与 6500 系列和 /K 材料测试固件兼容，可自动计算材料的介电常数。它支持接触和非接触电极方法，频率高达 30 MHz。",
+    "image": "/images/products/accessories/1J1020.webp",
+    "datasheet": "/datasheets/accessories/1J1020.pdf"
+  },
+  {
+    "id": 16,
+    "series": "1J1001(02)",
+    "title": "4 转 (1/2) BNC 转换器",
+    "description": "1001 和 1002 BNC 转换器使 WK 6500 分析仪能够连接到具有单个 BNC 连接器或两个 BNC 连接器的元件。",
+    "image": "/images/products/accessories/1J1001(02).webp",
+    "datasheet": "/datasheets/accessories/1J1001.pdf"
+  },
+  {
+    "id": 17,
+    "series": "1J1037",
+    "title": "偏置夹具转接器",
+    "description": "1037 转接器提供从 6565 到远端测试头（如 SMD 贴片机）的 SMA 接口连接。",
+    "image": "/images/products/accessories/1J1037.webp"
+  },
+  {
+    "id": 18,
+    "series": "1J1031",
+    "title": "SMD 两端点底部接触转接器",
+    "description": "1031 转接器与 1026、1027 或 1028 夹具配合使用，允许与底部接触表面贴装元件进行两端点连接，测试高达 80A。",
+    "image": "/images/products/accessories/1J1031.webp",
+    "datasheet": "/datasheets/accessories/1J1031.pdf"
+  },
+  {
+    "id": 19,
+    "series": "1J1026(27, 28)",
+    "title": "两端点传统夹具",
+    "description": "1026、1027 和 1028 夹具与 6565 直流偏置单元兼容，分别支持传统 DIL 元件测试，高达 20A、40A 和 80A。此系列为电子元件分析提供多功能的测试选项。",
+    "image": "/images/products/accessories/1J1026-28.webp",
+    "datasheet": "/datasheets/accessories/1J1031.pdf"
+  },
+  {
+    "id": 20,
+    "series": "1J1022",
+    "title": "液体夹具",
+    "description": "1022 液体夹具可准确测量液体的介电常数和阻抗。它需要 Wayne Kerr 6500 分析仪和单独提供的 1J1002 4-2 BNC 转换器才能运作。",
+    "image": "/images/products/accessories/1J1022.webp",
+    "datasheet": "/datasheets/accessories/1J1022.pdf"
+  },
+  {
+    "id": 21,
+    "series": "1J1011(W,WT)",
+    "title": "元件夹具",
+    "description": "1011 DIP 测试夹具设计用于支持高达 120MHz 的频率，专门适用于 WK4100、4300 系列、6500B 系列和 6500P 系列。其频率限制取决于所使用的仪器。",
+    "image": "/images/products/accessories/1J1011(W, WT).webp"
+  },
+  {
+    "id": 22,
+    "series": "1EV1006",
+    "title": "四端点元件夹具",
+    "description": "用于轴向、径向或带状元件的远端测试夹具。配备端接四个 BNC 连接器的电缆。",
+    "image": "/images/products/accessories/1EV1006.webp",
+    "datasheet": "/datasheets/accessories/1EV1006.pdf"
+  },
+  {
+    "id": 23,
+    "series": "1J1032 (324)",
+    "title": "SMD 2/4 端点底部接触转接器",
+    "description": "1032 夹具专为两端点测量而设计，适用于中高阻抗元件，而 10324 夹具提供四端点测量，适合低阻抗元件。",
+    "image": "/images/products/accessories/1J1032(324).webp",
+    "datasheet": "/datasheets/accessories/1J1032(324).pdf"
+  },
+  {
+    "id": 24,
+    "series": "1J1012(14)",
+    "title": "SMD (2/4) 端点夹具",
+    "description": "1012 和 1024 SMD 夹具可实现两端点测量，1014 则促进四端点测量，用于将 Wayne Kerr 分析仪连接到表面贴装元件。",
+    "image": "/images/products/accessories/1J1012(14, 24).webp",
+    "datasheet": "/datasheets/accessories/1J1012(14, 24).pdf"
+  }
+]

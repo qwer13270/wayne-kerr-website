@@ -2,6 +2,7 @@
 
 import React, { useState, useMemo } from "react";
 import { Search, ChevronLeft, ChevronRight } from "lucide-react";
+import { useTranslations } from "next-intl";
 import SearchBar from "../ui/SearchBar";
 import ProductModal from "./ProductModal";
 
@@ -26,10 +27,17 @@ export default function ProductsPageContent({
   data,
   category,
 }: ProductsPageContentProps) {
+  const t = useTranslations("products");
+  const tNav = useTranslations("navigation");
   const [searchQuery, setSearchQuery] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedProductId, setSelectedProductId] = useState<string>("");
+
+  // Get translated category name
+  const categoryName = tNav(
+    category as "instruments" | "accessories" | "softwares"
+  );
 
   // Filter products based on search
   const filteredProducts = useMemo(() => {
@@ -68,9 +76,6 @@ export default function ProductsPageContent({
     setIsModalOpen(true);
   };
 
-  // Get category title
-  const categoryTitle = category.charAt(0).toUpperCase() + category.slice(1);
-
   return (
     <>
       <div className="min-h-screen pt-32 pb-16">
@@ -78,11 +83,10 @@ export default function ProductsPageContent({
           {/* Header */}
           <div className="mb-16 text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-3 tracking-tight">
-              Products - {categoryTitle}
+              {t("hero.title", { category: categoryName })}
             </h1>
             <p className="text-lg text-secondary leading-relaxed max-w-[900px] mx-auto">
-              The Analyzers, LCR Meters, and DC Bias Models, Ohm meter,
-              Interlayer Short Circuit Tester
+              {t("hero.subtitle")}
             </p>
           </div>
 
@@ -90,25 +94,28 @@ export default function ProductsPageContent({
           <SearchBar
             value={searchQuery}
             onChange={setSearchQuery}
-            placeholder={`Search ${category} by name or category...`}
+            placeholder={t("search.placeholder", { category: categoryName })}
             maxWidth="600px"
             showResultsCount={filteredProducts.length > 0}
             resultsCount={filteredProducts.length}
-            resultsLabel={`Showing ${startIndex + 1}-${Math.min(
-              startIndex + ITEMS_PER_PAGE,
-              filteredProducts.length
-            )} of ${filteredProducts.length} ${category}`}
+            resultsLabel={t("search.resultsLabel", {
+              start: startIndex + 1,
+              end: Math.min(
+                startIndex + ITEMS_PER_PAGE,
+                filteredProducts.length
+              ),
+              total: filteredProducts.length,
+              category: categoryName,
+            })}
           />
 
           {/* Products Grid */}
           {currentProducts.length === 0 ? (
             <div className="text-center py-24">
               <h3 className="text-2xl font-semibold text-secondary mb-3">
-                No {category} found
+                {t("emptyState.title", { category: categoryName })}
               </h3>
-              <p className="text-secondary">
-                Try adjusting your search criteria
-              </p>
+              <p className="text-secondary">{t("emptyState.message")}</p>
             </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
@@ -146,7 +153,7 @@ export default function ProductsPageContent({
                           rel="noopener noreferrer"
                           className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-blue-600 text-white text-sm font-semibold rounded-lg hover:bg-blue-700 transition-all"
                         >
-                          Datasheet
+                          {t("buttons.datasheet")}
                         </a>
                       )}
 
@@ -156,7 +163,7 @@ export default function ProductsPageContent({
                           onClick={() => handleLearnMore(product.productId!)}
                           className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-transparent text-blue-600 text-sm font-semibold rounded-lg border border-blue-600 hover:bg-blue-50 dark:hover:bg-blue-950/20 transition-all"
                         >
-                          Learn More
+                          {t("buttons.learnMore")}
                           <span>→</span>
                         </button>
                       )}
