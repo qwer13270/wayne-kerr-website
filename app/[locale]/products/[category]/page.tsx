@@ -1,11 +1,11 @@
-import ProductsPageContent from "../../../src/components/layout/Productspagecontent";
+import ProductsPageContent from "../../../../src/components/layout/Productspagecontent";
 import { notFound } from "next/navigation";
 
-// This would be your actual data - replace with your JSON imports or API calls
-const getProductData = async (category: string) => {
+// Load product data from locale-specific folder
+const getProductData = async (locale: string, category: string) => {
   try {
-    // Dynamic import based on category
-    const data = await import(`@/data/${category}.json`);
+    // Dynamic import based on locale and category
+    const data = await import(`@/data/${locale}/${category}.json`);
     return data.default;
   } catch (error) {
     // If the JSON file doesn't exist, return null
@@ -16,9 +16,9 @@ const getProductData = async (category: string) => {
 export default async function ProductCategoryPage({
   params,
 }: {
-  params: Promise<{ category: string }>;
+  params: Promise<{ locale: string; category: string }>;
 }) {
-  const { category } = await params;
+  const { locale, category } = await params;
 
   // Validate category
   const validCategories = ["instruments", "accessories", "softwares"];
@@ -26,8 +26,8 @@ export default async function ProductCategoryPage({
     notFound();
   }
 
-  // Load data for this category
-  const data = await getProductData(category);
+  // Load data for this category from locale-specific folder
+  const data = await getProductData(locale, category);
 
   if (!data) {
     notFound();

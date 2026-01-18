@@ -2,8 +2,10 @@
 
 import React, { useState } from "react";
 import { Send, X, CheckCircle } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export default function ContactFormPage() {
+  const t = useTranslations("contact");
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -52,11 +54,11 @@ export default function ContactFormPage() {
           setShowToast(false);
         }, 5000);
       } else {
-        alert("Failed to send request. Please try again.");
+        alert(t("errors.submitFailed"));
       }
     } catch (error) {
       console.error("Error:", error);
-      alert("An error occurred. Please try again.");
+      alert(t("errors.generic"));
     } finally {
       setIsSubmitting(false);
     }
@@ -86,11 +88,9 @@ export default function ContactFormPage() {
             {/* Header */}
             <div className="text-center mb-10">
               <h1 className="text-5xl font-bold mb-4 text-primary">
-                Contact Us
+                {t("hero.title")}
               </h1>
-              <p className="text-lg text-secondary">
-                We&apos;ll respond within one business day
-              </p>
+              <p className="text-lg text-secondary">{t("hero.subtitle")}</p>
             </div>
 
             {/* Form */}
@@ -99,7 +99,8 @@ export default function ContactFormPage() {
                 {/* Name */}
                 <div className="md:col-span-2">
                   <label className="block text-sm font-semibold text-primary mb-2">
-                    Name <span className="text-red-500">*</span>
+                    {t("form.fields.name.label")}{" "}
+                    <span className="text-red-500">*</span>
                   </label>
                   <input
                     type="text"
@@ -107,7 +108,7 @@ export default function ContactFormPage() {
                     required
                     value={formData.name}
                     onChange={handleChange}
-                    placeholder="John Doe"
+                    placeholder={t("form.fields.name.placeholder")}
                     className="w-full px-4 py-3.5 border border-border rounded-xl text-primary bg-primary focus:outline-none focus:border-blue-500 focus:bg-blue-50/50 dark:focus:bg-blue-950/20 transition-all"
                   />
                 </div>
@@ -115,7 +116,8 @@ export default function ContactFormPage() {
                 {/* Email */}
                 <div>
                   <label className="block text-sm font-semibold text-primary mb-2">
-                    Email <span className="text-red-500">*</span>
+                    {t("form.fields.email.label")}{" "}
+                    <span className="text-red-500">*</span>
                   </label>
                   <input
                     type="email"
@@ -123,7 +125,7 @@ export default function ContactFormPage() {
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    placeholder="john@company.com"
+                    placeholder={t("form.fields.email.placeholder")}
                     className="w-full px-4 py-3.5 border border-border rounded-xl text-primary bg-primary focus:outline-none focus:border-blue-500 focus:bg-blue-50/50 dark:focus:bg-blue-950/20 transition-all"
                   />
                 </div>
@@ -131,14 +133,14 @@ export default function ContactFormPage() {
                 {/* Phone */}
                 <div>
                   <label className="block text-sm font-semibold text-primary mb-2">
-                    Phone Number
+                    {t("form.fields.phone.label")}
                   </label>
                   <input
                     type="tel"
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    placeholder="+1 (555) 000-0000"
+                    placeholder={t("form.fields.phone.placeholder")}
                     className="w-full px-4 py-3.5 border border-border rounded-xl text-primary bg-primary focus:outline-none focus:border-blue-500 focus:bg-blue-50/50 dark:focus:bg-blue-950/20 transition-all"
                   />
                 </div>
@@ -146,14 +148,14 @@ export default function ContactFormPage() {
                 {/* Company */}
                 <div>
                   <label className="block text-sm font-semibold text-primary mb-2">
-                    Company Name
+                    {t("form.fields.company.label")}
                   </label>
                   <input
                     type="text"
                     name="company"
                     value={formData.company}
                     onChange={handleChange}
-                    placeholder="Acme Inc."
+                    placeholder={t("form.fields.company.placeholder")}
                     className="w-full px-4 py-3.5 border border-border rounded-xl text-primary bg-primary focus:outline-none focus:border-blue-500 focus:bg-blue-50/50 dark:focus:bg-blue-950/20 transition-all"
                   />
                 </div>
@@ -161,7 +163,8 @@ export default function ContactFormPage() {
                 {/* Country */}
                 <div>
                   <label className="block text-sm font-semibold text-primary mb-2">
-                    Country <span className="text-red-500">*</span>
+                    {t("form.fields.country.label")}{" "}
+                    <span className="text-red-500">*</span>
                   </label>
                   <select
                     name="country"
@@ -170,25 +173,50 @@ export default function ContactFormPage() {
                     onChange={handleChange}
                     className="w-full px-4 py-3.5 border border-border rounded-xl text-primary bg-primary focus:outline-none focus:border-blue-500 focus:bg-blue-50/50 dark:focus:bg-blue-950/20 transition-all"
                   >
-                    <option value="">Please select</option>
-                    <option value="US">United States</option>
-                    <option value="UK">United Kingdom</option>
-                    <option value="TW">Taiwan</option>
-                    <option value="CN">China</option>
-                    <option value="DE">Germany</option>
-                    <option value="JP">Japan</option>
-                    <option value="KR">Korea</option>
-                    <option value="SG">Singapore</option>
-                    <option value="IN">India</option>
-                    <option value="DK">Denmark</option>
-                    <option value="other">Other</option>
+                    <option value="">
+                      {t("form.fields.country.placeholder")}
+                    </option>
+                    <option value="US">
+                      {t("form.fields.country.options.US")}
+                    </option>
+                    <option value="UK">
+                      {t("form.fields.country.options.UK")}
+                    </option>
+                    <option value="TW">
+                      {t("form.fields.country.options.TW")}
+                    </option>
+                    <option value="CN">
+                      {t("form.fields.country.options.CN")}
+                    </option>
+                    <option value="DE">
+                      {t("form.fields.country.options.DE")}
+                    </option>
+                    <option value="JP">
+                      {t("form.fields.country.options.JP")}
+                    </option>
+                    <option value="KR">
+                      {t("form.fields.country.options.KR")}
+                    </option>
+                    <option value="SG">
+                      {t("form.fields.country.options.SG")}
+                    </option>
+                    <option value="IN">
+                      {t("form.fields.country.options.IN")}
+                    </option>
+                    <option value="DK">
+                      {t("form.fields.country.options.DK")}
+                    </option>
+                    <option value="other">
+                      {t("form.fields.country.options.other")}
+                    </option>
                   </select>
                 </div>
 
                 {/* Topic */}
                 <div>
                   <label className="block text-sm font-semibold text-primary mb-2">
-                    Topic <span className="text-red-500">*</span>
+                    {t("form.fields.topic.label")}{" "}
+                    <span className="text-red-500">*</span>
                   </label>
                   <select
                     name="topic"
@@ -197,13 +225,23 @@ export default function ContactFormPage() {
                     onChange={handleChange}
                     className="w-full px-4 py-3.5 border border-border rounded-xl text-primary bg-primary focus:outline-none focus:border-blue-500 focus:bg-blue-50/50 dark:focus:bg-blue-950/20 transition-all"
                   >
-                    <option value="">Please select</option>
-                    <option value="pricing">Pricing Inquiry</option>
-                    <option value="trade-in">Trade-In Program</option>
-                    <option value="calibration">Calibration Service</option>
-                    <option value="rental">Rental Service</option>
+                    <option value="">
+                      {t("form.fields.topic.placeholder")}
+                    </option>
+                    <option value="pricing">
+                      {t("form.fields.topic.options.pricing")}
+                    </option>
+                    <option value="trade-in">
+                      {t("form.fields.topic.options.trade-in")}
+                    </option>
+                    <option value="calibration">
+                      {t("form.fields.topic.options.calibration")}
+                    </option>
+                    <option value="rental">
+                      {t("form.fields.topic.options.rental")}
+                    </option>
                     <option value="technical">
-                      Technical Discussion / Solution Consultation
+                      {t("form.fields.topic.options.technical")}
                     </option>
                   </select>
                 </div>
@@ -211,14 +249,14 @@ export default function ContactFormPage() {
                 {/* Model */}
                 <div>
                   <label className="block text-sm font-semibold text-primary mb-2">
-                    Model
+                    {t("form.fields.model.label")}
                   </label>
                   <input
                     type="text"
                     name="model"
                     value={formData.model}
                     onChange={handleChange}
-                    placeholder="e.g., 6500B"
+                    placeholder={t("form.fields.model.placeholder")}
                     className="w-full px-4 py-3.5 border border-border rounded-xl text-primary bg-primary focus:outline-none focus:border-blue-500 focus:bg-blue-50/50 dark:focus:bg-blue-950/20 transition-all"
                   />
                 </div>
@@ -226,13 +264,13 @@ export default function ContactFormPage() {
                 {/* Message */}
                 <div className="md:col-span-2">
                   <label className="block text-sm font-semibold text-primary mb-2">
-                    Additional Details
+                    {t("form.fields.message.label")}
                   </label>
                   <textarea
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
-                    placeholder="Please describe your requirements or questions..."
+                    placeholder={t("form.fields.message.placeholder")}
                     rows={5}
                     className="w-full px-4 py-3.5 border border-border rounded-xl text-primary bg-primary focus:outline-none focus:border-blue-500 focus:bg-blue-50/50 dark:focus:bg-blue-950/20 transition-all resize-vertical"
                   />
@@ -245,7 +283,9 @@ export default function ContactFormPage() {
                 disabled={isSubmitting}
                 className="w-full px-8 py-4 bg-blue-600 text-white text-lg font-semibold rounded-xl hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed transition-all duration-200 flex items-center justify-center gap-3"
               >
-                {isSubmitting ? "Sending..." : "Submit Quote Request"}
+                {isSubmitting
+                  ? t("form.submit.sending")
+                  : t("form.submit.default")}
                 {!isSubmitting && <Send size={18} />}
               </button>
             </form>
@@ -270,11 +310,10 @@ export default function ContactFormPage() {
               </div>
               <div>
                 <h3 className="font-bold text-white mb-1">
-                  Request Sent Successfully!
+                  {t("toast.title")}
                 </h3>
                 <p className="text-sm text-white/90 leading-relaxed">
-                  We&apos;ve received your quote request. Our team will get back
-                  to you within 24 hours.
+                  {t("toast.message")}
                 </p>
               </div>
             </div>

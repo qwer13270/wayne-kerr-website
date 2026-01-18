@@ -1,0 +1,71 @@
+{
+  "about": {
+    "title": "關於我們",
+    "subtitle": "以元件測量產品的品質、精度和能力享譽全球",
+    "prestigious": {
+      "title": "聲譽卓著",
+      "description": "Wayne Kerr Electronics 於 1946 年在英國倫敦成立，在過去 78 年中已成為全球領先的電子測試設備製造商。"
+    },
+    "professional": {
+      "title": "專業",
+      "description": "專門提供高精度、高品質和高性能的元件測試設備（LCR 表、阻抗分析儀、高頻 LCR 表）"
+    },
+    "worldwide": {
+      "title": "全球化",
+      "description": "Wayne Kerr Electronics 已在美國、德國、新加坡、印度、日本、中國和台灣設立區域辦事處，提供全球技術支援和服務"
+    },
+    "regionalOffice": "區域辦事處",
+    "mission": {
+      "title": "我們的使命",
+      "description": "我們的使命是透過創新、品質和承諾，徹底改變元件測量領域。我們的目標是為全球產業提供提高效率和可靠性的精密工具。",
+      "values": [
+        "透過精密測量解決方案為產業賦能",
+        "持續推進技術和服務",
+        "透過卓越超越客戶期望"
+      ]
+    },
+    "coreValues": {
+      "title": "核心價值",
+      "subtitle": "指導我們所做一切的原則",
+      "innovation": {
+        "title": "創新",
+        "description": "我們開創先進的測量技術，為精度和可靠性設定新的產業標準。"
+      },
+      "commitment": {
+        "title": "承諾",
+        "description": "我們對客戶成功的奉獻驅使我們提供出色的服務和支援，確保滿意度和信任。"
+      },
+      "quality": {
+        "title": "品質",
+        "description": "我們提供的每一款產品都是對品質承諾的見證，專為耐用性和性能而設計。"
+      }
+    },
+    "journey": {
+      "title": "我們的歷程",
+      "subtitle": "78 年的創新與卓越精密測量",
+      "milestones": {
+        "1946": {
+          "title": "在倫敦成立",
+          "description": "Wayne Kerr Electronics 在英國倫敦成立，開始我們的精密測量之旅。"
+        },
+        "1960s": {
+          "title": "產業認可",
+          "description": "因元件測量產品的品質和精度而獲得全球認可。"
+        },
+        "1980s": {
+          "title": "全球擴張",
+          "description": "在各大洲設立區域辦事處，提供全球技術支援。"
+        },
+        "2000s": {
+          "title": "技術領導地位",
+          "description": "成為全球領先的電子測試設備和 LCR 表製造商。"
+        },
+        "today": {
+          "year": "今日",
+          "title": "78+ 年的卓越成就",
+          "description": "持續創新並為 57 個國家/地區的客戶提供精密解決方案。"
+        }
+      }
+    }
+  }
+}

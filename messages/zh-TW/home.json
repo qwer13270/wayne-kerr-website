@@ -1,0 +1,72 @@
+{
+  "home": {
+    "hero": {
+      "badge": "78年來深受業界領導者信賴",
+      "typewriter": {
+        "base": "LCR測試儀領導者及",
+        "word1": "阻抗分析儀",
+        "word2": "精密測試",
+        "word3": "測量解決方案"
+      },
+      "subtitle": "精確度與創新的完美結合",
+      "cta": {
+        "explore": "探索產品",
+        "contact": "獲取報價"
+      }
+    },
+    "trustedBy": {
+      "prefix": "深受",
+      "highlight": "全球業界領導者信賴"
+    },
+    "stats": {
+      "title": "推動全球創新",
+      "yearsLabel": "卓越年份",
+      "yearsDesc": "業界領導地位",
+      "modelsLabel": "機型選擇",
+      "modelsDesc": "多元化解決方案",
+      "countriesLabel": "國家",
+      "countriesDesc": "全球布局",
+      "distributorsLabel": "經銷商",
+      "distributorsDesc": "全球支援"
+    },
+    "products": {
+      "title": "探索我們的產品",
+      "subtitle": "為卓越而設計的業界領先測量解決方案",
+      "exploreButton": "探索系列",
+      "instruments": {
+        "count": "19+ 型號",
+        "description": "多樣化的機器選擇，旨在滿足不同的測量需求。"
+      },
+      "accessories": {
+        "count": "24+ 項目",
+        "description": "一系列配件，專為補充和擴展我們儀器的功能而量身定制。"
+      },
+      "softwares": {
+        "count": "3+ 套裝",
+        "description": "專業軟體，可直接從您的電腦進行機器控制和數據分析。"
+      }
+    },
+    "features": {
+      "title": "為什麼選擇 Wayne Kerr？",
+      "subtitle": "七十年的創新推動精密測量的未來",
+      "quality": {
+        "title": "卓越品質",
+        "description": "專為在嚴苛環境中提供耐用性和穩定性能而設計。"
+      },
+      "precision": {
+        "title": "精密準確",
+        "description": "保證最高水準的準確度，確保完美的測量。"
+      },
+      "multifunctional": {
+        "title": "多功能性",
+        "description": "經過精心設計，可處理各行業的廣泛測量任務。"
+      }
+    },
+    "globalPresence": {
+      "title": "全球據點",
+      "subtitle": "區域辦事處提供全球技術支援和服務",
+      "regionalOffice": "區域辦事處",
+      "viewAllButton": "查看所有據點"
+    }
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "id": "3260B",
+  "series": "3260B 系列",
+  "title": "精密磁性分析儀",
+  "subtitle": "1 種型號：3260B（20 Hz 至 3 MHz）",
+  "image": "/images/products/transparent/3260.png",
+  "overview": {
+    "paragraphs": [
+      "3260B 精密磁性分析儀是一款專為元件全面特性分析而設計的儀器，特別適合電信變壓器測試和 SMD 電感器評估的需求。提供 20 Hz 至 3 MHz 的寬頻率範圍和 0.1% 的基本精度，它有助於在各種工作條件（包括不同頻率、交流驅動電平和直流偏置電流）下對元件性能進行精確分析。"
+    ]
+  },
+  "applications": ["電信變壓器測試", "SMD 電感器評估", "大電流元件測試"],
+  "features": [
+    {
+      "title": "寬頻率範圍",
+      "description": "20 Hz 至 3MHz 允許在寬頻譜範圍內進行詳細的元件分析"
+    },
+    {
+      "title": "高精度",
+      "description": "0.1% 基本精度確保可靠的測量結果"
+    },
+    {
+      "title": "多功能測量功能",
+      "description": "能夠測量 Z、L、C、Rac、Ø、Q、D、Rdc 和匝數比"
+    },
+    {
+      "title": "圖形分析",
+      "description": "將測量參數與頻率、交流驅動電平或直流偏置電流進行圖形化，進行全面的元件評估"
+    },
+    {
+      "title": "內部和外部直流偏置",
+      "description": "內部偏置高達 1A；使用可選的 3265B 直流偏置單元時，外部偏置高達 250A，可對需要大電流的元件進行測試"
+    },
+    {
+      "title": "分選處理模式",
+      "description": "根據絕對值或百分比將元件分選到最多 10 個分選中，提高生產效率"
+    },
+    {
+      "title": "直觀操作",
+      "description": "設計用於直接、使用者友善的互動"
+    },
+    {
+      "title": "列印和歸檔結果",
+      "description": "通過並列 Centronics 介面直接列印測試結果，用於分析和歸檔"
+    },
+    {
+      "title": "PC 控制和分析",
+      "description": "IEEE 488 GPIB 介面和 LabVIEW™ 驅動程式支援，可通過 PC 進行控制和資料分析"
+    }
+  ],
+  "specifications": [
+    {
+      "heading": "測量功能",
+      "content": ["L、Z、Rdc、C、Q、D、Rac、角度"]
+    },
+    {
+      "heading": "頻率範圍",
+      "content": ["20 Hz 至 3 MHz 選項"]
+    },
+    {
+      "heading": "驅動電平",
+      "content": ["開路時 1 mV 至 10 V rms", "短路時 50 µA 至 200 mA rms"]
+    },
+    {
+      "heading": "內部直流偏置供應",
+      "content": ["1 mA 至 1 A"]
+    },
+    {
+      "heading": "絕緣（選項）",
+      "content": ["測試電壓 100 V、200 V 或 500 V 直流，使用者可選"]
+    },
+    {
+      "heading": "測量速度",
+      "content": ["4 種速度可選（最大 20/秒）"]
+    },
+    {
+      "heading": "測量範圍",
+      "content": [
+        "R 0.01 mΩ 至 > 2 GΩ",
+        "L 0.1 nH 至 >1000H",
+        "C 5 fF 至 > 1 F"
+      ]
+    },
+    {
+      "heading": "精度",
+      "content": [
+        "L/Rac/Z/Cp ±0.1%",
+        "Q ±0.1% (Q+1/Q)",
+        "D ±0.001 (1+ D²)",
+        "匝數比 ±0.1%",
+        "Rdc ±0.5%"
+      ]
+    },
+    {
+      "heading": "輸入規格",
+      "content": [
+        "電源供應 230 V AC ±10% 或 115 V AC ±10%（可選）",
+        "50 至 400 Hz",
+        "最大功耗 400VA"
+      ]
+    },
+    {
+      "heading": "顯示器",
+      "content": [
+        "高對比度單色 LCD 320 x 240 點，CFL 背光",
+        "可見區域 115 x 86mm",
+        "視角 45°"
+      ]
+    },
+    {
+      "heading": "測量連接",
+      "content": [
+        "8 個前面板 BNC 插座",
+        "兩線或四線（開爾文）測量，螢幕處於接地電位",
+        "螢幕上的等效電路符號",
+        "初級和次級連接的獨立端子",
+        "LED 指示活動端子"
+      ]
+    }
+  ],
+  "datasheet": "/datasheets/instruments/WK3260B.pdf"
+}

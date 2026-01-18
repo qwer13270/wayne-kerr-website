@@ -34,3 +34,16 @@ export const MODAL_TAB_HOVER_BG =
 export const MODAL_TABS_CONTAINER_BG = "bg-gray-50 dark:bg-slate-800";
 export const MODAL_TABS_CONTAINER_BORDER =
   "border-b-2 border-gray-200 dark:border-slate-700";
+
+// ... existing code ...
+export const HERO_SECTION_BG =
+  "bg-gradient-to-br from-blue-900/80 via-black-800/30 to-black-900/80 dark:from-black/75 dark:via-gray-900/65 dark:to-black/75";
+
+// ... existing code ...
+export const HALF_CIRCLE_BRIDGE_SHADOW =
+  "[box-shadow:0_-60px_140px_rgb(255,255,255)] dark:[box-shadow:0_-60px_140px_rgba(0,0,0,0.85)]";
+
+export const HALF_CIRCLE_BRIDGE_BG = "bg-white dark:bg-black";
+
+export const CLIENT_LOGO_STYLES =
+  "brightness-0 contrast-125 dark:brightness-100 dark:contrast-100 dark:opacity-90";

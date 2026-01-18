@@ -1,0 +1,60 @@
+{
+  "products": {
+    "hero": {
+      "title": "產品 - {category}",
+      "subtitle": "分析儀、LCR測試儀和直流偏置型號、歐姆表、層間短路測試儀"
+    },
+    "search": {
+      "placeholder": "按名稱或類別搜尋 {category}...",
+      "resultsLabel": "顯示第 {start}-{end} 項，共 {total} 項 {category}"
+    },
+    "emptyState": {
+      "title": "未找到 {category}",
+      "message": "請嘗試調整您的搜尋條件"
+    },
+    "buttons": {
+      "datasheet": "數據表",
+      "learnMore": "了解更多"
+    },
+    "pagination": {
+      "previous": "上一頁",
+      "next": "下一頁"
+    },
+    "modal": {
+      "header": {
+        "loading": "載入中...",
+        "defaultTitle": "產品詳情"
+      },
+      "tabs": {
+        "overview": "概述",
+        "features": "特性",
+        "specifications": "規格",
+        "options": "選項"
+      },
+      "loading": {
+        "message": "正在載入產品詳情..."
+      },
+      "error": {
+        "failedToLoad": "載入產品詳情失敗",
+        "generic": "發生錯誤",
+        "retry": "重試"
+      },
+      "content": {
+        "overview": {
+          "title": "產品概述"
+        },
+        "features": {
+          "title": "主要特性"
+        },
+        "specifications": {
+          "title": "技術規格"
+        },
+        "options": {
+          "title": "可選配置",
+          "description": "使用這些可選功能增強您的系統。",
+          "clickToView": "點擊任何選項以查看詳細規格。"
+        }
+      }
+    }
+  }
+}

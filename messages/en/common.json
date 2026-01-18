@@ -1,0 +1,32 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "products": "Products",
+    "instruments": "Instruments",
+    "accessories": "Accessories",
+    "softwares": "Softwares",
+    "support": "Support",
+    "contact": "Contact Us",
+    "countries": "Countries"
+  },
+  "footer": {
+    "tagline": "Leaders in precision component measurement since 1946",
+    "products": "Products",
+    "company": "Company",
+    "contact": "Contact",
+    "phone": "+1 234 567 8900",
+    "email": "info@waynekerr.com",
+    "locations": "Global Locations",
+    "rights": "© 2024 Wayne Kerr Electronics. All rights reserved."
+  },
+  "countries": {
+    "us": "US",
+    "uk": "UK",
+    "germany": "Germany",
+    "china": "China",
+    "japan": "Japan",
+    "taiwan": "Taiwan",
+    "india": "India"
+  }
+}

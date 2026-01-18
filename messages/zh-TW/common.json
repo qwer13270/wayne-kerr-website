@@ -1,0 +1,32 @@
+{
+  "navigation": {
+    "home": "首頁",
+    "about": "關於我們",
+    "products": "產品",
+    "instruments": "儀器",
+    "accessories": "配件",
+    "softwares": "軟體",
+    "support": "支援",
+    "contact": "聯絡我們",
+    "countries": "國家"
+  },
+  "footer": {
+    "tagline": "自1946年以來精密元件測量的領導者",
+    "products": "產品",
+    "company": "公司",
+    "contact": "聯絡方式",
+    "phone": "+1 234 567 8900",
+    "email": "info@waynekerr.com",
+    "locations": "全球據點",
+    "rights": "© 2024 Wayne Kerr Electronics. 版權所有。"
+  },
+  "countries": {
+    "us": "美國",
+    "uk": "英國",
+    "germany": "德國",
+    "china": "中國",
+    "japan": "日本",
+    "taiwan": "台灣",
+    "india": "印度"
+  }
+}

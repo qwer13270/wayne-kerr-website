@@ -1,0 +1,30 @@
+{
+  "support": {
+    "hero": {
+      "title": "服務、維修和銷售聯絡方式",
+      "subtitle": "如需任何技術和銷售支援，請與我們聯絡，並提供您產品的詳細資訊以及所需的協助。"
+    },
+    "tabs": {
+      "sales": "銷售支援",
+      "technical": "技術支援"
+    },
+    "search": {
+      "placeholder": "按地區、國家或聯絡人搜尋...",
+      "resultsLabel": {
+        "sales": "顯示 {count} 個銷售支援地點",
+        "technical": "顯示 {count} 個技術支援地點"
+      }
+    },
+    "emptyState": {
+      "title": "未找到聯絡人",
+      "message": "請嘗試調整您的搜尋條件"
+    },
+    "contact": {
+      "button": "聯絡",
+      "emailSubject": {
+        "sales": "銷售支援",
+        "technical": "技術支援"
+      }
+    }
+  }
+}

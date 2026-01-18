@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import { useParams } from "next/navigation";
 import {
   MapPin,
   ArrowRight,
@@ -13,21 +14,32 @@ import {
   Shuffle,
 } from "lucide-react";
 import clients from "@/data/clients.json";
-import { useTheme } from "next-themes";
+import { useTranslations } from "next-intl";
 import globalLocations from "@/data/globalLocations.json";
-import { useRouter } from "next/navigation";
 import { BORDER_STYLES, TEXT_SECONDARY } from "@/src/styles/styles";
 import Link from "next/link";
+import type { Locale } from "@/i18n/request";
+import {
+  HERO_SECTION_BG,
+  HALF_CIRCLE_BRIDGE_SHADOW,
+  HALF_CIRCLE_BRIDGE_BG,
+  CLIENT_LOGO_STYLES,
+} from "@/src/styles/styles";
 
 export default function WayneKerrHomepage() {
-  const { theme } = useTheme();
-  const darkMode = theme === "dark";
+  // In client components, useParams() returns params directly (not a Promise!)
+  const params = useParams();
+  const locale = params.locale as Locale;
+
+  // Get translations
+  const t = useTranslations("home");
+  const tNav = useTranslations("navigation");
 
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const globalOffices = globalLocations.map((location) => ({
     region: location.name,
-    city: "Regional Office",
+    city: t("globalPresence.regionalOffice"),
   }));
 
   useEffect(() => {
@@ -42,13 +54,14 @@ export default function WayneKerrHomepage() {
   const [displayedText, setDisplayedText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
 
-  // Typewriter configuration
-  const baseText = "Leader in LCR Meters and ";
+  // Typewriter configuration with translations
+  const baseText = t("hero.typewriter.base");
   const rotatingWords = [
-    "Impedance Analyzers",
-    "Precision Testing",
-    "Measurement Solutions",
+    t("hero.typewriter.word1"),
+    t("hero.typewriter.word2"),
+    t("hero.typewriter.word3"),
   ];
+
   // Typewriter effect with word rotation
   useEffect(() => {
     const currentWord = rotatingWords[currentWordIndex];
@@ -56,93 +69,86 @@ export default function WayneKerrHomepage() {
     let timeout: NodeJS.Timeout;
 
     if (!isDeleting && displayedText === currentWord) {
-      // Finished typing, wait before deleting
       timeout = setTimeout(() => setIsDeleting(true), 2000);
     } else if (isDeleting && displayedText === "") {
-      // Finished deleting, move to next word
       setIsDeleting(false);
       setCurrentWordIndex((prev) => (prev + 1) % rotatingWords.length);
     } else if (!isDeleting) {
-      // Typing
       timeout = setTimeout(() => {
         setDisplayedText(currentWord.slice(0, displayedText.length + 1));
-      }, 100); // Typing speed
+      }, 100);
     } else {
-      // Deleting
       timeout = setTimeout(() => {
         setDisplayedText(currentWord.slice(0, displayedText.length - 1));
-      }, 50); // Deleting speed (faster)
+      }, 50);
     }
 
     return () => clearTimeout(timeout);
-  }, [displayedText, isDeleting, currentWordIndex]);
+  }, [displayedText, isDeleting, currentWordIndex, rotatingWords]);
 
   const stats = [
     {
       value: "78+",
-      label: "Years of Excellence",
+      label: t("stats.yearsLabel"),
       icon: Award,
-      description: "Industry leadership",
+      description: t("stats.yearsDesc"),
     },
     {
       value: "45+",
-      label: "Machine Options",
+      label: t("stats.modelsLabel"),
       icon: TrendingUp,
-      description: "Diverse solutions",
+      description: t("stats.modelsDesc"),
     },
     {
       value: "57",
-      label: "Countries",
+      label: t("stats.countriesLabel"),
       icon: Globe,
-      description: "Global presence",
+      description: t("stats.countriesDesc"),
     },
     {
       value: "16",
-      label: "Distributors",
+      label: t("stats.distributorsLabel"),
       icon: Users,
-      description: "Worldwide support",
+      description: t("stats.distributorsDesc"),
     },
   ];
 
   const features = [
     {
-      title: "Exceptional Quality",
-      description:
-        "Designed for durability and consistent performance in demanding environments.",
+      title: t("features.quality.title"),
+      description: t("features.quality.description"),
       icon: Shield,
     },
     {
-      title: "Precision Accuracy",
-      description:
-        "Guarantee highest level of accuracy, ensuring flawless measurements.",
+      title: t("features.precision.title"),
+      description: t("features.precision.description"),
       icon: Target,
     },
     {
-      title: "Multi-Functional",
-      description:
-        "Engineered to handle a wide range of measurement tasks across various industries.",
+      title: t("features.multifunctional.title"),
+      description: t("features.multifunctional.description"),
       icon: Shuffle,
     },
   ];
 
   const productCategories = [
     {
-      name: "Instruments",
-      count: "19+ Models",
-      description:
-        "Diverse selection of machines designed to meet different measurement needs.",
+      name: tNav("instruments"),
+      count: t("products.instruments.count"),
+      description: t("products.instruments.description"),
+      link: "instruments",
     },
     {
-      name: "Accessories",
-      count: "24+ Items",
-      description:
-        "Range of accessories, tailored to complement and extend the capabilities of our instruments.",
+      name: tNav("accessories"),
+      count: t("products.accessories.count"),
+      description: t("products.accessories.description"),
+      link: "accessories",
     },
     {
-      name: "Softwares",
-      count: "3+ Packages",
-      description:
-        "Specialized software, enabling machine control and data analysis directly from your computer.",
+      name: tNav("softwares"),
+      count: t("products.softwares.count"),
+      description: t("products.softwares.description"),
+      link: "softwares",
     },
   ];
 
@@ -160,17 +166,11 @@ export default function WayneKerrHomepage() {
             alt="Hero Background"
             className="w-full h-full object-cover"
           />
-          {/* Blur + Overlay */}
           <div
-            className={`absolute inset-0 backdrop-blur-sm transition-all duration-500 ${
-              darkMode
-                ? "bg-gradient-to-br from-black/75 via-gray-900/65 to-black/75"
-                : "bg-gradient-to-br from-blue-900/80 via-black-800/30 to-black-900/80"
-            }`}
+            className={`absolute inset-0 backdrop-blur-sm transition-all duration-500 ${HERO_SECTION_BG}`}
           ></div>
         </div>
 
-        {/* Animated overlay effects */}
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute inset-0 opacity-20">
             <div className="absolute top-20 left-10 w-72 h-72 bg-blue-400 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
@@ -182,15 +182,13 @@ export default function WayneKerrHomepage() {
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-20">
-          {/* Rest of hero content stays the same */}
           <div className="space-y-8">
             <div className="hidden sm:inline-block">
               <div className="px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-sm text-white mb-6">
-                Trusted by industry leaders for 78+ years
+                {t("hero.badge")}
               </div>
             </div>
 
-            {/* Typewriter with Rotating Words */}
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight min-h-[180px] sm:min-h-[240px] flex flex-col items-center justify-center text-center">
               <span className="block">{baseText}</span>
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-cyan-300 mt-2">
@@ -198,62 +196,48 @@ export default function WayneKerrHomepage() {
                 <span className="animate-blink">|</span>
               </span>
             </h1>
+
             <p className="text-xl sm:text-2xl md:text-3xl text-blue-100 max-w-4xl mx-auto">
-              Where Accuracy Meets Innovation
+              {t("hero.subtitle")}
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
-              <button className="group bg-white text-blue-900 px-8 py-4 rounded-full font-semibold text-lg hover:shadow-2xl transition-all flex items-center gap-2 w-full sm:w-auto">
-                <Link href="/products/instruments">Explore Products</Link>
-                <ArrowRight
-                  size={20}
-                  className="group-hover:translate-x-1 transition-transform"
-                />
-              </button>
-              <button className="btn-outline-light px-8 py-4 text-lg w-full sm:w-auto">
-                <Link href="/contact">Get Quote</Link>
-              </button>
+              <Link href={`/${locale}/products/instruments`}>
+                <button className="group bg-white text-blue-900 px-8 py-4 rounded-full font-semibold text-lg hover:shadow-2xl transition-all flex items-center gap-2 w-full sm:w-auto">
+                  {t("hero.cta.explore")}
+                  <ArrowRight
+                    size={20}
+                    className="group-hover:translate-x-1 transition-transform"
+                  />
+                </button>
+              </Link>
+              <Link href={`/${locale}/contact`}>
+                <button className="btn-outline-light px-8 py-4 text-lg w-full sm:w-auto">
+                  {t("hero.cta.contact")}
+                </button>
+              </Link>
             </div>
           </div>
         </div>
 
         {/* Half-circle bridge into next section */}
         <div
-          className={`absolute bottom-[-40%] left-1/2 -translate-x-1/2 w-[160%] h-[50%] rounded-[999px] blur-2xl opacity-100 pointer-events-none transition-colors duration-500 ${
-            darkMode ? "bg-black" : "bg-white"
-          }`}
-          style={{
-            boxShadow: darkMode
-              ? "0 -60px 140px rgba(0,0,0,0.85)"
-              : "0 -60px 140px rgb(255, 255, 255)",
-          }}
+          className={`absolute bottom-[-40%] left-1/2 -translate-x-1/2 w-[160%] h-[50%] rounded-[999px] blur-2xl opacity-100 pointer-events-none transition-colors duration-500 ${HALF_CIRCLE_BRIDGE_BG} ${HALF_CIRCLE_BRIDGE_SHADOW}`}
         />
       </section>
 
-      {/* Our Clients Section */}
-      <section className={`py-12 sm:py-20`}>
+      {/* Trusted By Section */}
+      <section className="py-12 sm:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <p className={`text-xl sm:text-2xl mb-12`}>
-              Trusted by{" "}
+              {t("trustedBy.prefix")}{" "}
               <span className="font-bold tracking-tight">
-                Industry Leaders Worldwide
+                {t("trustedBy.highlight")}
               </span>
             </p>
           </div>
-
           <div className="relative overflow-hidden">
-            <div
-              className={`pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r ${
-                darkMode ? "from-black-900/90" : "from-white"
-              } to-transparent`}
-            />
-            <div
-              className={`pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l ${
-                darkMode ? "from-black-900/90" : "from-white"
-              } to-transparent`}
-            />
-
             <div className="flex gap-10 animate-client-marquee py-6">
               {marqueeClients.map((client, index) => (
                 <div
@@ -265,9 +249,7 @@ export default function WayneKerrHomepage() {
                       .toLowerCase()
                       .replace(" ", "-")}.png`}
                     alt={client.name}
-                    className={`h-14 sm:h-16 w-auto object-contain transition ${
-                      darkMode ? "opacity-90" : "brightness-0 contrast-125"
-                    }`}
+                    className={`h-14 sm:h-16 w-auto object-contain transition ${CLIENT_LOGO_STYLES}`}
                   />
                 </div>
               ))}
@@ -281,7 +263,7 @@ export default function WayneKerrHomepage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className={`text-4xl sm:text-5xl font-bold mb-4`}>
-              Powering Innovation Worldwide
+              {t("stats.title")}
             </h2>
           </div>
 
@@ -321,42 +303,34 @@ export default function WayneKerrHomepage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className={`text-4xl sm:text-5xl md:text-6xl font-bold mb-6`}>
-              Explore Our Products
+              {t("products.title")}
             </h2>
             <p className={`text-xl ${TEXT_SECONDARY} max-w-3xl mx-auto`}>
-              Industry-leading measurement solutions engineered for excellence
+              {t("products.subtitle")}
             </p>
           </div>
 
-          {/* 3 Column Grid - Horizontal on Desktop, Vertical on Mobile */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {productCategories.map((category, index) => (
               <div key={index} className="group relative">
                 <div
                   className={`border ${BORDER_STYLES} rounded-3xl overflow-hidden hover:shadow-2xl transition-all duration-500 group-hover:-translate-y-2 h-full flex flex-col`}
                 >
-                  {/* Image Area */}
                   <div className="relative h-64 bg-gradient-to-br from-blue-50 to-purple-50 flex items-center justify-center overflow-hidden">
-                    {/* Replace this with your actual image */}
                     <img
-                      src={`/images/products/${category.name
-                        .toLowerCase()
-                        .replace(" ", "-")}.webp`}
+                      src={`/images/products/${category.link}.webp`}
                       alt={category.name}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                       onError={(e) => {
                         (e.target as HTMLElement).style.display = "none";
-                        // Fallback to emoji if image doesn't exist yet
                       }}
                     />
 
-                    {/* Count Badge */}
                     <div className="absolute top-4 right-4 bg-transparent border border-white/40 text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg">
                       {category.count}
                     </div>
                   </div>
 
-                  {/* Content Area */}
                   <div className="p-8 flex flex-col flex-grow">
                     <h3 className={`text-2xl sm:text-3xl font-bold mb-3`}>
                       {category.name}
@@ -366,15 +340,15 @@ export default function WayneKerrHomepage() {
                       {category.description}
                     </p>
 
-                    <button className="flex items-center gap-2 text-blue-600 font-semibold group-hover:gap-3 transition-all self-start">
-                      <Link href={`/products/${category.name.toLowerCase()}`}>
-                        Explore Range
-                      </Link>
-                      <ArrowRight
-                        size={20}
-                        className="group-hover:translate-x-1 transition-transform"
-                      />
-                    </button>
+                    <Link href={`/${locale}/products/${category.link}`}>
+                      <button className="flex items-center gap-2 text-blue-600 font-semibold group-hover:gap-3 transition-all self-start">
+                        {t("products.exploreButton")}
+                        <ArrowRight
+                          size={20}
+                          className="group-hover:translate-x-1 transition-transform"
+                        />
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -388,11 +362,10 @@ export default function WayneKerrHomepage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className={`text-4xl sm:text-5xl md:text-6xl font-bold mb-6`}>
-              Why Choose Wayne Kerr?
+              {t("features.title")}
             </h2>
             <p className={`text-xl ${TEXT_SECONDARY} max-w-3xl mx-auto`}>
-              Seven decades of innovation driving the future of precision
-              measurement
+              {t("features.subtitle")}
             </p>
           </div>
 
@@ -422,15 +395,16 @@ export default function WayneKerrHomepage() {
           </div>
         </div>
       </section>
+
+      {/* Global Presence */}
       <section className="py-20 sm:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className={`text-4xl sm:text-5xl font-bold mb-6`}>
-              Global Presence
+              {t("globalPresence.title")}
             </h2>
             <p className={`text-xl ${TEXT_SECONDARY} max-w-3xl mx-auto`}>
-              Regional offices providing worldwide technical support and
-              services
+              {t("globalPresence.subtitle")}
             </p>
           </div>
 
@@ -457,10 +431,12 @@ export default function WayneKerrHomepage() {
           </div>
 
           <div className="text-center mt-12">
-            <button className="bg-blue-600 text-white px-8 py-4 text-lg font-semibold rounded-xl hover:bg-blue-700 transition-all duration-200 inline-flex items-center justify-center gap-2">
-              <Link href="/support">View All Locations</Link>
-              <ArrowRight size={20} />
-            </button>
+            <Link href={`/${locale}/support`}>
+              <button className="bg-blue-600 text-white px-8 py-4 text-lg font-semibold rounded-xl hover:bg-blue-700 transition-all duration-200 inline-flex items-center justify-center gap-2">
+                {t("globalPresence.viewAllButton")}
+                <ArrowRight size={20} />
+              </button>
+            </Link>
           </div>
         </div>
       </section>

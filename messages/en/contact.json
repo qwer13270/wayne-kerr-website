@@ -1,0 +1,76 @@
+{
+  "contact": {
+    "hero": {
+      "title": "Contact Us",
+      "subtitle": "We'll respond within one business day"
+    },
+    "form": {
+      "fields": {
+        "name": {
+          "label": "Name",
+          "placeholder": "John Doe"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "john@company.com"
+        },
+        "phone": {
+          "label": "Phone Number",
+          "placeholder": "+1 (555) 000-0000"
+        },
+        "company": {
+          "label": "Company Name",
+          "placeholder": "Acme Inc."
+        },
+        "country": {
+          "label": "Country",
+          "placeholder": "Please select",
+          "options": {
+            "US": "United States",
+            "UK": "United Kingdom",
+            "TW": "Taiwan",
+            "CN": "China",
+            "DE": "Germany",
+            "JP": "Japan",
+            "KR": "Korea",
+            "SG": "Singapore",
+            "IN": "India",
+            "DK": "Denmark",
+            "other": "Other"
+          }
+        },
+        "topic": {
+          "label": "Topic",
+          "placeholder": "Please select",
+          "options": {
+            "pricing": "Pricing Inquiry",
+            "trade-in": "Trade-In Program",
+            "calibration": "Calibration Service",
+            "rental": "Rental Service",
+            "technical": "Technical Discussion / Solution Consultation"
+          }
+        },
+        "model": {
+          "label": "Model",
+          "placeholder": "e.g., 6500B"
+        },
+        "message": {
+          "label": "Additional Details",
+          "placeholder": "Please describe your requirements or questions..."
+        }
+      },
+      "submit": {
+        "sending": "Sending...",
+        "default": "Submit Quote Request"
+      }
+    },
+    "toast": {
+      "title": "Request Sent Successfully!",
+      "message": "We've received your quote request. Our team will get back to you within 24 hours."
+    },
+    "errors": {
+      "submitFailed": "Failed to send request. Please try again.",
+      "generic": "An error occurred. Please try again."
+    }
+  }
+}

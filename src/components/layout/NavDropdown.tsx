@@ -3,13 +3,22 @@
 import React, { useRef, useEffect } from "react";
 import { ChevronDown, LucideIcon } from "lucide-react";
 import Link from "next/link";
+import type { Locale } from "@/i18n/request";
+
 interface NavDropdownProps {
   label: string;
-  items: Array<{ label: string; href: string; icon?: LucideIcon }>;
+  items: Array<{
+    label: string;
+    href: string;
+    icon?: LucideIcon;
+    switchLocale?: Locale;
+    isLanguageSwitch?: boolean;
+  }>;
   isOpen: boolean;
   onToggle: (open: boolean) => void;
   navItemStyles: string;
   navSurfaceStyles: string;
+  onLanguageSwitch?: (locale: Locale) => void;
 }
 
 export default function NavDropdown({
@@ -19,6 +28,7 @@ export default function NavDropdown({
   onToggle,
   navItemStyles,
   navSurfaceStyles,
+  onLanguageSwitch,
 }: NavDropdownProps) {
   const dropdownRef = useRef<HTMLDivElement | null>(null);
 
@@ -77,6 +87,27 @@ export default function NavDropdown({
           const Icon = item.icon;
           const isExternal =
             item.href.startsWith("http://") || item.href.startsWith("https://");
+          const isLanguageSwitch =
+            item.isLanguageSwitch && item.switchLocale && onLanguageSwitch;
+
+          // Handle language switching
+          if (isLanguageSwitch && item.switchLocale && onLanguageSwitch) {
+            return (
+              <button
+                key={item.label}
+                onClick={() => {
+                  onLanguageSwitch(item.switchLocale!);
+                  onToggle(false);
+                }}
+                className={`flex items-center gap-3 rounded-xl px-4 py-2 text-sm font-medium transition-colors w-full text-left ${navItemStyles}`}
+              >
+                {Icon && <Icon size={18} />}
+                {item.label}
+              </button>
+            );
+          }
+
+          // Regular link
           return (
             <Link
               key={item.label}

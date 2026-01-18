@@ -1,0 +1,160 @@
+[
+  {
+    "id": 1,
+    "series": "7820 系列",
+    "title": "脈衝測試儀",
+    "description": "專用於測試電機、變壓器和電感器中的層間短路，支援多種測試模式，包括面積比、面積差、電暈數和電暈量。",
+    "image": "/images/products/instruments/7820.webp",
+    "datasheet": "/datasheets/instruments/WK7820.pdf",
+    "productId": "7820"
+  },
+  {
+    "id": 2,
+    "series": "6500B 系列",
+    "title": "阻抗分析儀",
+    "description": "高精度分析儀，配備友善的圖形介面、高解析度彩色顯示器、0.05% 基本精度、最低頻率 20Hz，最高頻率可達 120MHz。",
+    "image": "/images/products/instruments/6500B.webp",
+    "datasheet": "/datasheets/instruments/WK6500B.pdf",
+    "productId": "6500B"
+  },
+  {
+    "id": 3,
+    "series": "6500P 系列",
+    "title": "高頻 LCR 電錶",
+    "description": "6500P 系列 LCR 電錶具有擴展的測試頻率、高精度以及大型高解析度彩色顯示器。",
+    "image": "/images/products/instruments/6500P.webp",
+    "datasheet": "/datasheets/instruments/WK6500P.pdf",
+    "productId": "6500P"
+  },
+  {
+    "id": 4,
+    "series": "6565 系列",
+    "title": "高頻直流偏置",
+    "description": "6565 直流偏置單元用於評估高達 80A 電流下的元件，並與 Wayne Kerr 6500B 和 6500P 精密分析儀型號相容。",
+    "image": "/images/products/instruments/6565.webp",
+    "datasheet": "/datasheets/instruments/WK6565.pdf",
+    "productId": "6565"
+  },
+  {
+    "id": 5,
+    "series": "6400B 系列",
+    "title": "精密元件分析儀",
+    "description": "6400 系列提供全面且準確的被動元件測試，具有市場領先的精度。",
+    "image": "/images/products/instruments/6440B.webp",
+    "datasheet": "/datasheets/instruments/WK6400B.pdf",
+    "productId": "6400B"
+  },
+  {
+    "id": 6,
+    "series": "5400L 系列",
+    "title": "大電流測試系統 LCR 電錶",
+    "description": "大電流電感測試系統，外部直流偏置高達 300A，0.05% 基本精度，頻率範圍 10Hz 至 10MHz，並具備同時多參數測量能力。",
+    "image": "/images/products/instruments/5400L.webp",
+    "datasheet": "/datasheets/instruments/WK5400L.pdf",
+    "productId": "5400L"
+  },
+  {
+    "id": 7,
+    "series": "4300 系列",
+    "title": "LCR 電錶",
+    "description": "友善易用的 LCR 電錶，功能豐富，可進行 20Hz 至 1MHz 的準確快速測量，適合各種測試和生產環境。",
+    "image": "/images/products/instruments/4300.webp",
+    "datasheet": "/datasheets/instruments/WK4300.pdf",
+    "productId": "4300"
+  },
+  {
+    "id": 8,
+    "series": "3265B 系列",
+    "title": "直流偏置電流單元",
+    "description": "可與 Wayne Kerr 3255B 電感分析儀或 3260B 精密磁性分析儀配合使用，實現大電流元件評估，提供 25mA 至 25A 的偏置電流設定，步進為 25mA。",
+    "image": "/images/products/instruments/3265B.webp",
+    "datasheet": "/datasheets/instruments/WK3265B.pdf",
+    "productId": "3265B"
+  },
+  {
+    "id": 9,
+    "series": "3260B 系列",
+    "title": "精密磁性分析儀",
+    "description": "提供高達 3MHz 的全面磁性元件分析，包括真正的四端點初級到次級參數，透過 8 個前面板 BNC 連接器。",
+    "image": "/images/products/instruments/3260B.webp",
+    "datasheet": "/datasheets/instruments/WK3260B.pdf",
+    "productId": "3260B"
+  },
+  {
+    "id": 10,
+    "series": "3255B 系列",
+    "title": "電感分析儀",
+    "description": "多功能且精確的電感分析儀，專為直接元件特性分析而設計。",
+    "image": "/images/products/instruments/3255B.webp",
+    "datasheet": "/datasheets/instruments/WK3255B.pdf",
+    "productId": "3255B"
+  },
+  {
+    "id": 11,
+    "series": "3210B 系列",
+    "title": "耐壓測試儀",
+    "description": "三合一測試儀結合交流/直流/絕緣電阻耐壓測試，交流設定為 0.10 至 5000V 和 0.10mA 至 15.00mA，直流設定為 0 至 6000V 和 0.10mA 至 7.50mA。",
+    "image": "/images/products/instruments/3210.webp",
+    "datasheet": "/datasheets/instruments/WK3210.pdf",
+    "productId": "3210"
+  },
+  {
+    "id": 12,
+    "series": "3100 系列",
+    "title": "微歐姆計",
+    "description": "測量範圍從 0.001 mΩ 至 1.999 MΩ，精度為 ±0.1%，配備四線測試系統和 RS232/HANDLER 介面。",
+    "image": "/images/products/instruments/3100.webp",
+    "datasheet": "/datasheets/instruments/WK3100.pdf",
+    "productId": "3100"
+  },
+  {
+    "id": 13,
+    "series": "6500B 系統",
+    "title": "80 安培直流偏置測試系統",
+    "description": "6500 系統設計用於支援高達 80A 的直流偏置電流。透過並聯額外的 6565B 偏置單元來擴展功能，6500 系統提供可擴展的解決方案，以滿足先進的測試需求。",
+    "image": "/images/products/instruments/6500B_system.webp"
+  },
+  {
+    "id": 14,
+    "series": "5400 系統",
+    "title": "400 安培直流偏置測試系統",
+    "description": "5400/3265 400A 直流偏置系統，具有 1mS 超快測量速度，基本精度高達 0.02%，交流參數測量高達 10MHz，提供 5Vrms/200mA 強大的 AAC 信號驅動，是一個高效且準確的測試解決方案。",
+    "image": "/images/products/instruments/5400_system.webp",
+    "productId": "5400System"
+  },
+  {
+    "id": 15,
+    "series": "3260B 系統",
+    "title": "300 安培直流偏置測試系統",
+    "description": "該設備包括 12 個 3265B 單元，在 300A 時測量頻率為 500 kHz；10 個 3265B 單元，在 250A 時測量頻率為 1 MHz；以及 2 個 3265BQ 單元，在 50A 時測量頻率為 3 MHz，全部配備 7 英寸 WVGA 觸控螢幕，易於使用。",
+    "image": "/images/products/instruments/3260B_system.webp"
+  },
+  {
+    "id": 16,
+    "series": "DB23X 系列",
+    "title": "CLR 測量",
+    "description": "DB23x 系列提供精確快速的電容器測試，包括薄膜/箔片、鉭質和陶瓷類型，具有獨特的雙頻測試和高速分選能力。適合實驗室和工業使用，這些儀器確保高品質輸出和高效運作。",
+    "image": "/images/products/instruments/DB23X.webp"
+  },
+  {
+    "id": 17,
+    "series": "DB26X 系列",
+    "title": "絕緣測量",
+    "description": "DB26X 系列兆歐表提供快速精確的漏電流和絕緣電阻測量，配備雙高壓電源供應器，用於高效的預充電和精細充電循環。適合測試高達 5kV，可提升分選機性能，適用於工業和實驗室用途。",
+    "image": "/images/products/instruments/DB26X.webp"
+  },
+  {
+    "id": 18,
+    "series": "JP3X 系列",
+    "title": "高壓絕緣測量",
+    "description": "JP3X 系列高壓絕緣測試儀提供高達 36kV 的非破壞性測試，識別絕緣弱點和故障而不損壞元件。適合測試電纜、發電機和電動機，這些測試儀透過聲音信號檢測電離。",
+    "image": "/images/products/instruments/JP3X.webp"
+  },
+  {
+    "id": 19,
+    "series": "CLT10",
+    "title": "三次諧波測試",
+    "description": "CLT10 系統透過測量正弦波電流的三次諧波失真來確保元件可靠性，提供快速有效的品質控制。適用於測試金屬膜電阻器、電容器和音頻級元件，並符合 IEC-440 等國際標準。",
+    "image": "/images/products/instruments/CLT10.webp"
+  }
+]
