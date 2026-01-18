@@ -1,0 +1,174 @@
+{
+  "id": "7820Series",
+  "series": "7820 系列",
+  "title": "脉冲测试仪",
+  "subtitle": "3 种型号，从 30V 至 1200V、100V 至 5000V 和 500V 至 10kV",
+  "image": "/images/products/transparent/7820.png",
+  "overview": {
+    "paragraphs": [
+      "WK 7820 系列脉冲测试仪设计用于提供高性能脉冲测试，范围从 30V 的低电压至高达 10kV 的高电压。该系列提供单通道至八通道的型号，满足业内广泛的测试需求。配备最先进的 32 位 CPU 和高密度 SMD 技术，WK 7820 系列以其 7 英寸 TFT 彩色显示器提供精度和易用性，增强用户体验和操作效率。"
+    ]
+  },
+  "applications": [
+    "处理电气元件和组件的制造环境中的质量控制和研发",
+    "电气工程和建筑行业的安全测试",
+    "需要详细分析和表征电气元件的教育和测试机构"
+  ],
+  "features": [
+    {
+      "title": "多功能电压范围",
+      "description": "WK 7820 系列中的型号可以测试从 30V 至 10kV 的脉冲，适应各种测试场景"
+    },
+    {
+      "title": "高速性能",
+      "description": "实现每秒最多 6 次测量的最大测量速度，波形采样率高达 200Msps，确保快速准确的测试"
+    },
+    {
+      "title": "先进电晕提取",
+      "description": "整合专利高保真电晕提取算法，允许对产品的绝缘特性进行详细分析"
+    },
+    {
+      "title": "多通道测试",
+      "description": "提供从 1 至 8 通道的配置，为需要多个同时测量的测试提供灵活性"
+    },
+    {
+      "title": "全面存储器和存储",
+      "description": "配备 6k 字节的存储深度，能够存储 20 组仪器设定，用于高效的测试设置和执行"
+    },
+    {
+      "title": "灵活接口选项",
+      "description": "包括 RS232C、USB、LAN 和 Handler 接口，用于全面连接和远端控制能力"
+    },
+    {
+      "title": "耐用可靠的设计",
+      "description": "确保强劲性能，配备脚踏控制接口和可通过 USB 升级的系统固件"
+    }
+  ],
+  "specifications": [
+    {
+      "heading": "脉冲电压",
+      "modelVariants": [
+        { "model": "7820-1", "spec": "30V to 1200V, 5V steps" },
+        { "model": "7820-2", "spec": "100V to 5000V, 10V steps" },
+        { "model": "7820-3", "spec": "500V to 10kV, 20V steps" }
+      ]
+    },
+    {
+      "heading": "电压精度",
+      "modelVariants": [
+        { "model": "7820-1", "spec": "±(5% set value +5V)" },
+        { "model": "7820-2", "spec": "±(5% set value +15V)" },
+        { "model": "7820-3", "spec": "±(5% set value +25V)" }
+      ]
+    },
+    {
+      "heading": "回读精度",
+      "modelVariants": [
+        { "model": "7820-1", "spec": "±(5% actual value +5V)" },
+        { "model": "7820-2", "spec": "±(5% actual value +15V)" },
+        { "model": "7820-3", "spec": "±(5% actual value +25V)" }
+      ]
+    },
+    {
+      "heading": "电感测试范围",
+      "modelVariants": [
+        { "model": "7820-1", "spec": "≥1µH" },
+        { "model": "7820-2", "spec": "≥10µH" },
+        { "model": "7820-3", "spec": "≥20µH" }
+      ]
+    },
+    {
+      "heading": "脉冲能量",
+      "modelVariants": [
+        { "model": "7820-1", "spec": "Max.: 0.02 Joule" },
+        { "model": "7820-2", "spec": "Max.: 0.25 Joule" },
+        { "model": "7820-3", "spec": "Max.: 0.5 Joule" }
+      ]
+    },
+    {
+      "heading": "测试速度",
+      "modelVariants": [
+        { "model": "7820-1", "spec": "6 times/second" },
+        { "model": "7820-2", "spec": "6 times/second" },
+        {
+          "model": "7820-3",
+          "spec": "3 times/second (when 10kV impulse voltage is output)"
+        }
+      ]
+    },
+    {
+      "heading": "通道",
+      "content": ["1（可配置最多 8 个通道）"]
+    },
+    {
+      "heading": "应用脉冲",
+      "content": ["最大：32"]
+    },
+    {
+      "heading": "输入阻抗",
+      "content": ["5MΩ"]
+    },
+    {
+      "heading": "显示器",
+      "content": ["800x480 点，65k 彩色 TFT", "波形显示范围：600x256"]
+    },
+    {
+      "heading": "波形采集",
+      "content": [
+        "采样率：最大 200Msps，8 级可调",
+        "分辨率：8 位",
+        "存储器深度：6k 字节",
+        "平均值：1 至 32"
+      ]
+    },
+    {
+      "heading": "比较方法",
+      "list": ["面积大小比较", "差异面积比较", "电晕放电比较", "差异相位比较"],
+      "note": "与标准波形比较"
+    },
+    {
+      "heading": "波形测量",
+      "content": ["电压/频率/时间"]
+    },
+    {
+      "heading": "触发模式",
+      "content": ["手动/外部/总线/内部"]
+    },
+    {
+      "heading": "检测输出",
+      "content": ["OK/NG 显示/LED/警报"]
+    },
+    {
+      "heading": "测量统计",
+      "content": ["测量结果的统计"]
+    },
+    {
+      "heading": "存储器",
+      "content": [
+        "20 组标准波形数据和仪器设定可存储在内部非挥发性存储器中",
+        "USB 闪存可用作外部存储器"
+      ]
+    },
+    {
+      "heading": "接口",
+      "content": ["Handler、RS232C、USB 装置、USB 主机、LAN"]
+    },
+    {
+      "heading": "电源供应",
+      "content": ["220V ±10% 50Hz/60Hz ±5%"]
+    },
+    {
+      "heading": "功耗",
+      "content": ["≤200VA"]
+    },
+    {
+      "heading": "工作环境",
+      "content": ["温度：0°C 至 40°C", "湿度：≤75% R.H."]
+    },
+    {
+      "heading": "安全和电磁兼容性",
+      "content": ["IEC61010-1:2001、IEC61326-2-1:2005"]
+    }
+  ],
+  "datasheet": "/datasheets/instruments/WK7820Series.pdf"
+}

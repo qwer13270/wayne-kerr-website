@@ -1,0 +1,144 @@
+{
+  "id": "4300",
+  "series": "4300 系列",
+  "title": "LCR 電錶",
+  "subtitle": "4 種型號，頻率範圍從 20 Hz 至 100 kHz、200 kHz、500 kHz 和 1 MHz",
+  "image": "/images/products/transparent/4300.png",
+  "overview": {
+    "paragraphs": [
+      "4300 系列 LCR 電錶提供簡潔性和功能性的結合，能夠在 20Hz 至 1MHz 範圍內進行準確快速的測量。設計時考慮了多功能性，這些電錶適合在測試和生產環境中的廣泛應用。"
+    ]
+  },
+  "applications": [
+    "元件製造商和品質控制實驗室",
+    "研發部門",
+    "生產線測試",
+    "教育用途"
+  ],
+  "features": [
+    {
+      "title": "寬廣頻率範圍",
+      "description": "能夠測試從 20Hz 至 1 MHz 的元件，特別是 43100 型號，滿足廣泛的應用需求"
+    },
+    {
+      "title": "高精度",
+      "description": "提供 0.1% 的基本精度，確保可靠和精確的測量"
+    },
+    {
+      "title": "快速測量時間",
+      "description": "測量時間少於 25ms，提高快節奏環境中的生產效率"
+    },
+    {
+      "title": "多功能測量參數",
+      "description": "支援全面的參數集，包括 C、L、Z、Y、X、B、Rac、Rdc、G、Q、D 和 Ø"
+    },
+    {
+      "title": "雙測試模式",
+      "description": "允許使用兩個不同的儀器參數進行連續測量，例如在不同頻率下的兩個交流測量或一個交流和一個 Rdc 測量"
+    },
+    {
+      "title": "顯示能力",
+      "description": "在雙測試模式下可同時顯示最多四個參數，一目了然地提供全面資料"
+    },
+    {
+      "title": "可調驅動電平",
+      "description": "提供從 10mV 至 2Vrms 的驅動電平範圍，適應各種測試條件"
+    },
+    {
+      "title": "測量設定召回",
+      "description": "能夠儲存和召回最多 20 個測量設定，具有使用者定義的名稱，便於高效測試"
+    },
+    {
+      "title": "多種介面",
+      "description": "配備標準 RS232、GPIB、USB 或 LAN 介面，用於外部控制"
+    }
+  ],
+  "specifications": [
+    {
+      "heading": "測量功能",
+      "content": [
+        "阻抗 (Z)、相位角 (Ø)、電容 (C)、損耗因數 (D)、電感 (L)、品質因數 (Q)",
+        "交流電阻 (Rac)、電抗 (X)、電納 (B)、電導 (G)、導納 (Y)",
+        "直流電阻 (Rdc) 是所有型號的選項 (/R)"
+      ]
+    },
+    {
+      "heading": "頻率範圍",
+      "modelVariants": [
+        { "model": "4310", "spec": "20Hz to 100kHz" },
+        { "model": "4320", "spec": "20Hz to 200kHz" },
+        { "model": "4350", "spec": "20Hz to 500kHz" },
+        { "model": "43100", "spec": "20Hz to 1MHz" }
+      ]
+    },
+    {
+      "heading": "頻率步進",
+      "content": [
+        "5 Hz - 20 Hz 至 1 kHz",
+        "50 Hz - 1 kHz 至 10 kHz",
+        "500 Hz - 10 kHz 至 100 kHz",
+        "5 kHz - 100 kHz 至 1 MHz"
+      ]
+    },
+    {
+      "heading": "測量功能 - 直流電阻 (Rdc)",
+      "content": ["選項 (/R)"]
+    },
+    {
+      "heading": "串聯/並聯等效電路",
+      "content": ["任何組合"]
+    },
+    {
+      "heading": "極座標形式",
+      "content": ["Z + Ø、Y + Ø"]
+    },
+    {
+      "heading": "驅動電平（交流測量）",
+      "content": [
+        "開路：10 mV 至 2V rms",
+        "電壓步進大小：10 mV（200 步進）",
+        "短路：100 µA 至 20 mA rms",
+        "電流步進大小：100 µA（200 步進）",
+        "信號源阻抗：100Ω"
+      ]
+    },
+    {
+      "heading": "直流偏置電壓",
+      "content": [
+        "內部 - 2 Vdc",
+        "外部 - 可通過後面板連接高達 ±40V"
+      ]
+    },
+    {
+      "heading": "測量速度",
+      "content": [
+        "所有測量功能的四種可選速度",
+        "根據測試頻率和設定條件，每秒最多 50 次測量"
+      ]
+    },
+    {
+      "heading": "測量範圍",
+      "content": [
+        "Z、R、X  0.01 mΩ 至 > 1 GΩ",
+        "Y、B、G  0.1 nS 至 > 2 kS",
+        "L 1 nH 至 > 2 kH",
+        "C 0.01 pF 至 > 1 F",
+        "D、Q 0.0001 至 9999.9",
+        "相位角 -180° 至 +180°",
+        "Rdc 0.1 mΩ 至 > 100 MΩ"
+      ]
+    },
+    {
+      "heading": "分選（可選）",
+      "content": [
+        "使用者可程式設計的通過和失敗分選",
+        "25 路 d 型介面連接器"
+      ],
+      "list": [
+        "選項 /B1（非隔離）- 公共 0V。分選輸出 0 至 5V（標稱），具有 >10 mA 電流吸收能力",
+        "選項 /B2（隔離）- 公共 24V 輸入。輸出 0 至 24V，具有 >10 mA 電流源能力"
+      ]
+    }
+  ],
+  "datasheet": "/datasheets/instruments/WK4300.pdf"
+}

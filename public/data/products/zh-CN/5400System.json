@@ -1,0 +1,93 @@
+{
+  "id": "WK5400System",
+  "series": "5400/3265 系统",
+  "title": "300A 直流偏置测试系统",
+  "subtitle": "大电流直流偏置系统，配置从 50A 至 600A",
+  "image": "/images/products/transparent/5400System.png",
+  "overview": {
+    "paragraphs": [
+      "5400/3265 300A 直流偏置系统具有 1mS 超快测量速度，基本精度高达 0.02%，交流参数测量高达 10MHz，提供 5Vrms/200mA 强大的 AAC 信号驱动，直流偏置电流高达 600A，支持快速图形扫描，配备 7 英寸 WVGA 触摸屏，并可通过 USB、GPIB 和 LAN 接口进行编程，是一个高效且准确的测试解决方案。"
+    ]
+  },
+  "features": [
+    {
+      "title": "超快测量速度",
+      "description": "1mS 超快测量速度，适合高吞吐量测试环境"
+    },
+    {
+      "title": "高精度",
+      "description": "基本精度高达 0.02%，确保精确可靠的测量"
+    },
+    {
+      "title": "宽频率范围",
+      "description": "交流参数测量高达 10MHz，用于全面的元件特性分析"
+    },
+    {
+      "title": "强大信号驱动",
+      "description": "提供 5Vrms/200mA 强大的交流信号驱动，用于测试各种元件"
+    },
+    {
+      "title": "高直流偏置电流能力",
+      "description": "使用多个 3265B 单元时，直流偏置电流高达 600A，适合大功率电感器测试"
+    },
+    {
+      "title": "快速图形扫描",
+      "description": "支持快速图形扫描，用于详细的元件分析和可视化"
+    },
+    {
+      "title": "现代用户界面",
+      "description": "配备 7 英寸 WVGA 触摸屏，用于直观操作和数据可视化"
+    },
+    {
+      "title": "全面连接性",
+      "description": "可通过 USB、GPIB 和 LAN 接口进行编程，灵活整合到自动化测试系统中"
+    }
+  ],
+  "specifications": [
+    {
+      "heading": "系统配置",
+      "modelVariants": [
+        { "model": "3265B × 2", "spec": "50A DC Bias Current" },
+        { "model": "3265B × 10", "spec": "250A DC Bias Current" },
+        { "model": "3265B × 12", "spec": "300A DC Bias Current" },
+        { "model": "3265B × 12", "spec": "600A DC Bias Current" }
+      ]
+    },
+    {
+      "heading": "测试参数",
+      "content": [
+        "电容 (C)、电感 (L)、电阻 (R)、电导 (G)、电纳 (B)、电抗 (X)",
+        "损耗因数 (D)、品质因数 (Q)、阻抗 (Z)、导纳 (Y)、相位角 (θ)"
+      ]
+    },
+    {
+      "heading": "测量速度",
+      "content": ["1ms 超快测量"]
+    },
+    {
+      "heading": "基本精度",
+      "content": ["高达 0.02%"]
+    },
+    {
+      "heading": "频率范围",
+      "content": ["交流参数测量高达 10MHz"]
+    },
+    {
+      "heading": "交流信号驱动",
+      "content": ["5Vrms/200mA"]
+    },
+    {
+      "heading": "直流偏置电流",
+      "content": ["高达 600A（使用 12 × 3265B 单元）"]
+    },
+    {
+      "heading": "显示器",
+      "content": ["7 英寸 WVGA 触摸屏"]
+    },
+    {
+      "heading": "接口",
+      "content": ["USB、GPIB、LAN"]
+    }
+  ],
+  "datasheet": "/datasheets/systems/WK5400-3265System.pdf"
+}

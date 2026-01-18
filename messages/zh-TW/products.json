@@ -35,6 +35,8 @@
         "message": "正在載入產品詳情..."
       },
       "error": {
+        "failedToLoad": "載入產品詳情失敗",
+        "generic": "發生錯誤",
         "retry": "重試"
       },
       "content": {

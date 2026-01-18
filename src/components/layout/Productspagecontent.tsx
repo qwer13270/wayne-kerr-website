@@ -3,8 +3,10 @@
 import React, { useState, useMemo } from "react";
 import { Search, ChevronLeft, ChevronRight } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { useParams } from "next/navigation";
 import SearchBar from "../ui/SearchBar";
 import ProductModal from "./ProductModal";
+import type { Locale } from "@/i18n/request";
 
 const ITEMS_PER_PAGE = 9;
 
@@ -27,6 +29,8 @@ export default function ProductsPageContent({
   data,
   category,
 }: ProductsPageContentProps) {
+  const params = useParams();
+  const locale = (params.locale as Locale) || "en";
   const t = useTranslations("products");
   const tNav = useTranslations("navigation");
   const [searchQuery, setSearchQuery] = useState("");
@@ -218,6 +222,7 @@ export default function ProductsPageContent({
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
         productId={selectedProductId}
+        locale={locale}
       />
     </>
   );

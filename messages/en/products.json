@@ -35,6 +35,8 @@
         "message": "Loading product details..."
       },
       "error": {
+        "failedToLoad": "Failed to load product details",
+        "generic": "An error occurred",
         "retry": "Retry"
       },
       "content": {

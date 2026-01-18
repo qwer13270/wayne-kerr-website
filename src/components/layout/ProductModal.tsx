@@ -56,14 +56,16 @@ interface ProductModalProps {
   isOpen: boolean;
   onClose: () => void;
   productId: string;
+  locale: string;
 }
 
 export default function ProductModal({
   isOpen,
   onClose,
   productId,
+  locale,
 }: ProductModalProps) {
-  const t = useTranslations("products.modal");
+  const t = useTranslations("products");
   const [activeTab, setActiveTab] = useState<
     "overview" | "features" | "specifications" | "options"
   >("overview");
@@ -75,19 +77,21 @@ export default function ProductModal({
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch(`/data/products/${productId}.json`);
+      const response = await fetch(
+        `/data/products/${locale}/${productId}.json`
+      );
       if (!response.ok) {
-        throw new Error("Failed to load product details");
+        throw new Error(t("modal.error.failedToLoad"));
       }
       const data = await response.json();
       setProductData(data);
     } catch (err) {
-      setError(err instanceof Error ? err.message : "An error occurred");
+      setError(err instanceof Error ? err.message : t("modal.error.generic"));
       console.error("Error fetching product data:", err);
     } finally {
       setLoading(false);
     }
-  }, [productId]);
+  }, [productId, locale, t]);
 
   // Fetch product data when modal opens
   useEffect(() => {
@@ -156,10 +160,10 @@ export default function ProductModal({
         >
           <div>
             <div className="text-sm font-semibold text-blue-600 dark:text-blue-400 mb-2 uppercase tracking-wide">
-              {productData?.series || t("header.loading")}
+              {productData?.series || t("modal.header.loading")}
             </div>
             <h2 className="text-3xl font-bold text-primary mb-2">
-              {productData?.title || t("header.defaultTitle")}
+              {productData?.title || t("modal.header.defaultTitle")}
             </h2>
             {productData?.subtitle && (
               <p className={`text-sm ${TEXT_SECONDARY}`}>
@@ -193,7 +197,7 @@ export default function ProductModal({
                   : `${MODAL_TAB_INACTIVE_TEXT} ${MODAL_TAB_INACTIVE_BG} ${MODAL_TAB_HOVER_TEXT} ${MODAL_TAB_HOVER_BG}`
               }`}
             >
-              <span className="capitalize">{t(`tabs.${tab}`)}</span>
+              <span className="capitalize">{t(`modal.tabs.${tab}`)}</span>
               {activeTab === tab && (
                 <span className="absolute bottom-0 left-0 right-0 h-[3px] bg-blue-600 dark:bg-blue-500" />
               )}
@@ -206,7 +210,9 @@ export default function ProductModal({
           {loading && (
             <div className="text-center py-20">
               <div className="inline-block w-12 h-12 border-4 border-blue-600 border-t-transparent rounded-full animate-spin"></div>
-              <p className={`mt-4 ${TEXT_SECONDARY}`}>{t("loading.message")}</p>
+              <p className={`mt-4 ${TEXT_SECONDARY}`}>
+                {t("modal.loading.message")}
+              </p>
             </div>
           )}
 
@@ -219,7 +225,7 @@ export default function ProductModal({
                 onClick={fetchProductData}
                 className="mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all"
               >
-                {t("error.retry")}
+                {t("modal.error.retry")}
               </button>
             </div>
           )}
@@ -230,7 +236,7 @@ export default function ProductModal({
               {activeTab === "overview" && (
                 <div className="animate-fadeIn">
                   <h3 className="text-2xl font-bold text-primary mb-4">
-                    {t("content.overview.title")}
+                    {t("modal.content.overview.title")}
                   </h3>
                   {productData.overview.paragraphs.map((paragraph, index) => (
                     <p
@@ -247,7 +253,7 @@ export default function ProductModal({
               {activeTab === "features" && (
                 <div className="animate-fadeIn">
                   <h3 className="text-2xl font-bold text-primary mb-4">
-                    {t("content.features.title")}
+                    {t("modal.content.features.title")}
                   </h3>
                   <ul className="space-y-0">
                     {productData.features.map((feature, index) => (
@@ -272,7 +278,7 @@ export default function ProductModal({
               {activeTab === "specifications" && (
                 <div className="animate-fadeIn">
                   <h3 className="text-2xl font-bold text-primary mb-6">
-                    {t("content.specifications.title")}
+                    {t("modal.content.specifications.title")}
                   </h3>
                   {productData.specifications.map((spec, index) => (
                     <div
@@ -364,12 +370,12 @@ export default function ProductModal({
               {activeTab === "options" && productData.options && (
                 <div className="animate-fadeIn">
                   <h3 className="text-2xl font-bold text-primary mb-4">
-                    {t("content.options.title")}
+                    {t("modal.content.options.title")}
                   </h3>
                   <p className={`${TEXT_SECONDARY} leading-relaxed mb-8`}>
-                    {t("content.options.description")}
+                    {t("modal.content.options.description")}
                     {productData.options.some((opt) => opt.pdfUrl) &&
-                      ` ${t("content.options.clickToView")}`}
+                      ` ${t("modal.content.options.clickToView")}`}
                   </p>
 
                   <div className="space-y-4 mb-8">

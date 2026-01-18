@@ -1,0 +1,151 @@
+{
+  "id": "6500P",
+  "series": "6500P 系列",
+  "title": "精密 LCR 电表",
+  "subtitle": "7 种型号，频率范围从 20Hz 至 5、10、15、20、30、50 和 120MHz",
+  "image": "/images/products/transparent/6500P.png",
+  "overview": {
+    "paragraphs": [
+      "6500P 系列高频 LCR 电表是专为满足制造和测试的各种需求而设计的精密仪器，专注于高频元件分析。具有广泛的频率规格，这些电表经过量身定制，以提供与应用需求和预算限制的最佳匹配。6500P 系列以其高测量精度和多功能性而闻名，是需要详细元件评估和特性分析的任务的理想解决方案。"
+    ]
+  },
+  "features": [
+    {
+      "title": "高测量精度",
+      "description": "电容、电感和阻抗的基本精度为 ±0.05%，损耗因数精度为 ±0.0005，品质因数精度也为 ±0.05%"
+    },
+    {
+      "title": "可变驱动和偏置电平",
+      "description": "交流驱动电平高达 1Vrms 或 20mArms，直流偏置选项为 0 至 +40V 直流偏置电压和 0 至 +100mA 直流偏置电流，还有 -40V 至 +40V 直流偏置电压的进一步选项，允许在实际工作条件下进行元件评估"
+    },
+    {
+      "title": "全面测量能力",
+      "description": "能够在从 20 Hz 至 120 MHz 的频率范围内表征元件，提供从 5MHz（6505P）至 120MHz（65120P）的型号"
+    },
+    {
+      "title": "直观操作",
+      "description": "配备大型 8.4\" VGA 彩色 TFT 触摸屏，易于使用，辅以清晰的图形显示，有助于测量解释"
+    },
+    {
+      "title": "广泛连接选项",
+      "description": "包括 GPIB 和以太网接口，用于外部控制和数据输出，便于整合到各种测试环境中。还提供通过 PS/2 或 USB 连接进行键盘和鼠标控制的灵活性"
+    },
+    {
+      "title": "数据管理",
+      "description": "能够通过以太网或 USB 闪存存储测量和设定数据，每种模式最多可存储 20 个设定"
+    },
+    {
+      "title": "安全功能",
+      "description": "整合保护功能，防止充电电容器造成损坏，确保仪器使用寿命"
+    },
+    {
+      "title": "多功能元件连接",
+      "description": "配备四个前面板 BNC 连接器，用于三端点或四端点连接，以及用于有引线和表面贴装元件的夹具"
+    }
+  ],
+  "specifications": [
+    {
+      "heading": "测量功能",
+      "functions": [
+        { "symbol": "C", "name": "电容" },
+        { "symbol": "L", "name": "电感" },
+        { "symbol": "R", "name": "电阻" },
+        { "symbol": "X", "name": "电抗" },
+        { "symbol": "G", "name": "电导" },
+        { "symbol": "B", "name": "电纳" },
+        { "symbol": "D", "name": "损耗因数" },
+        { "symbol": "Q", "name": "品质因数" },
+        { "symbol": "Z", "name": "阻抗" },
+        { "symbol": "Y", "name": "导纳" },
+        { "symbol": "Ø", "name": "相位角" }
+      ]
+    },
+    {
+      "heading": "频率范围",
+      "content": [
+        "频率步进大小 <1 mHz",
+        "设定频率精度 ±0.005%"
+      ],
+      "modelVariants": [
+        { "model": "6505P", "spec": "20Hz to 5MHz" },
+        { "model": "6510P", "spec": "20Hz to 10MHz" },
+        { "model": "6515P", "spec": "20Hz to 15MHz" },
+        { "model": "6520P", "spec": "20Hz to 20MHz" },
+        { "model": "6530P", "spec": "20Hz to 30MHz" },
+        { "model": "6550P", "spec": "20Hz to 50MHz" },
+        { "model": "65120P", "spec": "20Hz to 120MHz" }
+      ]
+    },
+    {
+      "heading": "交流驱动电平",
+      "content": [
+        "5mV 至 1Vrms（随频率变化）",
+        "100µA 至 20mArms（随频率变化）"
+      ]
+    },
+    {
+      "heading": "测量速度",
+      "content": [
+        "4 种速度可选",
+        "测试频率 ≥100 Hz 时，每秒最多 20 次测量"
+      ]
+    },
+    {
+      "heading": "精度",
+      "content": [
+        "损耗因数 - ±0.0005 (1+D²)",
+        "品质因数 - ±0.05% (Q+1/Q)",
+        "电容 / 电感 / 阻抗 - ±0.05%"
+      ],
+      "note": "精度取决于频率、驱动电平和阻抗"
+    },
+    {
+      "heading": "直流偏置电流（选项）",
+      "content": [
+        "/D1 0 至 +100mA 直流偏置电流和 0 至 +40V 直流偏置电压",
+        "/D2 -40V 至 +40V 直流偏置电压"
+      ]
+    },
+    {
+      "heading": "分选（选项）",
+      "content": [
+        "10 个分选，具有绝对和百分比限制",
+        "25 路 d 型接口连接器"
+      ],
+      "list": [
+        "/B1（非隔离）公共 0V 分选输出 0 至 5V（正常），具有 >10mA 电流吸收能力",
+        "/B2（隔离）公共 24V 输入输出 0 至 24V，具有 >10mA 电流源能力"
+      ]
+    },
+    {
+      "heading": "显示器",
+      "content": ["8.4\" VGA (650 x 480) 彩色 TFT 触摸面板"]
+    },
+    {
+      "heading": "GPIB 接口",
+      "content": ["外部仪器控制 24 针 IEEE 488 连接器"]
+    },
+    {
+      "heading": "USB 接口",
+      "content": [
+        "两个通用串行总线 (USB) 接口",
+        "USB 1.1 兼容"
+      ]
+    },
+    {
+      "heading": "网络接口",
+      "content": ["10/100-BASETX 以太网控制器", "RJ45 连接器"]
+    }
+  ],
+  "options": [
+    {
+      "title": "/K 选项 - 材料测试",
+      "pdfUrl": "/datasheets/options/6500P/6500P K option.pdf"
+    },
+    {
+      "title": "/M 选项 - 多测量模式",
+      "pdfUrl": "/datasheets/options/6500P/6500P M option.pdf"
+    }
+  ],
+  "datasheet": "/datasheets/instruments/WK6500P.pdf"
+}
