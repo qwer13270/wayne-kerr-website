@@ -10,9 +10,23 @@ export default getRequestConfig(async ({ requestLocale }) => {
     locale = routing.defaultLocale;
   }
 
+  // Load and merge all translation files for the locale
+  const [common, home, about] = await Promise.all([
+    import(`../messages/${locale}/common.json`),
+    import(`../messages/${locale}/home.json`),
+    import(`../messages/${locale}/about.json`)
+  ]);
+
+  // Merge all translation files into a single messages object
+  const messages = {
+    ...common.default,
+    ...home.default,
+    ...about.default
+  };
+
   return {
     locale,
-    messages: (await import(`../messages/${locale}.json`)).default
+    messages
   };
 });
 
