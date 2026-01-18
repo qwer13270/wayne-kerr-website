@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
-import { setRequestLocale } from 'next-intl/server';
-import { notFound } from 'next/navigation';
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages } from "next-intl/server";
+import { setRequestLocale } from "next-intl/server";
+import { notFound } from "next/navigation";
 import { ThemeProvider } from "next-themes";
 import Navigation from "@/src/components/layout/Navigation";
 import Footer from "@/src/components/layout/Footer";
-import { routing } from '@/i18n/routing';
+import { routing } from "@/i18n/routing";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -46,7 +46,7 @@ export default async function RootLayout({
     <html lang={locale} suppressHydrationWarning>
       <head />
       <body className={inter.className}>
-        <ThemeProvider attribute="class" defaultLocale="system" enableSystem>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <NextIntlClientProvider messages={messages} locale={locale}>
             <Navigation />
             {children}
