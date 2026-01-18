@@ -5,10 +5,11 @@ import Link from "next/link";
 import { Menu, X, Sun, Moon, Gauge, Wrench, Code2, Globe } from "lucide-react";
 import { useTheme } from "next-themes";
 import { useTranslations } from "next-intl";
+import { useParams, usePathname, useRouter } from "next/navigation";
 import globalLocations from "../../../data/globalLocations.json";
 import NavDropdown from "./NavDropdown";
 import MobileNavDropdown from "./MobileNavDropdown";
-import LanguageSwitcher from "@/src/components/LanguageSwitcher";
+import { locales, type Locale } from "@/i18n/request";
 import {
   NAV_ITEM_STYLES,
   NAV_SURFACE_STYLES,
@@ -23,10 +24,39 @@ export default function Navigation() {
   const [mobileProductsOpen, setMobileProductsOpen] = useState(false);
   const [mobileCountriesOpen, setMobileCountriesOpen] = useState(false);
   const { setTheme, resolvedTheme } = useTheme();
+  const params = useParams();
+  const pathname = usePathname();
+  const router = useRouter();
 
   // Get translations
   const t = useTranslations("navigation");
   const tCountries = useTranslations("countries");
+
+  // Language switching function
+  const switchLanguage = (newLocale: Locale) => {
+    // Get current pathname without locale prefix
+    const segments = pathname.split("/");
+
+    // Remove current locale from path (first segment after /)
+    if (locales.includes(segments[1] as Locale)) {
+      segments.splice(1, 1);
+    }
+
+    // Build new path with new locale
+    const newPath = `/${newLocale}${segments.join("/")}`;
+
+    // Navigate to new locale path
+    router.push(newPath);
+  };
+
+  // Map country names to locales
+  const countryToLocale = (countryName: string): Locale => {
+    const normalizedName = countryName.trim().toLowerCase();
+    if (normalizedName === "taiwan") return "zh-TW";
+    if (normalizedName === "china") return "zh-CN";
+    // US, UK, Germany, Japan, India → en
+    return "en";
+  };
 
   // Dropdown menu items with translations
   const productsItems = [
@@ -40,7 +70,7 @@ export default function Navigation() {
     link: string;
   };
 
-  // Map country names to translated versions
+  // Map country names to translated versions with language switching
   const countriesItems = Array.from(
     new Map(
       (globalLocations as GlobalLocation[]).map((location) => {
@@ -53,9 +83,16 @@ export default function Navigation() {
           translatedName = location.name.trim();
         }
 
+        const targetLocale = countryToLocale(location.name);
+
         return [
           location.name.trim(),
-          { label: translatedName, href: location.link },
+          {
+            label: translatedName,
+            href: location.link,
+            switchLocale: targetLocale,
+            isLanguageSwitch: true, // Always enable language switching for countries
+          },
         ];
       })
     ).values()
@@ -127,16 +164,12 @@ export default function Navigation() {
                   onToggle={setCountriesMenuOpen}
                   navItemStyles={NAV_ITEM_STYLES}
                   navSurfaceStyles={DROPDOWN_SURFACE_STYLES}
+                  onLanguageSwitch={switchLanguage}
                 />
               </div>
 
               {/* Right Side - Language + Dark Mode Toggle + Contact Button */}
               <div className="hidden lg:flex items-center space-x-3">
-                {/* Language Switcher */}
-                <div className="relative">
-                  <LanguageSwitcher />
-                </div>
-
                 {/* Dark Mode Toggle */}
                 <button
                   onClick={() =>
@@ -220,18 +253,8 @@ export default function Navigation() {
                 isOpen={mobileCountriesOpen}
                 onToggle={() => setMobileCountriesOpen(!mobileCountriesOpen)}
                 textColor={TEXT_PRIMARY}
+                onLanguageSwitch={switchLanguage}
               />
-
-              {/* Mobile Language Switcher */}
-              <div className="pt-2 border-t border-gray-200 dark:border-gray-700">
-                <div className="flex items-center gap-2 mb-2">
-                  <Globe size={20} className={TEXT_PRIMARY} />
-                  <span className={`text-sm font-medium ${TEXT_PRIMARY}`}>
-                    Language
-                  </span>
-                </div>
-                <LanguageSwitcher />
-              </div>
 
               {/* Mobile Dark Mode Toggle */}
               <div className="flex items-center gap-3 pt-2">
