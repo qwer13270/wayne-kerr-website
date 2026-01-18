@@ -1,0 +1,76 @@
+{
+  "contact": {
+    "hero": {
+      "title": "联系我们",
+      "subtitle": "我们会在一个工作日内回复"
+    },
+    "form": {
+      "fields": {
+        "name": {
+          "label": "姓名",
+          "placeholder": "张三"
+        },
+        "email": {
+          "label": "邮箱",
+          "placeholder": "zhangsan@company.com"
+        },
+        "phone": {
+          "label": "电话号码",
+          "placeholder": "+86 138 0000 0000"
+        },
+        "company": {
+          "label": "公司名称",
+          "placeholder": "示例公司"
+        },
+        "country": {
+          "label": "国家",
+          "placeholder": "请选择",
+          "options": {
+            "US": "美国",
+            "UK": "英国",
+            "TW": "台湾",
+            "CN": "中国",
+            "DE": "德国",
+            "JP": "日本",
+            "KR": "韩国",
+            "SG": "新加坡",
+            "IN": "印度",
+            "DK": "丹麦",
+            "other": "其他"
+          }
+        },
+        "topic": {
+          "label": "主题",
+          "placeholder": "请选择",
+          "options": {
+            "pricing": "价格咨询",
+            "trade-in": "以旧换新计划",
+            "calibration": "校准服务",
+            "rental": "租赁服务",
+            "technical": "技术讨论 / 解决方案咨询"
+          }
+        },
+        "model": {
+          "label": "型号",
+          "placeholder": "例如：6500B"
+        },
+        "message": {
+          "label": "其他详情",
+          "placeholder": "请描述您的需求或问题..."
+        }
+      },
+      "submit": {
+        "sending": "发送中...",
+        "default": "提交报价请求"
+      }
+    },
+    "toast": {
+      "title": "请求发送成功！",
+      "message": "我们已收到您的报价请求。我们的团队将在24小时内与您联系。"
+    },
+    "errors": {
+      "submitFailed": "发送请求失败。请重试。",
+      "generic": "发生错误。请重试。"
+    }
+  }
+}
